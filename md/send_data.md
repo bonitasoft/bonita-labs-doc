@@ -1,3 +1,3 @@
-# Send us (anonimous) data!
+# Send us (anonymous) data !
 
-Send us (anonimous) data!
+Send us (anonymous) data!
