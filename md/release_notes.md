@@ -2,7 +2,5 @@
 
 ## Limitations and known issues
 
+## What's in ICI v1.0.0 
 
-## What's new in 1.0.0 
-
-### Bugfixes
