@@ -12,10 +12,11 @@ more information about process mining.
 
 ## What is used in ICI v1: Predict chances to finish on time
 
-Analysis done in ICI will observe each path used by process instance, and compute the remaining time to completion. In
-addition, the current state of the case is used know which task is active at this time. 
+Analysis done in ICI will replay each process instance using its history and compute the remaining time on each state it went through.
 
-The predictive model allows to predict case duration, based on similar completed instances split in percentiles. 
-Prediction consist on defining which percentile belong to each open case, and according to process configuration predict
-if case is _on time_, _late_, or _predicted late_. 
+Then percentiles of the remaining time for each of these state will be stored in a *prediction model*.
+
+The *prediction model* allows to predict the percentage of chance to be within a target duration.
+
+Then the state of the case is deducted from this percentage and target duration, possible states are _on time_, _late_, or _predicted late_. 
 
