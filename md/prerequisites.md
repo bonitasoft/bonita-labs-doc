@@ -45,7 +45,7 @@ Software required for ICI add-on:
 | **Bonita platform** | 
 | Bonita | 7.5.4 and higher (see note 2, 3 and 4) |
 | **Storage** | 
-| elastic | 6.2.4 and higher (unless using docker deployment mode)|
+| Elasticsearch | 6.2.4 and higher (unless using docker deployment mode)|
 | **Docker** | 
 | Docker | 18.03 and higher (only if using docker deployment mode)|
 | **Browser** |
