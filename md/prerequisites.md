@@ -43,8 +43,7 @@ Software required for ICI add-on:
 | Oracle Java SE Runtime Environment | 8u112 (see note 1) |
 | OpenJDK | 8u112 (see note 1) |
 | **Bonita platform** | 
-| Bonita | 7.5.4 and higher (see note 2 and 3) |
-| Bonita engine database| (see note 4)  |
+| Bonita | 7.5.4 and higher (see note 2, 3 and 4) |
 | **Storage** | 
 | elastic | 6.2.4 and higher (unless using docker deployment mode)|
 | **Docker** | 
