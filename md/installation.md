@@ -7,6 +7,7 @@ This chapter cover *Quick start* and *Production* installation.
 ## Download
 
 Download ICI from [Bonitasoft Customer Portal](https://customer.bonitasoft.com/).
+
 The archive contains:
 * The installation guide: `installation-guide.md`
 * The ICI application: `ici-application-<version>.zip`
@@ -17,12 +18,12 @@ The archive contains:
 
 Installation can be done in a *Quick start* or *Production* mode. 
  
-* *Quick start* mode is designed to try out the ICI module on an existing bonita application.
+* *Quick start* mode is designed to try out the ICI module on an existing Bonita platform.
 * *Production* mode should be used when using ICI module for production.
 
 ## Pre-requisites
 
-* A bonita platform
+* A Bonita platform
 * Java
 * Docker (for *Quick start*)
 
