@@ -1,18 +1,48 @@
-# Poll data from Bonita Engine database to Elastic Search
+# Poll data from Bonita platform to ICI Module
 
-Bonita Intelligent Continuous Improvement architecture.
+In order to learn from the history of all executed processes in Bonita platform, ICI backend need to access and poll data from Bonita platform database.
 
-## Start / Stop / Scheduled polling
+The first time ICI backend is launched, all data regarding case and task execution is retrieved from the Bonita platform database. Then, every 15 minutes (default configuration), a job update the module with data of newly executed tasks and cases.
 
-## Status
+## Configuration
 
-## Reporting 
+All these configuration can be set in the `application.properties` of the ICI backend.
 
-## Incremental polling
+Bonita platform database connection informations
+```
+bonita.datasource.url=jdbc url
+bonita.datasource.username=username
+bonita.datasource.password=password
+```
 
-### Definition
+If you use oracle you need to add your driver `lib` folder of the ICI backend ( or in the `jdbc_driver` folder of the  installer if you use it).
 
-### Setting
+Polling rate interval, i.e. at each rate the data in ICI backend will be updated
+```
+bonita.ici.polling.rate_minute=15
+```
+
+The connection pool of this polling can be configured to limit or increase the polling velocity.
+It can be useful to decrease it when you want to limit the impact of the ICI modules on Bonita platform's performances.
+```
+spring.datasource.hikari.maximum-pool-size=20
+```
+
+## Manage polling executions
+
+The polling can be handled on a page served directly on the ICI backend, By default it can be accessed on [http://localhost:8082/](http://localhost:8082/)
+
+This page allows to:
+* activate/deactive the polling.
+* run it immediatly.
+* cancel any running polling.
+* see previous polling executions.
+
+There are REST endpoints to manage execution of the polling on `/api/polling/` see [REST APIs documentation](./rest_api.md)
 
 ## Troubleshooting
+
+When a polling execution fails, it can be seen in error in the polling page [http://localhost:8082/](http://localhost:8082/).
+
+More informations whould be available in output logs on the backend, either in the Standard output or in the log file `logs/bonita-ici.log`
  
