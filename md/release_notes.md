@@ -5,7 +5,7 @@
 * A mechanism to incrementally retrieve Data from Bonita platform database.
 * A process mining algorithm that predict what are the chances that a case will finish in time and how much time it will take.
 * A living application that allows to define the target for each of these processes.
-* A living application that allows to view cases along with their prediction
+* A living application that allows to view cases along with their prediction.
 
 ## Limitations and known issues
 
