@@ -2,7 +2,7 @@
 
 In order to learn from the history of all executed processes in Bonita platform, ICI backend need to access and poll data from Bonita platform database.
 
-The first time ICI backend is launched, all data regarding case and task execution is retrieved from the Bonita platform database. Then, every 15 minutes (default configuration), a job update the module with data of newly executed tasks and cases.
+The first time ICI backend is launched, all data regarding case and task execution is retrieved from the Bonita platform database. Then, every 15 minutes (default configuration), a job updates the module with data of newly executed tasks and cases.
 
 ## Configuration
 
