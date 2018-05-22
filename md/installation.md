@@ -36,7 +36,7 @@ If Bonita engine database vendor is oracle, get JDBC driver jar from Oracle (not
 ### Quick start mode
 
 1. Ensure you have java installed, using command `java -version`
-2. Ensure you have java installed, using command `docker --version`
+2. Ensure you have Docker installed, using command `docker --version`
 3. Docker requires an active internet connection to pull Elasticsearch docker image and to build ICI application image
 4. Follow installation guide Quick start instructions from the archive.
 
