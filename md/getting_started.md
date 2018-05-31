@@ -2,7 +2,7 @@
 
 Bonita Intelligent Continuous Improvement installation and configuration instruction. 
 
-This chapter cover *Quick start* and *Production* installation.
+This chapter cover *Evaluation* and *Production* installation.
 
 ## Download
 
@@ -16,24 +16,16 @@ The archive contains:
 
 ## Installation
 
-Installation can be done in a *Quick start* or *Production* mode. 
- 
-* *Quick start* mode is designed to try out the ICI module on an existing Bonita platform.
-* *Production* mode should be used when using ICI module for production.
-
-## Pre-requisites
-
-* A Bonita platform
-* Java
-* Docker (for *Quick start*)
+Installation can be done in a *Evaluation* or *Production* mode. 
 
 :::info
 Check all [pre-requisites](./prerequisites.md) prior to install.
 :::
 
-If Bonita engine database vendor is oracle, get JDBC driver jar from Oracle (not included in distribution).
+* *Evaluation mode* mode is designed to try out the ICI module on an existing Bonita platform.
+* *Production* mode should be used when using ICI module for production.
 
-### Quick start mode
+### Evaluation mode
 
 1. Ensure you have java installed, using command `java -version`
 2. Ensure you have Docker installed, using command `docker --version`
