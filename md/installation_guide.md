@@ -1,14 +1,14 @@
 # Installation guide
 
-Bonita ICI installation guide. It covers evaluation and production mode installation, 
+Bonita ICI installation guide. It covers evaluation and production modes installation, 
 and detailed available parameters values.  
 
-Installation can be done using *evaluation* or *production* mode. Evaluation mode will start two Docker container 
-and living application. Production mode is a on-premise ICI server deployement.
+Installation can be done using *evaluation* or *production* modes. Evaluation mode will start two Docker containers 
+and Living Application. Production mode is an on-premise ICI server deployment.
 
-## Prerequisites
+## Hardware and software requirements
 
-Check all pre-requisites detailed in [Bonitasoft offical documentation](https://documentation.bonitasoft.com)
+Check all requirements detailed in [Bonitasoft offical documentation](https://documentation.bonitasoft.com)
 
 ### Bonita platform
 First of all, you need an up and running **Bonita platform 7.5.4 or greater**.  
@@ -138,7 +138,7 @@ We recommend you to read this file and change other parameters if needed.
 #### Advanced polling profile mode (Oracle only)
 
 This mode requires that database user is allowed to create materialized views. To grant this, use 
-`GRANT CREATE MATERIALIZED VIEW TO <USER>` using a SYS connection prior to start application.  
+`GRANT CREATE MATERIALIZED VIEW TO <USER>` using a SYS connection prior to start the application.  
 
 To activate this mode, uncomment this property in `$ICI_APPLICATION_HOME/application.properties`
 
@@ -157,7 +157,7 @@ This will start a web server on port 8082 by default (if not changed in `$ICI_AP
 
 #### Using the deployer
 
-This method is the recommended way. Use command below, you will be prompted for required parameters
+This method is the recommended way. Use the command below, you will be prompted for required parameters
 
 ```shell
 ./bonita-ici deploy
@@ -165,7 +165,7 @@ This method is the recommended way. Use command below, you will be prompted for 
 
 #### Manually
 
-This method is the not recommended way.
+This method is the not recommended way, but can be used if you want fine control of deployed Living Applications.
 
 #### Living Application "Configuration"
 
@@ -191,7 +191,7 @@ This method is the not recommended way.
 
 3. Edit the file `configuration.properties` to configure `bonita.ici.application.url`
 
-4. rezip `api-configuration-<VERSION>.zip`
+4. Rezip `api-configuration-<VERSION>.zip`
 
 5. Login to Bonita Portal with credentials that belong to the _Administrator_ profile.
 
@@ -224,7 +224,7 @@ This method is the not recommended way.
 │   └── page.properties
 ```
 
-3. Edit file `configuration.properties` to configure `bonita.ici.application.url`
+3. Edit the file `configuration.properties` to configure `bonita.ici.application.url`
 
 4. Rezip `api-monitoring-<VERSION>.zip`
 
