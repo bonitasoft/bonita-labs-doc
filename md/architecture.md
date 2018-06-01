@@ -1,39 +1,37 @@
 # Architecture
 
-Bonita Intelligent Continuous Improvement use data Bonita engine database and store them in an Elasticsearch storage
-engine. A set of [REST API](./rest_api.md) allow to query this storage. Those API are used in two Living Application
-deployed on Bonita platform to configure processes and render predictions.   
+Bonita Intelligent Continuous Improvement Add-on (ICI) extracts data of the Bonita Engine database, transforms it, and stores documents in an Elasticsearch storage engine. A set of REST APIs allow to query this storage. Those APIs are used in two Living Applications deployed on Bonita Platform to configure processes and render predictions.   
 
-![Bonita Intelligent Continuous Improvement Architecture](images/ici_architecture.png)
+![Bonita Intelligent Continuous Improvement Add-on Architecture](images/ici_architecture.png)
 
 ## Overview
 
-ICI connects to Bonita engine database, using it owns connection pool to read events from archives. 
-Events are stored in elastic search
+ICI connects to the Bonita Engine database, using its own connection pool to read events from the archives. 
+Events are stored in Elasticsearch.
 
-When configuring processes using Configuration Living Application, a REST API extension calls ICI REST API to store configuration.
+When configuring processes using the "Configuration" Living Application, a REST API extension calls the ICI REST API to store the configuration.
 
-Data is polled from Bonita on a configurable interval. Once configured, a prediction model is build, 
-based on completed cases and then applied on open cases 
+Data is polled from Bonita on a configurable time interval.  
+Once configured, a prediction model is build, based on completed cases and then applied on open cases 
   
-Operation Management Living Application is a mobile first UI which displays predictions.   
+The "Operations Management" Living Application is a mobile first -usable on a desktop- UI which displays predictions.   
 
 ## Components
 
 ### ICI Server
  
-The backend server polls data, learn process mining models and serves REST API 
+The backend server polls data, creates process mining models, and serves the REST APIs.
 
 
 ### ICI Storage
 
-Store ICI data and predictive models. relay on Elasticsearch engine
+It stores ICI data and predictive models, and it relies on Elasticsearch engine.
 
-### ICI Configuration living application
+### ICI Configuration Living Application
 
-This living application is used to configure process 
+This Living Application is used to configure the processes.
 
-### ICI Operation management living application
+### ICI Operation Management Living Application
 
-This living application is used to display prediction to Operation Manager 
+This Living Application is used to display case execution information and predictions to the Operation Managers.
   
