@@ -7,6 +7,5 @@
 * [Configure Operations Management Living Application](configure.md)
 * [Monitor cases](monitoring.md)
 * [Business Process Intelligence dashboard](dashboard.md)
-* [ICI Rest Api](rest_api.md)
 * [Send us (anonymous) data!](send_data.md)
 
