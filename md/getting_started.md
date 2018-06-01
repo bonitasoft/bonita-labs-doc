@@ -1,4 +1,4 @@
-# Download, Install, and Configure ICI add-on
+# Getting started
 
 Bonita Intelligent Continuous Improvement installation and configuration instruction. 
 
