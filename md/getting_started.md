@@ -32,12 +32,12 @@ Check all [pre-requisites](./prerequisites.md) prior to install.
 1. Ensure you have java installed, using command `java -version`
 2. Ensure you have Docker installed, using command `docker --version`
 3. Docker requires an active Internet connection to pull Elasticsearch Docker image and to build ICI application image
-4. Follow the installation guide "Quick start" instructions from the archive.
+4. Follow the installation guide "evaluation mode" instructions from the archive.
 
 ### Production mode
 
 1. Ensure you have Java installed, using the command `java -version`
-2. Follow the installation guide "ICI standalone application" instructions.
+2. Follow the installation guide "production mode" instructions.
 
 ## Configuration
 

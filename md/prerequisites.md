@@ -65,7 +65,7 @@ Notes:
 in addition to Bonita connections
 
 :::info    
-When installing ICI in evaluation mode, an active internet connexion is required to download Docker images.    
+When installing ICI in evaluation mode, an active Internet connexion is required to download Docker images.    
 :::
 
 ## Skills
