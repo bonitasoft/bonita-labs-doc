@@ -2,7 +2,7 @@
 * [Architecture](architecture.md)
 * [Process-mining](process_mining.md)
 * [Pre-requisites](prerequisites.md)
-* [Download, Install and Configure ICI](installation.md)
+* [Getting started](getting_started.md)
 * [Poll data from Bonita Engine database](polling.md)
 * [Configure Operations Management Living Application](configure.md)
 * [Monitor cases](monitoring.md)
