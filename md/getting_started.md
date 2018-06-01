@@ -51,6 +51,6 @@ Main configuration is done by the installer.
 
 Once installed, you need to setup in Bonita portal profile mapping for 
 profiles `Configuration` and `Operations Manager`.
- 
 
-
+`Process Manager mapping` must also be configured for each process in order to display them in Operation Management 
+living application.
