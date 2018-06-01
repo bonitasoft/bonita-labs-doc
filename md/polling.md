@@ -42,7 +42,14 @@ There are REST endpoints to manage execution of the polling on `/api/polling/` s
 
 ## Troubleshooting
 
+### Polling errors
+
 When a polling execution fails, it can be seen in error in the polling page [http://localhost:8082/](http://localhost:8082/).
 
 More informations whould be available in output logs on the backend, either in the Standard output or in the log file `logs/bonita-ici.log`
  
+### Deleted cases
+
+When a started case is already polled in ICI storage and then deleted in Bonita platform, this case is still present 
+in ICI storage and will still be displayed in Operation Management Living app, but this overview can't be displayed 
+anymore since data is deleted from Bonita database .   
