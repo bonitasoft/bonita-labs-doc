@@ -16,9 +16,7 @@ The archive contains:
 
 ## Installation
 
-Installation can be done in a *Evaluation* or *Production* mode. The major difference between those mode is that 
-Elasticsearch and ICI server are provided in Docker container for evaluation mode and don't allow to connect 
-to an existing Elasticsearch cluster.
+Installation can be done in a *Evaluation* or *Production* mode. The major difference between those modes is that in the evaluation mode, Elasticsearch and ICI servers are provided in a Docker container and do not allow to connect to an existing Elasticsearch cluster.
 
 :::info
 Check all [pre-requisites](./prerequisites.md) prior to install.
