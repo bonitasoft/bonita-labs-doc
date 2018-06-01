@@ -12,8 +12,10 @@ Events are stored in Elasticsearch.
 When configuring processes using the "Configuration" Living Application, a REST API extension calls the ICI REST API to store the configuration.
 
 Data is polled from Bonita on a configurable time interval.  
-Once configured, a prediction model is built, based on completed cases and then applied on open cases. 
-  
+
+Once configured, the developer can configure the relevant processes using [ICI Configuration living application](configure.md) 
+and start the creation of the prediction model based on completed cases and then applied on open cases. 
+
 The "Operations Management" Living Application is a mobile first -usable on a desktop- UI which displays predictions.   
 
 ## Components
