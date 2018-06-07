@@ -30,23 +30,21 @@ spring.datasource.hikari.maximum-pool-size=20
 
 ## Manage polling executions
 
-The polling can be handled on a page served directly on the ICI backend, By default it can be accessed on [http://localhost:8082/](http://localhost:8082/)
+The polling can be handled on a page served directly on the ICI backend. By default it can be accessed on [http://localhost:8082/](http://localhost:8082/)
 
 This page allows to:
-* activate/deactive the polling.
-* run it immediatly.
-* cancel any running polling.
-* see previous polling executions.
-
-There are REST endpoints to manage execution of the polling on `/api/polling/` see [REST APIs documentation](./rest_api.md)
+* activate/deactivate the polling
+* run it immediately
+* cancel any running polling
+* see previous polling executions
 
 ## Troubleshooting
 
 ### Polling errors
 
-When a polling execution fails, it can be seen in error in the polling page [http://localhost:8082/](http://localhost:8082/).
+When a polling execution fails, it can be seen in error on the ICI backend. By default it can be accessed on [http://localhost:8082/](http://localhost:8082/).
 
-More informations whould be available in output logs on the backend, either in the Standard output or in the log file `logs/bonita-ici.log`
+More information would be available in output logs on the ICI backend, either in the Standard output or in the log file `logs/bonita-ici.log`
  
 ### Deleted cases
 
