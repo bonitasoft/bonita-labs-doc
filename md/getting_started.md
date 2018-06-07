@@ -16,8 +16,8 @@ The archive contains:
 
 ## Installation
 
-Installation can be done in a *Evaluation* or *Production* mode. The major difference between those modes is that in the evaluation mode, Elasticsearch and ICI servers are provided in a Docker container, with basic settings.  
-This evaluation mode is very easy to install, to get immediate value from the ICI add-on.  
+Installation can be done in a *Evaluation* or *Production* mode. The major difference between those modes is that in the *Evaluation* mode, Elasticsearch and ICI servers are provided in Docker containers, with basic settings.  
+This mode is very easy to install, to get immediate value from the ICI add-on.  
 
 However, to ensure the best performance of a system using Elasticsearch, advanced settings are needed. This means that the ICI Add-on installed in *Evaluation* mode may not handle a large volume of data efficiently.   
 
