@@ -1,6 +1,6 @@
 # Getting started
 
-Bonita Intelligent Continuous Improvement Add-on installation and configuration instruction. 
+Bonita Intelligent Continuous Improvement Add-on (ICI Add-on) installation and configuration instructions. 
 
 This chapter covers *Evaluation* and *Production*, two different installation modes.
 
@@ -16,20 +16,22 @@ The archive contains:
 
 ## Installation
 
-Installation can be done in a *Evaluation* or *Production* mode. The major difference between those modes is that in the evaluation mode, Elasticsearch and ICI servers are provided in a Docker container and do not allow to connect to an existing Elasticsearch cluster.
+Installation can be done in a *Evaluation* or *Production* mode. The major difference between those modes is that in the evaluation mode, Elasticsearch and ICI servers are provided in a Docker container, with basic settings.  
+This evaluation mode is very easy to install, to get immediate value from the ICI add-on.  
 
+However, to ensure the best performance of a system using Elasticsearch, advanced settings are needed. This means that the ICI Add-on installed in *Evaluation* mode may not handle a large volume of data efficiently.   
+
+So, for production, we recommand to switch to a clusterized and configured Elasticsearch instance, and install ICI on *Production* mode.
+ 
 :::info
 Check all [pre-requisites](./prerequisites.md) prior to install.
 :::
-
-* *Evaluation mode* mode is designed to try out the ICI add-on on an existing Bonita platform.
-* *Production* mode should be used when using ICI add-on for production.
 
 ### Evaluation mode
 
 1. Ensure you have java installed, using command `java -version`
 2. Ensure you have Docker installed, using command `docker --version`
-3. Docker requires an active Internet connection to pull Elasticsearch Docker image and to build ICI application image
+3. Docker requires an active Internet connection to pull the Elasticsearch Docker image and to build the ICI application image
 4. Follow the installation guide "evaluation mode" instructions from the archive.
 
 ### Production mode
@@ -41,8 +43,7 @@ Check all [pre-requisites](./prerequisites.md) prior to install.
 
 Most of the configuration is done by the installer. 
 
-Once installed, you need to setup in Bonita portal profile mapping for 
-profiles `Configuration` and `Operations Manager`.
+Once installed, you need to setup the Bonita Portal profile mapping for profiles `Configuration` and `Process Manager`.
 
-`Process Manager mapping` must also be configured for each process in order to display them in Operation Management 
+`Process Manager mapping` must also be configured for each process in order to display them in the `Operations Management` 
 living application.
