@@ -73,7 +73,7 @@ The ports on which Elasticsearch and ICI standalone application will be deployed
 * i: the port of the deployed ICI application (default '8082') 
 * e: the port of the deployed elasticsearch (default '9200')    
 
-:::note
+:::info
 use `./bonita-ici --help` to display all options
 :::
 
