@@ -3,6 +3,7 @@
 * [Process-mining](process_mining.md)
 * [Pre-requisites](prerequisites.md)
 * [Getting started](getting_started.md)
+* [Installation guide](installation_guide.md)
 * [Poll data from Bonita Engine database](polling.md)
 * [Configure Operations Management Living Application](configure.md)
 * [Monitor cases](monitoring.md)
