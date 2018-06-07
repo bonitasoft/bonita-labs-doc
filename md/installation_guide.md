@@ -4,7 +4,7 @@ Bonita ICI installation guide. It covers evaluation and production modes install
 and detailed available parameters values.  
 
 Installation can be done using *evaluation* or *production* modes. Evaluation mode will start two Docker containers 
-and Living Application. Production mode is an on-premise ICI server deployment.
+and deploy Living Applications. Production mode is an on-premise ICI server deployment.
 
 ## Hardware and software requirements
 
@@ -17,17 +17,17 @@ ICI server will connect directly to Bonita database, in a read-only manner.
 
 ## Evaluation mode
 
-This mode is design to get a fully functional ICI stack including ICI server, ICI storage and living applications 
-for configuration and operation management.
+This mode is designed to get a fully functional ICI stack including ICI server, ICI storage and Living Applications 
+for configuration and operations management.
 
 :::warning
-Du to usage of Docker container for ICI server and storage, this mode is not recommended for production platform.
+Due to the usage of Docker containers for ICI server and storage, this mode is not recommended for a production platform.
 :::
 
 
 ### Linux / OSX
 
-Elasticsearch, even in a Docker container, requires specific configuration of virtual memory. see [elasticsearch documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/vm-max-map-count.html)
+Elasticsearch, even in a Docker container, requires a specific configuration of virtual memory. For more information, see [elasticsearch documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/vm-max-map-count.html)
 
 ```
 # configure runtime environnement
@@ -38,10 +38,14 @@ or edit file `/etc/sysctl.conf` file
 
 ### Interactive installer 
 
-Run the product using `bonita-ici` (`bonita-ici.bat` on Windows platform)script that is located inside the `bin` folder
+Run the Add-on using `bonita-ici` (`bonita-ici.bat` on Windows platform) script that is located inside the `bin` folder
 
-It will deploy an elasticsearch installation and configure and deploy the ICI application.
-Then it will deploy living application configured to use this ICI installation.
+This installer will do the following operations:
+ 
+* prompt for parameters if they are not provided in the command line
+* deploy an Elasticsearch server in a Docker container
+* configure and deploy the ICI server in a Docker container
+* deploy the two Living Applications configured to run on top of this installation.
 
 Example:
 
@@ -65,19 +69,19 @@ Parameters are:
 * P: the password to use when deploying LAs on bonita (default 'install')
 * H: the host on which this current host is accessible form bonita (i.e. the external ip),  (default 'localhost')
 
-Ports on which Elasticsearch and ICI application will be deployed can be customized
+The ports on which Elasticsearch and ICI standalone application will be deployed can be customized
 * i: the port of the deployed ICI application (default '8082') 
 * e: the port of the deployed elasticsearch (default '9200')    
 
 :::note
-use `./bonita-ici --help` displays all options
+use `./bonita-ici --help` to display all options
 :::
 
 It can be stopped using `bonita-ici stop`
 
 ## Production mode 
 The deliverable is composed of one standalone application, two Bonita Living Applications, and an installer that will
-help you install the backend and deploy the two living applications in your current instance of the Bonita platform.
+help you install the backend and deploy the two Living Applications in your current instance of the Bonita platform.
 
 ```
 bonita-ici-<VERSION>.zip
@@ -94,28 +98,28 @@ bonita-ici-<VERSION>.zip
 
 ### Elasticsearch
 
-ICI server requires elasticsearch. Supported version is 6.2.3 or above, in cluster or single node mode. 
+The ICI server requires and Elasticsearch. Supported versions are 6.2.3 or above, in cluster or single node mode. 
 
 For more information, please refer to the [official installation guide](https://www.elastic.co/downloads/elasticsearch)
 
 
 ### ICI server
 
-1. Copy ici-application-<VERSION>.zip` to the host. 
+1. Copy `ici-application-<VERSION>.zip` to the host. 
 2. Unzip it in the directory of your choice. 
 
 We will refer to the extracted directory as `ICI_APPLICATION_HOME`.
 
 #### Configuration
 
-Edit `$ICI_APPLICATION_HOME/application.properties` to configure application.
+Edit `$ICI_APPLICATION_HOME/application.properties` to configure the application.
 Mandatory parameters are:
 
-In Elastic search configuration
+In Elasticsearch configuration
 ```
-bonita.elasticsearch.hosts              // http url(s) of installed Elasticsearch 
+bonita.elasticsearch.hosts              // http url(s) of the installed Elasticsearch 
 
-# when elastic search endpoint are protected by authentication,
+# when Elasticsearch endpoints are protected by authentication,
 # rest client basic authentication can be enabled by adding properties as follow
 #bonita.elasticsearch.username=admin
 #bonita.elasticsearch.password=changeme
@@ -123,8 +127,8 @@ bonita.elasticsearch.hosts              // http url(s) of installed Elasticsearc
 
 In Bonita database configuration
 ```
-bonita.datasource.url                   // url of Bonita platform database
-bonita.datasource.username              // username used to connect to Bonita database (can be a read-only user)
+bonita.datasource.url                   // url of Bonita Platform database
+bonita.datasource.username              // username used to connect to the Bonita database (can be a read-only user)
 bonita.datasource.password              // password associated to the user used to connect to Bonita database
 ```
 
@@ -137,7 +141,7 @@ We recommend you to read this file and change other parameters if needed.
 
 #### Advanced polling profile mode (Oracle only)
 
-This mode requires that database user is allowed to create materialized views. To grant this, use 
+This mode requires that the database user is allowed to create materialized views. To grant this, use 
 `GRANT CREATE MATERIALIZED VIEW TO <USER>` using a SYS connection prior to start the application.  
 
 To activate this mode, uncomment this property in `$ICI_APPLICATION_HOME/application.properties`
