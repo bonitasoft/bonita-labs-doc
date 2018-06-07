@@ -1,56 +1,49 @@
 # Getting started
 
-Bonita Intelligent Continuous Improvement installation and configuration instruction. 
+Bonita Intelligent Continuous Improvement Add-on (ICI Add-on) installation and configuration instructions. 
 
-This chapter cover *Quick start* and *Production* installation.
+This chapter covers *Evaluation* and *Production*, two different installation modes.
 
 ## Download
 
-Download ICI from [Bonitasoft Customer Portal](https://customer.bonitasoft.com/).
+Download ICI Add-on from [Bonitasoft Customer Portal](https://customer.bonitasoft.com/).
 
 The archive contains:
-* The installation guide: `installation-guide.md`
+* An installation guide: `installation-guide.md`
 * The ICI application: `ici-application-<version>.zip`
-* The Living applications
+* Two Living Applications: Case Monitoring with predictions, and Configuration of the first application
 * An installer: `bin/bonita-ici`
 
 ## Installation
 
-Installation can be done in a *Quick start* or *Production* mode. 
+Installation can be done in a *Evaluation* or *Production* mode. The major difference between those modes is that in the *Evaluation* mode, Elasticsearch and ICI servers are provided in Docker containers, with basic settings.  
+This mode is very easy to install, to get immediate value from the ICI add-on.  
+
+However, to ensure the best performance of a system using Elasticsearch, advanced settings are needed. This means that the ICI Add-on installed in *Evaluation* mode may not handle a large volume of data efficiently.   
+
+So, for production, we recommand to switch to a clusterized and configured Elasticsearch instance, and install ICI on *Production* mode.
  
-* *Quick start* mode is designed to try out the ICI module on an existing Bonita platform.
-* *Production* mode should be used when using ICI module for production.
-
-## Pre-requisites
-
-* A Bonita platform
-* Java
-* Docker (for *Quick start*)
-
 :::info
 Check all [pre-requisites](./prerequisites.md) prior to install.
 :::
 
-If Bonita engine database vendor is oracle, get JDBC driver jar from Oracle (not included in distribution).
-
-### Quick start mode
+### Evaluation mode
 
 1. Ensure you have java installed, using command `java -version`
 2. Ensure you have Docker installed, using command `docker --version`
-3. Docker requires an active internet connection to pull Elasticsearch docker image and to build ICI application image
-4. Follow installation guide Quick start instructions from the archive.
+3. Docker requires an active Internet connection to pull the Elasticsearch Docker image and to build the ICI application image
+4. Follow the installation guide "evaluation mode" instructions from the archive.
 
 ### Production mode
 
-1. Ensure you have java installed, using command `java -version`
-2. Follow installation guide ICI standalone application instructions.
+1. Ensure you have Java installed, using the command `java -version`
+2. Follow the installation guide "production mode" instructions.
 
 ## Configuration
 
-Main configuration is done by the installer. 
+Most of the configuration is done by the installer. 
 
-Once installed, you need to setup in Bonita portal profile mapping for 
-profiles `Configuration` and `Operations Manager`.
+Once installed, you need to setup the Bonita Portal profile mapping for profiles `Configuration` and `Process Manager`.
 
-`Process Manager mapping` must also be configured for each process in order to display them in Operation Management 
+`Process Manager mapping` must also be configured for each process in order to display them in the `Operations Management` 
 living application.

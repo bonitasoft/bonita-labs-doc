@@ -45,9 +45,9 @@ Software required for ICI add-on:
 | **Bonita platform** | 
 | Bonita | 7.5.4 and higher (see note 2, 3 and 4) |
 | **Storage** | 
-| Elasticsearch | 6.2.4 and higher (unless using docker deployment mode)|
+| Elasticsearch | 6.2.4 and higher (unless using evaluation mode)|
 | **Docker** | 
-| Docker | 18.03 and higher (only if using docker deployment mode)|
+| Docker | 18.03 and higher (only if using evaluation mode)|
 | **Browser** |
 | Mozilla Firefox | latest version |
 | Google Chrome | latest version |
@@ -63,6 +63,10 @@ Notes:
 1. Archive must be activated
 1. ICI has its own connection pool to connect to Bonita engine database. Ensure database has available connections 
 in addition to Bonita connections
+
+:::info    
+When installing ICI in evaluation mode, an active Internet connexion is required to download Docker images.    
+:::
 
 ## Skills
 
