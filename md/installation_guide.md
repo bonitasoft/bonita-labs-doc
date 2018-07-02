@@ -67,7 +67,7 @@ Parameters are:
 * b: the url of bonita platform
 * U: the username to use when deploying LAs on bonita (default 'install')
 * P: the password to use when deploying LAs on bonita (default 'install')
-* H: the host on which this current host is accessible form bonita (i.e. the external ip),  (default 'localhost')
+* H: the host on which this current host is accessible from bonita (i.e. the external ip),  (default 'localhost')
 
 The ports on which Elasticsearch and ICI standalone application will be deployed can be customized
 * i: the port of the deployed ICI application (default '8082') 
