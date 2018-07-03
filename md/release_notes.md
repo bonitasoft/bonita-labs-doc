@@ -11,3 +11,17 @@
 
 * The process mining algorithm does not yet take into account your business data. It will be relevant only on processes which their duration are correlated to the path that is taken in the process.
 * No security mechanism implemented in the ICI backend. It is up to you to secure the access to the ICI backend REST APIs.
+
+## Bug fixes
+
+### Fixes in Bonita Intelligent Continuous Improvement 1.0.1
+
+#### Fixes in Documentation
+* ICI-848 Document why deleted cases are displayed in Operations Management Living Application	
+
+#### Fixes in the Add-On
+* ICI-826 Some logs are printed when connection to database is not UP	
+* ICI-837 Polling status displays "finishing" status before "running"	
+* ICI-847 No percentage displayed when case is late since less than 1 hour
+* ICI-853 Connection errors to ici storage are not displayed properly in polling status page
+* ICI-855 Polling fails when a case is deleted in Bonita database
