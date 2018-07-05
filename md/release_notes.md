@@ -14,6 +14,12 @@
 
 ## Bug fixes
 
+### Fixes in Bonita Intelligent Continuous Improvement 1.0.2
+ICI-854  As Omar, I don't want to see deleted cases (either automatic or manual delete) in my case list
+ICI-901  Installer should not display password in debug mode
+ICI-900  Typo in interactive installer 
+ICI-899  Start command in evaluation mode should not ask host name from bonita
+
 ### Fixes in Bonita Intelligent Continuous Improvement 1.0.1
 
 #### Fixes in Documentation
