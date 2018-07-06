@@ -21,11 +21,7 @@
 * ICI-899  Start command in evaluation mode should not ask host name from bonita
 
 ### Fixes in Bonita Intelligent Continuous Improvement 1.0.1
-
-#### Fixes in Documentation
 * ICI-848 Document why deleted cases are displayed in Operations Management Living Application	
-
-#### Fixes in the Add-On
 * ICI-826 Some logs are printed when connection to database is not UP	
 * ICI-837 Polling status displays "finishing" status before "running"	
 * ICI-847 No percentage displayed when case is late since less than 1 hour
