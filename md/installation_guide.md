@@ -15,17 +15,12 @@ First of all, you need an up and running **Bonita platform 7.5.4 or greater**.
 ICI server will connect directly to Bonita database, in a read-only manner.
 
 
-## Evaluation mode
+## Using the installer
 
 This mode is designed to get a fully functional ICI stack including ICI server, ICI storage and Living Applications 
 for configuration and operations management.
 
-:::warning
-Due to the usage of Docker containers for ICI server and storage, this mode is not recommended for a production platform.
-:::
-
-
-### Linux / OSX
+### Pre-requisite
 
 Elasticsearch, even in a Docker container, requires a specific configuration of virtual memory. For more information, see [elasticsearch documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/vm-max-map-count.html)
 
@@ -35,51 +30,75 @@ sudo sysctl -w vm.max_map_count=262144
 ```
 or edit file `/etc/sysctl.conf` file
 
-
-### Interactive installer 
+### Installation
 
 Run the Add-on using `bonita-ici` (`bonita-ici.bat` on Windows platform) script that is located inside the `bin` folder
 
 This installer will do the following operations:
- 
-* prompt for parameters if they are not provided in the command line
+
 * deploy an Elasticsearch server in a Docker container
 * configure and deploy the ICI server in a Docker container
 * deploy the two Living Applications configured to run on top of this installation.
 
-Example:
+All required parameters are asked in the command line.
 
+### SSL configuration
+
+HTTPS is activated by default on the module. 
+
+There is two way to configure it
+
+#### Self signed certificate
+
+If you don't have already a valid certificate for you platform or does not know what it is, choose this option.
+A certificate will be generated for you based on some informations asked by the installer.
+
+#### Provide your own certificate
+
+If you already have a certificate and the associated private key of your domain, it can be given to the installer to be used in the backend to enable the https.
+
+This certiface and the private key must be passed to the installer in a format compatible with the Java KeyStore. 
+
+Common supported format are JKS and PKCS12.
+
+##### Example using LetsEncrypt's certbot:
+
+Generate a certificate for your local machine using the certbot of Lets encrypt using the following command line
 ```
-./bonita-ici -d jdbc:postgresql://192.23.1.25:5432/bonita\
-            -u bonita \
-            -p bpm \ 
-            -b https://192.23.1.24:8080/bonita \
-            -U install \
-            -P install \
-            -H 192.23.1.23
+certbot certonly
+```
+(see [](https://letsencrypt.org/getting-started/) for more informations)
+
+Convert the certificate given by LetsEncrypt into a PKCS12 format
+```
+openssl pkcs12 -export -in /etc/letsencrypt/live/{domain}/fullchain.pem -inkey /etc/letsencrypt/live/{domain}/privkey.pem -out mykey.p12 -name myAlias
 ```
 
-Parameters are:
+Then when using the installer provide this generated file as a keystore, the same password for the keystore and the key, and the same alias.
 
-* d: the jdbc url of the bonita datasource to use
-* u: the username for the datasource
-* p: the username for the datasource
-* b: the url of bonita platform
-* U: the username to use when deploying LAs on bonita (default 'install')
-* P: the password to use when deploying LAs on bonita (default 'install')
-* H: the host on which this current host is accessible from bonita (i.e. the external ip),  (default 'localhost')
+### Stop the module 
 
-The ports on which Elasticsearch and ICI standalone application will be deployed can be customized
-* i: the port of the deployed ICI application (default '8082') 
-* e: the port of the deployed elasticsearch (default '9200')    
+It can be stopped using `bonita-ici stopStorage stopApp`
 
 :::info
 use `./bonita-ici --help` to display all options
 :::
 
-It can be stopped using `bonita-ici stop`
+### Pass parameters using configuration file
 
-## Production mode 
+All parameters asked by the installer can be passed using a configuration file.
+
+Example:
+
+```
+./bonita-ici --file configuration.properties
+```
+
+The sample configuration file named `configuration.properties` contains all properties that can be configured
+
+
+## Manual installation
+
 The deliverable is composed of one standalone application, two Bonita Living Applications, and an installer that will
 help you install the backend and deploy the two Living Applications in your current instance of the Bonita platform.
 
@@ -90,6 +109,7 @@ bonita-ici-<VERSION>.zip
     |---- la-operations-management-<VERSION>.zip  // Bonita L.A. for Operations Management
     |---- la.properties                           // properties used by L.A. deployer utility
     |---- installation-guide.md                   // this file
+    |---- configuration.properties                // sample configuration file
     |---- bin/bonita-ici                          // an utility that start the dockers and deploy L.A.s
     |---- bin/bonita-ici.bat                      // an utility that start the dockers and deploy L.A.s (Windows)
     |---- jdbc_drivers/                           // the folder where to put the jdbc driver of the Bonita platform database
