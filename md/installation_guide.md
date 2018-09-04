@@ -67,7 +67,7 @@ Generate a certificate for your local machine using the certbot of Lets encrypt 
 ```
 certbot certonly
 ```
-(see [](https://letsencrypt.org/getting-started/) for more informations)
+(see [Let's Encrypt documentation](https://letsencrypt.org/getting-started/) for more information)
 
 Convert the certificate given by LetsEncrypt into a PKCS12 format
 ```
