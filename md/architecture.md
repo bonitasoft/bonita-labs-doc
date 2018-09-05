@@ -24,6 +24,10 @@ The "Operations Management" Living Application is a mobile first -usable on a de
  
 The backend server polls data, creates process mining models, and serves the REST APIs.
 
+:::info
+ICI Server is secured by https and a security token to allow only requests from Bonita server.
+Calls with other origin are rejected with a 403 (Forbidden) response code
+:::
 
 ### ICI Storage
 
