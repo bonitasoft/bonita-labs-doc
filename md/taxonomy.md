@@ -7,6 +7,5 @@
 * [Poll data from Bonita Engine database](polling.md)
 * [Configure Operations Management Living Application](configure.md)
 * [Monitor cases](monitoring.md)
-* [Business Process Intelligence dashboard](dashboard.md)
 * [Send us (anonymous) data!](send_data.md)
 
