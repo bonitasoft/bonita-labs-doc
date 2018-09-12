@@ -46,12 +46,16 @@ All required parameters are asked in the command line.
 
 HTTPS is activated by default on the module. 
 
-There is two way to configure it
+There are two ways to configure it:
 
-#### Self signed certificate
+#### Self-signed certificate
 
-If you don't have already a valid certificate for you platform or does not know what it is, choose this option.
+If you don't already have a valid certificate for you platform or does not know what it is, choose this option.
 A certificate will be generated for you based on some informations asked by the installer.
+
+:::info
+This is not recommended for a Production use of BICI. It is recommended to get your own certificate.
+:::
 
 #### Provide your own certificate
 
@@ -59,7 +63,7 @@ If you already have a certificate and the associated private key of your domain,
 
 This certiface and the private key must be passed to the installer in a format compatible with the Java KeyStore. 
 
-Common supported format are JKS and PKCS12.
+Common supported formats are JKS and PKCS12.
 
 ##### Example using LetsEncrypt's certbot:
 
@@ -67,7 +71,7 @@ Generate a certificate for your local machine using the certbot of Lets encrypt 
 ```
 certbot certonly
 ```
-(see [Let's Encrypt documentation](https://letsencrypt.org/getting-started/) for more information)
+(For more information, go to [Let's Encrypt documentation](https://letsencrypt.org/getting-started/))
 
 Convert the certificate given by LetsEncrypt into a PKCS12 format
 ```
