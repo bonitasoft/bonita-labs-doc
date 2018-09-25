@@ -1,5 +1,7 @@
 # ICI Operations Management API
+
 *version 1.0*
+
 API used by Operations Management Living Application
 
 
@@ -17,9 +19,12 @@ Get list of running cases
 |search|string|false|Search keyword, will search in case id and name of the initiator|
 
 #### Responses
+
 * default
-default response
+
+*default response*
   * application/json
+
   string
 
 
@@ -31,7 +36,14 @@ Get processes
 No parameters
 
 #### Responses
+
 * default
-default response
+
+*default response*
   * application/json
+
   string
+
+
+
+
