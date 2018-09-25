@@ -1,60 +1,37 @@
----
-title: Bonita BICI Rest API documentation
-language_tabs:
-  - shell: Shell
-  - http: HTTP
-  - javascript: JavaScript
-  - javascript--nodejs: Node.JS
-  - ruby: Ruby
-  - python: Python
-  - java: Java
-  - go: Go
-toc_footers: []
-includes: []
-search: true
-highlight_theme: darkula
-headingLevel: 2
+# ICI Operations Management API
+*version 1.0*
+API used by Operations Management Living Application
 
----
 
-<h1 id="Bonita-BICI-Rest-API-documentation">Bonita BICI Rest API documentation v1.1</h1>
+## `/ici-case-api`
+### `GET`
+Get list of running cases
+#### Query parameters
+|Parameter|Type|Required|Description|
+|---------|----|--------|-----------|
+|c|integer|false|Number of elements to return|
+|p|integer|false|Page to return, start at 0|
+|processName|string|true|Name of the process|
+|processVersion|string|false|Version of the process|
+|status|string|false|Status of the cases: late, predictedLate. onTime|
+|search|string|false|Search keyword, will search in case id and name of the initiator|
 
-BICI provides a set of REST Api extensions deployed by BICI intaller. This page lists all extensiosns avalaibles
+#### Responses
+* default
+default response
+  * application/json
+  string
 
-Base URLs:
 
-* <a href="/bonita/API/extension/">/bonita/API/extension/</a>
 
-<h1 id="Bonita-BICI-Rest-API-documentation-Default">Default</h1>
+## `/ici-process-api`
+### `GET`
+Get processes
+#### Query parameters
+No parameters
 
-## getCaseList
-
-<a id="opIdgetCaseList"></a>
-
-`GET /ici-case-api`
-
-<h3 id="getcaselist-parameters">Parameters</h3>
-
-|Parameter|In|Type|Required|Description|
-|---|---|---|---|---|
-|c|query|string|false|none|
-|p|query|string|false|none|
-|processName|query|string|false|none|
-|processVersion|query|string|false|none|
-|status|query|string|false|none|
-|search|query|string|false|none|
-
-> Example responses
-
-> default Response
-
-<h3 id="getcaselist-responses">Responses</h3>
-
-|Status|Meaning|Description|Schema|
-|---|---|---|---|
-|default|Default|default response|string|
-
-<aside class="success">
-This operation does not require authentication
-</aside>
-
+#### Responses
+* default
+default response
+  * application/json
+  string
