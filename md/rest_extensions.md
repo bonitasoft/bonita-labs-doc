@@ -18,32 +18,19 @@ Get list of running cases
 |status|string|false|Status of the cases: late, predictedLate. onTime|
 |search|string|false|Search keyword, will search in case id and name of the initiator|
 
-#### Responses
-
-* default
-
-*default response*
-  * application/json
-
-  string
-
-
-
 ## `/ici-process-api`
 ### `GET`
 Get processes
 #### Query parameters
 No parameters
 
-#### Responses
-
-* default
-
-*default response*
-  * application/json
-
-  string
-
-
-
+## `/ici-query-api`
+### `GET`
+Execute a query
+#### Query parameters
+|Parameter|Type|Required|Description|
+|---------|----|--------|-----------|
+|c|integer|false|Number of elements to return|
+|p|integer|false|Page to return, start at 0|
+|parameters|object|false|Parameters required by the query|
 
