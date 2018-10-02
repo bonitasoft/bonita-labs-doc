@@ -10,9 +10,9 @@ Bonita engine database to compute a predictive model
 As an introduction, you can see some of ours [webinars](https://www.bonitasoft.com/videos?category=Webinars) for
 more information about process mining.
 
-## What is used in ICI v1: Predict chances to finish on time
+## What is used in BICI v1: Predict chances to finish on time
 
-Analysis done in ICI will replay each process instance using its history and compute the remaining time on each state it went through.
+Analysis done in BICI will replay each process instance using its history and compute the remaining time on each state it went through.
 
 Then percentiles of the remaining time for each of these state will be stored in a *prediction model*.
 

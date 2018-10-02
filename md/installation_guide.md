@@ -1,10 +1,7 @@
 # Installation guide
 
-Bonita ICI installation guide. It covers evaluation and production modes installation, 
-and detailed available parameters values.  
-
-Installation can be done using *evaluation* or *production* modes. Evaluation mode will start two Docker containers 
-and deploy Living Applications. Production mode is an on-premise ICI server deployment.
+Bonita ICI installation guide. It covers evaluation and production modes installation, as well as detailed available parameters values.  
+Installation can be done using *evaluation* or *production* modes. Evaluation mode will start two Docker containers and deploy Living Applications. Production mode is an on-premise BICI server deployment.
 
 ## Hardware and software requirements
 
@@ -12,12 +9,12 @@ Check all requirements detailed in [Bonitasoft offical documentation](https://do
 
 ### Bonita platform
 First of all, you need an up and running **Bonita platform 7.5.4 or greater**.  
-ICI server will connect directly to Bonita database, in a read-only manner.
+BICI server will connect directly to Bonita database, in a read-only manner.
 
 
 ## Using the installer
 
-This mode is designed to get a fully functional ICI stack including ICI server, ICI storage and Living Applications 
+This mode is designed to get a fully functional BICI stack including BICI server, BICI storage and Living Applications 
 for configuration and operations management.
 
 ### Pre-requisite
@@ -32,12 +29,12 @@ or edit file `/etc/sysctl.conf` file
 
 ### Installation
 
-Run the Add-on using `bonita-ici` (`bonita-ici.bat` on Windows platform) script that is located inside the `bin` folder
+Run the Add-on using `bonita-bici` (`bonita-bici.bat` on Windows platform) script that is located inside the `bin` folder
 
 This installer will do the following operations:
 
 * deploy an Elasticsearch server in a Docker container
-* configure and deploy the ICI server in a Docker container
+* configure and deploy the BICI server in a Docker container
 * deploy the two Living Applications configured to run on top of this installation.
 
 All required parameters are asked in the command line.
@@ -82,10 +79,10 @@ Then when using the installer provide this generated file as a keystore, the sam
 
 ### Stop the module 
 
-It can be stopped using `bonita-ici stopStorage stopApp`
+It can be stopped using `bonita-bici stopStorage stopApp`
 
 :::info
-use `./bonita-ici --help` to display all options
+use `./bonita-bici --help` to display all options
 :::
 
 ### Pass parameters using configuration file
@@ -95,7 +92,7 @@ All parameters asked by the installer can be passed using a configuration file.
 Example:
 
 ```
-./bonita-ici --file configuration.properties
+./bonita-bici --file configuration.properties
 ```
 
 The sample configuration file named `configuration.properties` contains all properties that can be configured
@@ -107,36 +104,36 @@ The deliverable is composed of one standalone application, two Bonita Living App
 help you install the backend and deploy the two Living Applications in your current instance of the Bonita platform.
 
 ```
-bonita-ici-<VERSION>.zip
-    |---- ici-application-<VERSION>.zip           // Standalone application for A.I.
-    |---- la-configuration-<VERSION>.zip          // Bonita L.A. for I.C.I. configuration
+bonita-bici-<VERSION>.zip
+    |---- bici-application-<VERSION>.zip           // Standalone application for A.I.
+    |---- la-configuration-<VERSION>.zip          // Bonita L.A. for BICI. configuration
     |---- la-operations-management-<VERSION>.zip  // Bonita L.A. for Operations Management
     |---- la.properties                           // properties used by L.A. deployer utility
     |---- installation-guide.md                   // this file
     |---- configuration.properties                // sample configuration file
-    |---- bin/bonita-ici                          // an utility that start the dockers and deploy L.A.s
-    |---- bin/bonita-ici.bat                      // an utility that start the dockers and deploy L.A.s (Windows)
+    |---- bin/bonita-bici                          // an utility that start the dockers and deploy L.A.s
+    |---- bin/bonita-bici.bat                      // an utility that start the dockers and deploy L.A.s (Windows)
     |---- jdbc_drivers/                           // the folder where to put the jdbc driver of the Bonita platform database
 ```
 
 
 ### Elasticsearch
 
-The ICI server requires and Elasticsearch. Supported versions are 6.2.3 or above, in cluster or single node mode. 
+The BICI server requires and Elasticsearch. Supported versions are 6.2.3 or above, in cluster or single node mode. 
 
 For more information, please refer to the [official installation guide](https://www.elastic.co/downloads/elasticsearch)
 
 
-### ICI server
+### BICI server
 
-1. Copy `ici-application-<VERSION>.zip` to the host. 
+1. Copy `bici-application-<VERSION>.zip` to the host. 
 2. Unzip it in the directory of your choice. 
 
-We will refer to the extracted directory as `ICI_APPLICATION_HOME`.
+We will refer to the extracted directory as `BICI_APPLICATION_HOME`.
 
 #### Configuration
 
-Edit `$ICI_APPLICATION_HOME/application.properties` to configure the application.
+Edit `$BICI_APPLICATION_HOME/application.properties` to configure the application.
 Mandatory parameters are:
 
 In Elasticsearch configuration
@@ -156,11 +153,11 @@ bonita.datasource.username              // username used to connect to the Bonit
 bonita.datasource.password              // password associated to the user used to connect to Bonita database
 ```
 
-Oracle only: copy Jdbc driver in `$ICI_APPLICATION_HOME/lib` (drivers for PostgreSQL, MySQL and MS SqlServer are already provided).
+Oracle only: copy Jdbc driver in `$BICI_APPLICATION_HOME/lib` (drivers for PostgreSQL, MySQL and MS SqlServer are already provided).
 
 #### Advanced configuration
 
-Other parameters are available in `$ICI_APPLICATION_HOME/application.properties`.  
+Other parameters are available in `$BICI_APPLICATION_HOME/application.properties`.  
 We recommend you to read this file and change other parameters if needed.
 
 #### Advanced polling profile mode (Oracle only)
@@ -168,27 +165,27 @@ We recommend you to read this file and change other parameters if needed.
 This mode requires that the database user is allowed to create materialized views. To grant this, use 
 `GRANT CREATE MATERIALIZED VIEW TO <USER>` using a SYS connection prior to start the application.  
 
-To activate this mode, uncomment this property in `$ICI_APPLICATION_HOME/application.properties`
+To activate this mode, uncomment this property in `$BICI_APPLICATION_HOME/application.properties`
 
 ```
-#bonita.ici.polling.profile=advanced
+#bonita.bici.polling.profile=advanced
 ```
 
 ### Launch
 
-To launch the application, simply run `$ICI_APPLICATION_HOME/bin/bonita-ici` on Linux 
-or `$ICI_APPLICATION_HOME/bin/bonita-ici.bat` on Windows.
+To launch the application, simply run `$BICI_APPLICATION_HOME/bin/bonita-bici` on Linux 
+or `$BICI_APPLICATION_HOME/bin/bonita-bici.bat` on Windows.
 
-This will start a web server on port 8082 by default (if not changed in `$ICI_APPLICATION_HOME/application.properties`)
+This will start a web server on port 8082 by default (if not changed in `$BICI_APPLICATION_HOME/application.properties`)
 
-### Installation of ICI Living Applications
+### Installation of BICI Living Applications
 
 #### Using the deployer
 
 This method is the recommended way. Use the command below, you will be prompted for required parameters
 
 ```shell
-./bonita-ici deploy
+./bonita-bici deploy
 ```
 
 #### Manually
@@ -217,7 +214,7 @@ This method is the not recommended way, but can be used if you want fine control
 │   └── page.properties
 ```
 
-3. Edit the file `configuration.properties` to configure `bonita.ici.application.url`
+3. Edit the file `configuration.properties` to configure `bonita.bici.application.url`
 
 4. Rezip `api-configuration-<VERSION>.zip`
 
@@ -252,8 +249,8 @@ This method is the not recommended way, but can be used if you want fine control
 │   └── page.properties
 ```
 
-3. Edit the file `configuration.properties` to configure `bonita.ici.application.url`
-
+3. Edit the file `configuration.properties` to configure `bonita.bici.application.url`
+        
 4. Rezip `api-monitoring-<VERSION>.zip`
 
 5. Login to Bonita Portal with credentials that belong to the _Administrator_ profile.
