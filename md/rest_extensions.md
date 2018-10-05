@@ -9,16 +9,16 @@ API used by Operations Management Living Application
 `GET`
 
 #### Description
-Get list of running cases
+This list of cases can be filtered by status (late, predictedLate, onTime) or using a search term
 
 #### Query parameters
 |Parameter|Type|Required|Description|
 |---------|----|--------|-----------|
 |c|integer|false|Number of elements to return|
-|p|integer|false|Page to return, start at 0|
+|p|integer|false|Page to return, starts at 0|
 |processName|string|true|Name of the process|
 |processVersion|string|false|Version of the process|
-|status|string|false|Status of the cases: late, predictedLate. onTime|
+|status|string|false|Status of the cases: late, predictedLate, onTime|
 |search|string|false|Search keyword, will search in case id and name of the initiator|
 
 ## `/bici-process-api`
@@ -26,7 +26,7 @@ Get list of running cases
 `GET`
 
 #### Description
-Get processes
+Get processes that the user is manager of
 
 #### Query parameters
 No parameters
@@ -36,14 +36,14 @@ No parameters
 `GET`
 
 #### Description
-Execute a query
+This allows to execute an analytics query.
 
 #### Query parameters
 |Parameter|Type|Required|Description|
 |---------|----|--------|-----------|
 |c|integer|false|Number of elements to return|
-|p|integer|false|Page to return, start at 0|
-|queryName|string|false|Name of the analytic query |
+|p|integer|false|Page to return, starts at 0|
+|queryName|string|false|Name of the analytics query|
 |processName|string|true|Name of the process|
 |processVersion|string|false|Version of the process. If empy, use all allowed versions|
 |parameters|object|false|Parameters required by the query|
