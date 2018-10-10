@@ -30,7 +30,7 @@ spring.datasource.hikari.maximum-pool-size=20
 
 ## Manage polling executions
 
-The polling can be handled on a page served directly on the BICI backend. By default it can be accessed on [http://localhost:8082/](http://localhost:8082/)
+The polling can be handled in BICI Configuration Living Application.
 
 This page allows to:
 * activate/deactivate the polling
@@ -42,9 +42,9 @@ This page allows to:
 
 ### Polling errors
 
-When a polling execution fails, it can be seen in error on the BICI backend. By default it can be accessed on [http://localhost:8082/](http://localhost:8082/).
+When a polling execution fails, it can be seen in error in BICI Configuration Living Application.
 
-More information is available in the output logs on the BICI backend, either in the Standard output or in the log file `logs/bonita-bici.log`
+More information is available in the output logs on the BICI backend, either in the Standard output or in the log file `logs/bonita-ici.log`
  
 ### Deleted cases
 

@@ -29,7 +29,7 @@ or edit file `/etc/sysctl.conf` file
 
 ### Installation
 
-Run the Add-on using `bonita-bici` (`bonita-bici.bat` on Windows platform) script that is located inside the `bin` folder
+Run the Add-on using `bonita-ici` (`bonita-ici.bat` on Windows platform) script that is located inside the `bin` folder
 
 This installer will do the following operations:
 
@@ -79,10 +79,10 @@ Then when using the installer provide this generated file as a keystore, the sam
 
 ### Stop the module 
 
-It can be stopped using `bonita-bici stopStorage stopApp`
+It can be stopped using `bonita-ici stopStorage stopApp`
 
 :::info
-use `./bonita-bici --help` to display all options
+use `./bonita-ici --help` to display all options
 :::
 
 ### Pass parameters using configuration file
@@ -92,7 +92,7 @@ All parameters asked by the installer can be passed using a configuration file.
 Example:
 
 ```
-./bonita-bici --file configuration.properties
+./bonita-ici --file configuration.properties
 ```
 
 The sample configuration file named `configuration.properties` contains all properties that can be configured
@@ -111,8 +111,8 @@ bonita-bici-<VERSION>.zip
     |---- la.properties                           // properties used by L.A. deployer utility
     |---- installation-guide.md                   // this file
     |---- configuration.properties                // sample configuration file
-    |---- bin/bonita-bici                          // an utility that start the dockers and deploy L.A.s
-    |---- bin/bonita-bici.bat                      // an utility that start the dockers and deploy L.A.s (Windows)
+    |---- bin/bonita-ici                          // an utility that start the dockers and deploy L.A.s
+    |---- bin/bonita-ici.bat                      // an utility that start the dockers and deploy L.A.s (Windows)
     |---- jdbc_drivers/                           // the folder where to put the jdbc driver of the Bonita platform database
 ```
 
@@ -168,7 +168,7 @@ This mode requires that the database user is allowed to create materialized view
 To activate this mode, uncomment this property in `$BICI_APPLICATION_HOME/application.properties`
 
 ```
-#bonita.bici.polling.profile=advanced
+#bonita.ici.polling.profile=advanced
 ```
 
 ### Launch
@@ -214,7 +214,7 @@ This method is the not recommended way, but can be used if you want fine control
 │   └── page.properties
 ```
 
-3. Edit the file `configuration.properties` to configure `bonita.bici.application.url`
+3. Edit the file `configuration.properties` to configure `bonita.ici.application.url`
 
 4. Rezip `api-configuration-<VERSION>.zip`
 
@@ -249,7 +249,7 @@ This method is the not recommended way, but can be used if you want fine control
 │   └── page.properties
 ```
 
-3. Edit the file `configuration.properties` to configure `bonita.bici.application.url`
+3. Edit the file `configuration.properties` to configure `bonita.ici.application.url`
         
 4. Rezip `api-monitoring-<VERSION>.zip`
 

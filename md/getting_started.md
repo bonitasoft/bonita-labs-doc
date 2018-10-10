@@ -10,9 +10,9 @@ Download BICI Add-on from [Bonitasoft Customer Portal](https://customer.bonitaso
 
 The archive contains:
 * An installation guide: `installation-guide.md`
-* The BICI application: `ici-application-<version>.zip`
+* The BICI application: `bici-application-<version>.zip`
 * Two Living Applications: *BICI Case Monitoring* with predictions, and *BICI Configuration*, to configure the first application
-* An installer: `bin/bonita-bici`
+* An installer: `bin/bonita-ici` (`bin/bonita-ici.bat` on Windows platform)
 
 ## Installation
 

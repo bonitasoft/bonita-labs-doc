@@ -2,7 +2,7 @@
 
 ## REST APIs
 
-REST APIs are not yet secured. In production only Bonita platform and the plaftorm administrator should be able to access the BICI backend by e.g. configuring your network this way.
+REST APIs are secured using HTTPS and a JWT token.
 
 ## Elasticsearch
 
