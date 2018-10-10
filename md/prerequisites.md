@@ -52,6 +52,7 @@ Software required for ICI add-on:
 | Mozilla Firefox | latest version |
 | Google Chrome | latest version |
 | Microsoft Edge | latest version |
+| Microsoft Internet Explorer | 11 |
 | **Mobile** |
 | Mozilla Firefox | latest version |
 | Google Chrome | latest version |
