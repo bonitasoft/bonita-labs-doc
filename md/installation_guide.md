@@ -4,7 +4,7 @@ Bonita ICI installation guide. It covers evaluation and production modes install
 and detailed available parameters values.  
 
 Installation can be done using *evaluation* or *production* modes. Evaluation mode will start two Docker containers 
-and deploy Living Applications. Production mode is an on-premise ICI server deployment.
+and deploy Living Applications. Production mode is an on-premise BICI server deployment.
 
 ## Hardware and software requirements
 
@@ -12,16 +12,16 @@ Check all requirements detailed in [Bonitasoft offical documentation](https://do
 
 ### Bonita platform
 First of all, you need an up and running **Bonita platform 7.5.4 or greater**.  
-ICI server will connect directly to Bonita database, in a read-only manner.
+The BICI server will connect directly to Bonita database, in a read-only manner.
 
 
 ## Evaluation mode
 
-This mode is designed to get a fully functional ICI stack including ICI server, ICI storage and Living Applications 
+This mode is designed to get a fully functional BICI stack including a BICI server, BICI storage and Living Applications 
 for configuration and operations management.
 
 :::warning
-Due to the usage of Docker containers for ICI server and storage, this mode is not recommended for a production platform.
+Due to the usage of Docker containers for the BICI server and storage, this mode is not recommended for a production platform.
 :::
 
 
@@ -44,7 +44,7 @@ This installer will do the following operations:
  
 * prompt for parameters if they are not provided in the command line
 * deploy an Elasticsearch server in a Docker container
-* configure and deploy the ICI server in a Docker container
+* configure and deploy the BICI server in a Docker container
 * deploy the two Living Applications configured to run on top of this installation.
 
 Example:
@@ -70,7 +70,7 @@ Parameters are:
 * H: the host on which this current host is accessible from bonita (i.e. the external ip),  (default 'localhost')
 
 The ports on which Elasticsearch and ICI standalone application will be deployed can be customized
-* i: the port of the deployed ICI application (default '8082') 
+* i: the port of the deployed BICI application (default '8082') 
 * e: the port of the deployed elasticsearch (default '9200')    
 
 :::info
@@ -98,21 +98,21 @@ bonita-ici-<VERSION>.zip
 
 ### Elasticsearch
 
-The ICI server requires and Elasticsearch. Supported versions are 6.2.3 or above, in cluster or single node mode. 
+The BICI server requires and Elasticsearch. Supported versions are 6.2.3 or above, in cluster or single node mode. 
 
 For more information, please refer to the [official installation guide](https://www.elastic.co/downloads/elasticsearch)
 
 
-### ICI server
+### BICI server
 
 1. Copy `ici-application-<VERSION>.zip` to the host. 
 2. Unzip it in the directory of your choice. 
 
-We will refer to the extracted directory as `ICI_APPLICATION_HOME`.
+We will refer to the extracted directory as `BICI_APPLICATION_HOME`.
 
 #### Configuration
 
-Edit `$ICI_APPLICATION_HOME/application.properties` to configure the application.
+Edit `$BICI_APPLICATION_HOME/application.properties` to configure the application.
 Mandatory parameters are:
 
 In Elasticsearch configuration
@@ -132,11 +132,11 @@ bonita.datasource.username              // username used to connect to the Bonit
 bonita.datasource.password              // password associated to the user used to connect to Bonita database
 ```
 
-Oracle only: copy Jdbc driver in `$ICI_APPLICATION_HOME/lib` (drivers for PostgreSQL, MySQL and MS SqlServer are already provided).
+Oracle only: copy Jdbc driver in `$BICI_APPLICATION_HOME/lib` (drivers for PostgreSQL, MySQL and MS SqlServer are already provided).
 
 #### Advanced configuration
 
-Other parameters are available in `$ICI_APPLICATION_HOME/application.properties`.  
+Other parameters are available in `$BICI_APPLICATION_HOME/application.properties`.  
 We recommend you to read this file and change other parameters if needed.
 
 #### Advanced polling profile mode (Oracle only)
@@ -144,7 +144,7 @@ We recommend you to read this file and change other parameters if needed.
 This mode requires that the database user is allowed to create materialized views. To grant this, use 
 `GRANT CREATE MATERIALIZED VIEW TO <USER>` using a SYS connection prior to start the application.  
 
-To activate this mode, uncomment this property in `$ICI_APPLICATION_HOME/application.properties`
+To activate this mode, uncomment this property in `$BICI_APPLICATION_HOME/application.properties`
 
 ```
 #bonita.ici.polling.profile=advanced
@@ -152,12 +152,12 @@ To activate this mode, uncomment this property in `$ICI_APPLICATION_HOME/applica
 
 ### Launch
 
-To launch the application, simply run `$ICI_APPLICATION_HOME/bin/bonita-ici` on Linux 
-or `$ICI_APPLICATION_HOME/bin/bonita-ici.bat` on Windows.
+To launch the application, simply run `$BICI_APPLICATION_HOME/bin/bonita-ici` on Linux 
+or `$BICI_APPLICATION_HOME/bin/bonita-ici.bat` on Windows.
 
-This will start a web server on port 8082 by default (if not changed in `$ICI_APPLICATION_HOME/application.properties`)
+This will start a web server on port 8082 by default (if not changed in `$BICI_APPLICATION_HOME/application.properties`)
 
-### Installation of ICI Living Applications
+### Installation of BICI Living Applications
 
 #### Using the deployer
 
