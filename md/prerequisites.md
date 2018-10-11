@@ -1,15 +1,15 @@
 # Pre-requisites
 
-Bonita Intelligent Continuous Improvement prerequisites list all required environment to operate ICI add-on.
+Bonita Intelligent Continuous Improvement prerequisites lists all required environment to operate BICI Add-on.
 
 ## Hardware
 
-We recommend to use a dedicated server for ICI, and for the ICI storage. 
+We recommend to use a dedicated server for BICI, and for the BICI storage. 
 
-### ICI server
+### BICI server
 
 
-Hardware required for ICI server:
+Hardware required for BICI server:
 
 | Type | Minimum | Recommended |
 |:-|:-|:-|
@@ -31,7 +31,7 @@ If you deploy elastic on premise, we recommend to follow official [elastic suppo
 ## Software
 
 
-Software required for ICI add-on:
+Software required for BICI Add-on:
 
 | | Version
 |:-|-
@@ -58,19 +58,19 @@ Software required for ICI add-on:
 | Apple Safari | latest version |
 
 Notes:
-1. ICI can be executed on Java 8. Java 9 and above are not yet supported. 
+1. BICI can be executed on Java 8. Java 9 and above are not yet supported. 
 1. All subscription edition are supported.
 1. Archive must be activated
-1. ICI has its own connection pool to connect to Bonita engine database. Ensure database has available connections 
+1. BICI has its own connection pool to connect to Bonita engine database. Ensure database has available connections 
 in addition to Bonita connections
 
 :::info    
-When installing ICI in evaluation mode, an active Internet connexion is required to download Docker images.    
+When installing BICI in evaluation mode, an active Internet connexion is required to download Docker images.    
 :::
 
 ## Skills
 
-ICI is not a Data Scientist tooling, so no particular skills are required to use the add-on
+BICI is not a Data Scientist tooling, so no particular skills are required to use the add-on
 
 ## Data
 
