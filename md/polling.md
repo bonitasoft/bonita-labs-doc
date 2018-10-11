@@ -6,7 +6,7 @@ The first time BICI backend is launched, all data regarding case and task execut
 
 ## Configuration
 
-All these configuration can be set in the `application.properties` of the BICI backend.
+All these configuration items can be set in the `application.properties` of the BICI backend.
 
 Bonita platform database connection informations
 ```
@@ -45,9 +45,3 @@ This page allows to:
 When a polling execution fails, it can be seen in error in BICI Configuration Living Application.
 
 More information is available in the output logs on the BICI backend, either in the Standard output or in the log file `logs/bonita-ici.log`
- 
-### Deleted cases
-
-When a started case is already polled in BICI storage and then deleted in Bonita platform, this case is still present 
-in BICI storage and will still be displayed in Operation Management Living app, but this overview can't be displayed 
-anymore since data is deleted from Bonita database .   
