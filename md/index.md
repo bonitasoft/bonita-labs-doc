@@ -1,7 +1,7 @@
 # Bonita Intelligent Continuous Improvement Add-on
 This page explains the values and content of Bonita ICI Add-on, which is composed of a standalone application connected to Bonita Engine database, and two Living Applications: one with configuration elements, and one to monitor open cases for SLA compliance.
 
-![Bonita ICI Add-on architecture](images/ici.png)
+![Bonita ICI Add-on logo](images/ici.png)
 
 ## Business values
 
