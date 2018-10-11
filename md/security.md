@@ -6,7 +6,7 @@ REST APIs are not yet secured. In production only Bonita platform and the plafto
 
 ## Elasticsearch
 
-Elasticsearch access should be restricted to the BICI backend. Alternativly you can use Elasticsearch editions that contains security features [see Elasticsearch documentation](https://www.elastic.co/guide/en/x-pack/current/xpack-security.html).
+Elasticsearch access should be restricted to the BICI backend. Alternatively, you can use Elasticsearch editions that contains security features [see Elasticsearch documentation](https://www.elastic.co/guide/en/x-pack/current/xpack-security.html).
 
 ## REST API extensions
 
