@@ -2,7 +2,7 @@
 
 Bonita Intelligent Continuous Improvement Add-on (BICI) extracts data of the Bonita Engine database, transforms it, and stores documents in an Elasticsearch storage engine. A set of REST APIs allow to query this storage. Those APIs are used in two Living Applications deployed on Bonita Platform to configure processes and render predictions.   
 
-![Bonita Intelligent Continuous Improvement Add-on Architecture](images/ici_architecture.png)
+![Bonita Intelligent Continuous Improvement Add-on Architecture](images/bici_architecture.png)
 
 ## Overview
 
@@ -25,19 +25,19 @@ The "Operations Management" Living Application is a mobile first -usable on a de
 The backend server polls data, creates process mining models, and serves the REST APIs.
 
 :::info
-ICI Server is secured by https and a security token to only allow requests from Bonita server.
+BICI Server is secured by https and a security token to only allow requests from Bonita server.
 Calls with other origins are rejected with a 403 (Forbidden) response code.
 :::
 
 ### BICI storage
 
-It stores ICI data and predictive models, and it relies on Elasticsearch engine.
+It stores BICI data and predictive models, and it relies on Elasticsearch engine.
 
-### BICI Configuration Living Application
+### _BICI Configuration_ Living Application
 
 This Living Application is used to configure the processes.
 
-### BICI Operation Management Living Application
+### _BICI Operation Management_ Living Application
 
 This Living Application is used to display case execution information and predictions to the Operation Managers.
   

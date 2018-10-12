@@ -1,12 +1,12 @@
-# Poll data from Bonita platform to ICI Module
+# Poll data from Bonita platform to BICI Add-on
 
-In order to learn from the history of all executed processes in Bonita platform, ICI backend need to access and poll data from Bonita platform database.
+In order to learn from the history of all executed processes in Bonita platform, BICI backend need to access and poll data from Bonita platform database.
 
-The first time ICI backend is launched, all data regarding case and task execution is retrieved from the Bonita platform database. Then, every 15 minutes (default configuration), a job updates the module with data of newly executed tasks and cases.
+The first time BICI backend is launched, all data regarding case and task execution is retrieved from the Bonita platform database. Then, every 15 minutes (default configuration), a job updates the module with data of newly executed tasks and cases.
 
 ## Configuration
 
-All these configuration can be set in the `application.properties` of the ICI backend.
+All these configuration items can be set in the `application.properties` of the BICI backend.
 
 Bonita platform database connection informations
 ```
@@ -15,22 +15,22 @@ bonita.datasource.username=username
 bonita.datasource.password=password
 ```
 
-If you use oracle you need to add your driver `lib` folder of the ICI backend ( or in the `jdbc_driver` folder of the  installer if you use it).
+If you use Oracle, you need to add your driver `lib` folder of the BICI backend (or in the `jdbc_driver` folder of the installer).
 
-Polling rate interval, i.e. at each rate the data in ICI backend will be updated
+Polling rate interval, i.e. at each rate the data in BICI backend will be updated
 ```
-bonita.ici.polling.rate_minute=15
+bonita.bici.polling.rate_minute=15
 ```
 
 The connection pool of this polling can be configured to limit or increase the polling velocity.
-It can be useful to decrease it when you want to limit the impact of the ICI modules on Bonita platform's performances.
+It can be useful to decrease it when you want to limit the impact of BICI Add-on on Bonita platform's performances.
 ```
 spring.datasource.hikari.maximum-pool-size=20
 ```
 
 ## Manage polling executions
 
-The polling can be handled on a page served directly on the ICI backend. By default it can be accessed on [http://localhost:8082/](http://localhost:8082/)
+The polling can be handled in BICI Configuration Living Application.
 
 This page allows to:
 * activate/deactivate the polling
@@ -42,12 +42,6 @@ This page allows to:
 
 ### Polling errors
 
-When a polling execution fails, it can be seen in error on the ICI backend. By default it can be accessed on [http://localhost:8082/](http://localhost:8082/).
+When a polling execution fails, it can be seen in error in BICI Configuration Living Application.
 
-More information would be available in output logs on the ICI backend, either in the Standard output or in the log file `logs/bonita-ici.log`
- 
-### Deleted cases
-
-When a started case is already polled in ICI storage and then deleted in Bonita platform, this case is still present 
-in ICI storage and will still be displayed in Operation Management Living app, but this overview can't be displayed 
-anymore since data is deleted from Bonita database .   
+More information is available in the output logs on the BICI backend, either in the Standard output or in the log file `logs/bonita-ici.log`
