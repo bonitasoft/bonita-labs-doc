@@ -1,27 +1,27 @@
 # Getting started
 
-Bonita Intelligent Continuous Improvement Add-on (ICI Add-on) installation and configuration instructions. 
+Bonita Intelligent Continuous Improvement Add-on (BICI Add-on) installation and configuration instructions. 
 
 This chapter covers *Evaluation* and *Production*, two different installation modes.
 
 ## Download
 
-Download ICI Add-on from [Bonitasoft Customer Portal](https://customer.bonitasoft.com/).
+Download BICI Add-on from [Bonitasoft Customer Portal](https://customer.bonitasoft.com/).
 
 The archive contains:
 * An installation guide: `installation-guide.md`
-* The ICI application: `ici-application-<version>.zip`
+* The BICI application: `ici-application-<version>.zip`
 * Two Living Applications: Case Monitoring with predictions, and Configuration of the first application
 * An installer: `bin/bonita-ici`
 
 ## Installation
 
-Installation can be done in a *Evaluation* or *Production* mode. The major difference between those modes is that in the *Evaluation* mode, Elasticsearch and ICI servers are provided in Docker containers, with basic settings.  
-This mode is very easy to install, to get immediate value from the ICI add-on.  
+Installation can be done in a *Evaluation* or *Production* mode. The major difference between those modes is that in the *Evaluation* mode, Elasticsearch and BICI servers are provided in Docker containers, with basic settings.  
+This mode is very easy to install, to get immediate value from the BICI Add-on.  
 
-However, to ensure the best performance of a system using Elasticsearch, advanced settings are needed. This means that the ICI Add-on installed in *Evaluation* mode may not handle a large volume of data efficiently.   
+However, to ensure the best performance of a system using Elasticsearch, advanced settings are needed. This means that the BICI Add-on installed in *Evaluation* mode may not handle a large volume of data efficiently.   
 
-So, for production, we recommand to switch to a clusterized and configured Elasticsearch instance, and install ICI on *Production* mode.
+So, for production, we recommand to switch to a clusterized and configured Elasticsearch instance, and install BICI on *Production* mode.
  
 :::info
 Check all [pre-requisites](./prerequisites.md) prior to install.
@@ -31,7 +31,7 @@ Check all [pre-requisites](./prerequisites.md) prior to install.
 
 1. Ensure you have java installed, using command `java -version`
 2. Ensure you have Docker installed, using command `docker --version`
-3. Docker requires an active Internet connection to pull the Elasticsearch Docker image and to build the ICI application image
+3. Docker requires an active Internet connection to pull the Elasticsearch Docker image and to build the BICI application image
 4. Follow the installation guide "evaluation mode" instructions from the archive.
 
 ### Production mode

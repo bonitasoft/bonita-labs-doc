@@ -1,6 +1,6 @@
 # Release notes
 
-## What's in ICI v1.0.0 
+## What's in BICI v1.0.0 
 
 * A mechanism to incrementally retrieve Data from Bonita platform database.
 * A process mining algorithm that predict what are the chances that a case will finish in time and how much time it will take.
@@ -10,7 +10,7 @@
 ## Limitations and known issues
 
 * The process mining algorithm does not yet take into account your business data. It will be relevant only on processes which their duration are correlated to the path that is taken in the process.
-* No security mechanism implemented in the ICI backend. It is up to you to secure the access to the ICI backend REST APIs.
+* No security mechanism implemented in the BICI backend. It is up to you to secure the access to the BICI backend REST APIs.
 
 ## Bug fixes
 
@@ -25,5 +25,5 @@
 * ICI-826 Some logs are printed when connection to database is not UP	
 * ICI-837 Polling status displays "finishing" status before "running"	
 * ICI-847 No percentage displayed when case is late since less than 1 hour
-* ICI-853 Connection errors to ici storage are not displayed properly in polling status page
+* ICI-853 Connection errors to BICI storage are not displayed properly in polling status page
 * ICI-855 Polling fails when a case is deleted in Bonita database

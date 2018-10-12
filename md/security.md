@@ -2,11 +2,11 @@
 
 ## REST APIs
 
-REST APIs are not yet secured. In production only Bonita platform and the plaftorm administrator should be able to access ICI backend by e.g. configuring your network this way.
+REST APIs are not yet secured. In production only Bonita platform and the plaftorm administrator should be able to access BICI backend by e.g. configuring your network this way.
 
 ## Elasticsearch
 
-Elasticsearch access should be restricted to the ICI backend. Alternativly you can use Elasticsearch editions that contains security features [see Elasticsearch documentation](https://www.elastic.co/guide/en/x-pack/current/xpack-security.html).
+Elasticsearch access should be restricted to the BICI backend. Alternatively, you can use Elasticsearch editions that contains security features [see Elasticsearch documentation](https://www.elastic.co/guide/en/x-pack/current/xpack-security.html).
 
 ## REST API extensions
 
