@@ -43,7 +43,7 @@ This allows to execute an analytics query.
 |---------|----|--------|-----------|
 |c|integer|false|Number of elements to return|
 |p|integer|false|Page to return, starts at 0|
-|queryName|string|false|Name of the analytics query|
+|queryName|string|true|Name of the analytics query|
 |processName|string|true|Name of the process|
 |processVersion|string|false|Version of the process. If empy, use all allowed versions|
 |parameters|object|false|Parameters required by the query|
