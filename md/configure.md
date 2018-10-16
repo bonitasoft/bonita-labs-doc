@@ -8,11 +8,15 @@ The target duration is a mandatory configuration to set. It allows the BICI Add-
 
 In the page, the target duration is configurable in calendar days.
 
-## Success rate threshold
+## Decision threshold
 
-If the success rate percentage of a case is below this success rate threshold, a case will be considered as *Predicted late*.
+This configuration is set for each process.
+It defines the percentage of likelyhood to finish on time below which a case will be considered as *Predicted late*.
 
-e.g. if the success rate threshold is 80%, all cases having a success rate percentage below 80% will be displayed as *Predicted late* in the monitoring view.
+e.g. if the decision threshold is set at 80%, all cases with a percentage lower than 80% will be displayed as predicted late in the Monitoring view, and all cases with a percentage of 80% or higher will be considered as On time.
+This use-case can be configured when the process is critical and any deviation must be tracked and trigger a corrective action. 
+
+By default, this parameter is set at 50%.
 
 ## Create the model
 
