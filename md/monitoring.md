@@ -1,14 +1,18 @@
-# Monitor cases
+# Operations Management
 
-The Operations Management Living Application contains pages that allow Operations Managers to monitor cases with more information that they could normally get by looking at cases execution.
+The Operations Management Living Application contains pages that allow Operations Managers to monitor cases with more information than they could normally get by looking at cases execution.
 
 ## Monitoring page
 
 The view is filtered by process and optionally process version.
-The artificial intelligence algorithm applies to each case a prediction of how its likelihood to finish within the target duration.
-Based on this information, the page shows a pie chart with the proportion of cases Late, Predicted late and On time.
-This helps Operations Managers to make the best short-term decision to put operations on track if needed.
+The artificial intelligence algorithm applies a prediction to each case: its likelihood to finish within the target duration, given two parameters: its execution flow so far and the time remaining before the target duration.
 
-It also contains a list of cases that displays the chances for each case to reach the target duration, according to its execution so far and the time remaining before the target duration. This remaining time is also displayed for each case.
+Based on this information, the page shows a pie chart with the proportion of cases *Late* (already behind the deadline), *Predicted late* (likelihood is below 50%), and *On time* (likelihood is 50% or above).
 
-You can click on a particular case to display its overview.  
+It also contains a tabbed list of cases that identifies each case by its ID as well as the name of the initiator. 
+For each case *On time* and *Predicted late*, the likelihood to finish on time and the remaining time are also displayed.
+For *Late* cases, the amount of time the case has been late as well as the initial due date are displayed.
+
+A click on a particular case displays its overview: current business data values as well as a timeline that shows all human tasks already done as well as the current task and its assignee.
+
+This helps Operations Managers make the best short-term decision to put operations back on track if needed, and organize the team's activity.
