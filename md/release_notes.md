@@ -5,14 +5,14 @@
     - Statistical indicators on case durations by case
     - Number of cases open per month and case status (Late or On time) at the time they were archived
     - Dispersion of case durations 10% by 10%
-* For the developer, new _Polling_ page to manage data polling from Bonita database to BICI storage
+* For the Developer, new _Polling_ page to manage data polling from Bonita database to BICI storage
+* For the Platform Administrator, a _Health check_ page, to make sure the back-end is up and running
 * New REST API extensions available for the developer to get the results of the algorithm (percentage of chances to finish on time) and use it in existing business applications.
 * Security:
     - https mechanism added
     - JWT mechanism with of auto-generated token if needed
     - Input validation implemented to protect against malicious JavaScript
 * Translation in French and Spanish
-* Health check page for the platform administration, making sure the back-end is up and running
 
 ## Improvements
 * Graphical rework of the Monitoring page: data got more readable, desktop display got more efficient
