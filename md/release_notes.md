@@ -1,11 +1,28 @@
 # Release notes
 
-## What's in BICI v1.0.0 
+## New features in BICI v1.1.0 
+* For the Operations Managers, new _Analytics_ page added to their Living Application:
+    - Statistical indicators on case durations by case
+    - Number of cases open per month and case status (Late or On time) at the time they were archived
+    - Dispersion of case durations 10% by 10%
+* For the Developer, new _Polling_ page to manage data polling from Bonita database to BICI storage
+* For the Platform Administrator, a _Health check_ page, to make sure the back-end is up and running
+* New REST API extensions available for the developer to get the results of the algorithm (percentage of chances to finish on time) and use it in existing business applications.
+* Security:
+    - https mechanism added
+    - JWT mechanism with of auto-generated token if needed
+    - Input validation implemented to protect against malicious JavaScript
+* Translation in French and Spanish
 
-* A mechanism to incrementally retrieve Data from Bonita platform database.
-* A process mining algorithm that predict what are the chances that a case will finish in time and how much time it will take.
-* A living application that allows to define the target for each of these processes.
-* A living application that allows to view cases along with their prediction.
+## Improvements
+* Graphical rework of the Monitoring page: data got more readable, desktop display got more efficient
+* New _Search_ field on case ID (even partial) and case initiator
+* Case overview page shows the current tasks and their assignees
+* Better access right management of process versions and cases
+* The installation procedure does not start the scheduled polling automatically
+* Full support of IE11
+* Better error management on both Living Applications
+
 
 ## Limitations and known issues
 
@@ -14,16 +31,11 @@
 
 ## Bug fixes
 
-### Fixes in Bonita Intelligent Continuous Improvement 1.0.2
-* ICI-854  As Omar, I don't want to see deleted cases (either automatic or manual delete) in my case list
-* ICI-901  Installer should not display password in debug mode
-* ICI-900  Typo in interactive installer 
-* ICI-899  Start command in evaluation mode should not ask host name from bonita
-
-### Fixes in Bonita Intelligent Continuous Improvement 1.0.1
-* ICI-848 Document why deleted cases are displayed in Operations Management Living Application	
-* ICI-826 Some logs are printed when connection to database is not UP	
-* ICI-837 Polling status displays "finishing" status before "running"	
-* ICI-847 No percentage displayed when case is late since less than 1 hour
-* ICI-853 Connection errors to BICI storage are not displayed properly in polling status page
-* ICI-855 Polling fails when a case is deleted in Bonita database
+### Fixes in Bonita Intelligent Continuous Improvement 1.1.0
+* ICI-1045 On configuration page, unable to update "Confidence threshold" if "Target duration" is empty
+* ICI-923  Process version are not filtered regarding access right
+* ICI-922  Process version should be listed from bonita and not from elastic
+* ICI-921  [doc] architecture image is a bit too wide. Scrolling is needed which is not that great
+* ICI-920  Cases with 50% chances are in the On-time tab but are orange. They should be green.
+* ICI-898  [EDGE] error pop up has a big icon
+* ICI-856  Navigation in Omar's LA looses current tab when returning back from overview
