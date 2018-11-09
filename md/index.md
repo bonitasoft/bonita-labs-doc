@@ -1,5 +1,7 @@
 # Bonita Intelligent Continuous Improvement Add-on
-This page explains the values and content of Bonita ICI Add-on, which is composed of a standalone application connected to Bonita Engine database, and two Living Applications: one with configuration elements, and one to monitor open cases for SLA compliance as well as a dasboard with statistics on case duration.
+Monitor the duration of open cases, get help from an Artifical Intelligence algorithm providing the chances for each case to finish within a target duration, and follow the trends on the longer term thanks to the Analytics dashboard.
+
+This page explains the values and content of Bonita ICI Add-on, which is composed of a standalone application connected to Bonita Engine database, and two Living Applications: one for the Configuration of business elements and algorithm, and one for Operations Management.
 
 ![Bonita ICI Add-on logo](images/ici.png)
 
