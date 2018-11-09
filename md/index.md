@@ -1,37 +1,20 @@
 # Bonita Intelligent Continuous Improvement Add-on
-This page explains the values and content of Bonita ICI Add-on, which is composed of a standalone application connected to Bonita Engine database, and two Living Applications: one with configuration elements, and one to monitor open cases for SLA compliance.
+This page explains the values and content of Bonita ICI Add-on, which is composed of a standalone application connected to Bonita Engine database, and two Living Applications: one with configuration elements, and one to monitor open cases for SLA compliance as well as a dasboard with statistics on case duration.
 
 ![Bonita ICI Add-on logo](images/ici.png)
-
-## Business values
-
-### Decision support: short term improvement
-
-![Bonita ICI Add-on Omar](images/omar.png)
-
-This add-on provides a solution to support decision-making in the context of process execution that involves a compliance to "Service Level of Agreements".  
-
-It is designed to help Operations Managers to insure that the execution of processes they supervise reaches efficiency standards, and as much as possible, avoid penalties that may occur when SLAs are not met.  
-
-By analyzing data from the BPM archives, BICI Add-on predicts whether an open case has good chances to finish within the contractual SLA or not.  
-Cases that are predicted late on the supervised processes are highlighted, so the operations manager can take corrective actions while there is still time, so as to improve the overall operational efficiency of the team.
-
-This is made possible by implementing a process mining algorithm, that uses both timestamps of all BPM events and the id of each process instance in Bonita archives to build the path that each case has taken and its history.
-
-### Descriptive analytics: long term improvement
-
-BICI Add-on also provides a solution to detect areas of improvements like fixing the process design or adapting the resources to workload peaks.
-The data extracted from Bonita database can be used to build charts that give meaning to process execution.  
-Process managers get to detect patterns, performance indicators and maybe pinpoint execution flaws.  
 
 <div class="col-md-4">
 <div class="panel panel-default">
 <div class="panel-heading">Highlights</div>
 <div class="panel-body">
-<div style="padding: 15px; padding-bottom: 0px;">Find out what’s in Bonita ICI Add-on! Read the release notes.</div>
 <div class="menu-block-wrapper">
-
-* [:fa-angle-double-right: Release Notes](release_notes.md)
+* [Release notes](release-notes.md)<!--{li:.first .leaf}-->
+* For the Operations Managers, new _Analytics_ dashboard<!--{li:.first .leaf}-->
+* For the Developer, new _Polling_ page<!--{li:.first .leaf}-->
+* New REST API extensions available<!--{li:.first .leaf}-->
+* Enhanced Security: https, JWT, and input validation - checked!<!--{li:.first .leaf}-->
+* Translation in French and Spanish<!--{li:.first .leaf}-->
+* Lots of graphical improvements on the Monitoring page for better readability<!--{li:.first .leaf}-->
 <!--{ul:.menu .nav}-->
 </div>
 </div>
@@ -65,3 +48,5 @@ Process managers get to detect patterns, performance indicators and maybe pinpoi
 </div>
 </div>
 </div>
+
+
