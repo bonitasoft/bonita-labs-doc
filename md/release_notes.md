@@ -32,10 +32,10 @@
 ## Bug fixes
 
 ### Fixes in Bonita Intelligent Continuous Improvement 1.1.0
-ICI-1045 On configuration page, unable to update "Confidence threshold" if "Target duration" is empty
-ICI-923	Process version are not filtered regarding access right
-ICI-922	Process version should be listed from bonita and not from elastic
-ICI-921	[doc] architecture image is a bit too wide. Scrolling is needed which is not that great
-ICI-920	Cases with 50% chances are in the On-time tab but are orange. They should be green.
-ICI-898	[EDGE] error pop up has a big icon
-ICI-856	Navigation in Omar's LA looses current tab when returning back from overview
+* ICI-1045 On configuration page, unable to update "Confidence threshold" if "Target duration" is empty
+* ICI-923  Process version are not filtered regarding access right
+* ICI-922  Process version should be listed from bonita and not from elastic
+* ICI-921  [doc] architecture image is a bit too wide. Scrolling is needed which is not that great
+* ICI-920  Cases with 50% chances are in the On-time tab but are orange. They should be green.
+* ICI-898  [EDGE] error pop up has a big icon
+* ICI-856  Navigation in Omar's LA looses current tab when returning back from overview
