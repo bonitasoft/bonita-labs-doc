@@ -3,24 +3,27 @@ This page explains the values and content of Bonita ICI Add-on, which is compose
 
 ![Bonita ICI Add-on logo](images/ici.png)
 
+
 <div class="col-md-4">
 <div class="panel panel-default">
 <div class="panel-heading">Highlights</div>
 <div class="panel-body">
 <div class="menu-block-wrapper">
-* [Release notes](release-notes.md)<!--{li:.first .leaf}-->
-* For the Operations Managers, new _Analytics_ dashboard<!--{li:.first .leaf}-->
-* For the Developer, new _Polling_ page<!--{li:.first .leaf}-->
-* New REST API extensions available<!--{li:.first .leaf}-->
-* Enhanced Security: https, JWT, and input validation - checked!<!--{li:.first .leaf}-->
-* Translation in French and Spanish<!--{li:.first .leaf}-->
-* Lots of graphical improvements on the Monitoring page for better readability<!--{li:.first .leaf}-->
-<!--{ul:.menu .nav}-->
-</div>
-</div>
-</div>
-</div>
+  
+* [Release notes](release-notes.md)  <!--{li:.first .leaf}-->
+* For the Operations Managers, new _Analytics_ dashboard  <!--{li:.first .leaf}-->
+* For the Developer, new _Polling_ page  <!--{li:.first .leaf}-->
+* New REST API extensions available  <!--{li:.first .leaf}-->
+* Enhanced Security: https, JWT, and input validation - checked!  <!--{li:.first .leaf}-->
+* Translation in French and Spanish  <!--{li:.first .leaf}-->
+* Lots of graphical improvements on the Monitoring page for better readability  <!--{li:.first .leaf}-->
 
+<!--{ul:.menu .nav}-->
+
+</div>
+</div>
+</div>
+</div>
 <div class="col-md-4">
 <div class="panel panel-default">
 <div class="panel-heading">Getting started</div>
