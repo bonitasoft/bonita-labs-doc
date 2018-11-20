@@ -27,7 +27,6 @@
 ## Limitations and known issues
 
 * The process mining algorithm does not yet take into account your business data. It will be relevant only on processes which their duration are correlated to the path that is taken in the process.
-* No security mechanism implemented in the BICI backend. It is up to you to secure the access to the BICI backend REST APIs.
 
 ## Bug fixes
 
