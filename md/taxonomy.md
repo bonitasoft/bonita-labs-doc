@@ -5,8 +5,8 @@
 * [Getting started](getting_started.md)
 * [Installation guide](installation_guide.md)
 * [Poll data from Bonita Engine database](polling.md)
-* [Configure Operations Management Living Application](configure.md)
-* [Monitor cases](monitoring.md)
+* [Configuration Living Application](configure.md)
+* [Operations Management Living Application](monitoring.md)
 * [REST API extensions](rest_extensions.md)
 * [Send us (anonymous) data!](send_data.md)
 
