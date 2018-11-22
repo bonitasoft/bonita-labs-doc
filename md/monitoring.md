@@ -38,7 +38,7 @@ A partition of the bars stands for the cases that have ended in the *On time* st
 ### Distribution of case duration
 This bar chart gives the percentiles.
 
-In descriptive statistics, a percentile, or percentile, is each of the 99 values that divide the sorted data into 100 equal parts, so that each part represents 1/100 of the population sample.
+In descriptive statistics, a percentile is each of the 99 values that divide the sorted data into 100 equal parts, so that each part represents 1/100 of the population sample.
 
 The percentiles are represented by graphs that indicate the case duration and are defined by numbers: 10, 20, 30, 40, 50, 60, 70, 80, 90, 100. 
 
