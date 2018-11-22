@@ -32,12 +32,17 @@ Over the period of time selected, minimum duration, maximum duration, mean, medi
 The target duration is recalled as a KPI for comparison.
 
 ### Number of cases opened per month, sorted by status at the time they ended (on-time or late)
-Over the time period selected, this stacked-bar chart gives an overview of the number of cases opened by month.
-A partition of the bars stands for the cases that have ended in the *On time* status, the other partition stands for the cases that have ended in the *Late* status. The percentage and counts of each partition is indicated in the tooltip of each bar. 
+Over the time period selected, this stacked bar chart gives an overview of the number of cases opened by month.
+A partition of the bars stands for the cases that have ended in the *On time* status, the other partition stands for the cases that have ended in the *Late* status. The counts of each partition is indicated in the tooltip of each bar. 
 
 ### Distribution of case duration
-This bar chart gives the distribution of case duration.
-Each bar represents 10% of the total number of cases archived over the time period selected.
-The duration of the longest case in this slice of 10% is given in the tooltip of each bar.
+This bar chart gives the percentiles.
+
+In descriptive statistics, a percentile is each of the 99 values that divide the sorted data into 100 equal parts, so that each part represents 1/100 of the population sample.
+
+The percentiles are represented by graphs that indicate the case duration and are defined by numbers: 10, 20, 30, 40, 50, 60, 70, 80, 90, 100. 
+
+#### How to interpret percentiles ?
+For example, for the 30th percentile, the case duration is 2 days, which means that 30% of the archived cases considered ended within 2 days.
 
 Raw values, trends, and comparison with the KPI will help decision making for the continuous improvement of process execution and user experience.
