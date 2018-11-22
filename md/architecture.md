@@ -22,7 +22,7 @@ The "Operations Management" Living Application is a mobile first -usable on a de
 
 ### BICI server
  
-The backend server polls data, creates process mining models, and serves the REST APIs.
+The backend server polls data, creates process mining models, and serves protected REST apis.
 
 :::info
 BICI Server is secured by https and a security token to only allow requests from Bonita server.
@@ -35,9 +35,11 @@ It stores BICI data and predictive models, and it relies on Elasticsearch engine
 
 ### _BICI Configuration_ Living Application
 
-This Living Application is used to configure the processes.
+This Living Application is used to configure the processes and verify that data are up to date in the BICI storage.
 
 ### _BICI Operation Management_ Living Application
 
-This Living Application is used to display case execution information and predictions to the Operation Managers.
+This Living Application is used to:
+* Display case execution information and predictions to the Operation Managers.
+* Provide analytics on executed cases.
   
