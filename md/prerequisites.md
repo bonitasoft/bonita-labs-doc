@@ -45,9 +45,9 @@ Software required for BICI Add-on:
 | **Bonita platform** | 
 | Bonita | 7.5.4 and higher (see note 2, 3 and 4) |
 | **Storage** | 
-| Elasticsearch | 6.2.4 and higher (unless using evaluation mode)|
+| Elasticsearch | 6.2.4 and higher (unless using the docker version launched by the installer)|
 | **Docker** | 
-| Docker | 18.03 and higher (only if using evaluation mode)|
+| Docker | 18.03 and higher|
 | **Browser** |
 | Mozilla Firefox | latest version |
 | Google Chrome | latest version |
@@ -60,9 +60,9 @@ Software required for BICI Add-on:
 
 Notes:
 1. BICI can be executed on Java 8. Java 9 and above are not yet supported. 
-1. All Subscription editions are supported.
-1. Archive must be activated
-1. BICI has its own connection pool to connect to Bonita engine database. Ensure database has available connections 
+2. All Subscription editions are supported.
+3. Archive must be activated
+4. BICI has its own connection pool to connect to Bonita engine database. Ensure database has available connections 
 in addition to Bonita connections
 
 :::info    
