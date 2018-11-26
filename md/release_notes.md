@@ -9,19 +9,22 @@
 * For the Platform Administrator, a _Health check_ page, to make sure the back-end is up and running
 * New REST API extensions available for the developer to get the results of the algorithm (percentage of chances to finish on time) and use it in existing business applications.
 * Security:
-    - https mechanism added
-    - JWT mechanism with of auto-generated token if needed
+    - https activated by default and configured by the installer
+    - JWT mechanism to secure BICI back-end APIs
     - Input validation implemented to protect against malicious JavaScript
 * Translation in French and Spanish
+* Automatic migration of data to 1.1.0 on startup
+* Documentation of rest api extensions is provided in a [OpenAPI v3](https://openapi.tools/) format ( `api-doc.yml` in the rest api extension zip file )
 
 ## Improvements
 * Graphical rework of the Monitoring page: data got more readable, desktop display got more efficient
 * New _Search_ field on case ID (even partial) and case initiator
 * Case overview page shows the current tasks and their assignees
-* Better access right management of process versions and cases
+* Better access right management of process versions and cases. A user can only see cases of processes he is the manager of
 * The installation procedure does not start the scheduled polling automatically
 * Full support of IE11
 * Better error management on both Living Applications
+* Re installation (or upgrade) of BICI do not loose the mapping made on the profile
 
 
 ## Limitations and known issues
