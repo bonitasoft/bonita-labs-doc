@@ -32,12 +32,29 @@ or edit file `/etc/sysctl.conf` file
 Run the Add-on using `bonita-ici` (`bonita-ici.bat` on Windows platform) script that is located inside the `bin` folder
 
 This installer will do the following operations:
-
-* deploy an Elasticsearch server in a Docker container
-* configure and deploy the BICI server in a Docker container
-* deploy the two Living Applications configured to run on top of this installation.
+* `stopApp`: stop and remove any existing BICI back-end running
+* `stopStorage`: stop and remove any BICI storage (elasticsearch) docker container
+* `startStorage`: deploy an Elasticsearch server in a Docker container
+* `startApp`: configure and deploy the BICI server in a Docker container
+* `deploy`: deploy the two Living Applications configured to run on top of this installation.
 
 All required parameters are asked in the command line.
+
+### Installation with a manually installed Elasticsearch
+
+If you want to use a your own manually installed elasticsearch, change the following properties from the `configuration.properties` File:
+```
+elasticsearch.port=<port of the elasticsearch>
+elasticsearch.host=<host of the elasticsearch>
+```
+
+Then run the installer like this:
+```
+bonita-ici startApp deploy
+```
+
+It will not try to start the bonita-storage (Elasticsearch) docker container and it will use the elasticsearch specified in the `configuration.properties` File.
+
 
 ### SSL configuration
 
