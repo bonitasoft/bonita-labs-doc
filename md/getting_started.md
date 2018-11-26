@@ -26,7 +26,7 @@ The installer rely on docker to deploy all components of BICI.
 2. Ensure you have Docker installed, using command `docker --version`
 3. Docker requires an active Internet connection to pull the Elasticsearch Docker image and to build the BICI application image
 4. Unzip the application  `bici-application-<version>.zip`
-5. Run `bin/bonita-ici` (`bin/bonita-ici.bat` on Windows platform)
+5. Run `bin/bonita-ici` (`bin/bonita-ici.bat` on Windows platform). or `sudo bin/bonita-ici`, if docker is available only for root user
 6. Follow the instructions
 
 For more detailed informations of that, see the [installation guide](installation_guide.md).
