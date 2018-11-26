@@ -10,11 +10,11 @@
 * New REST API extensions available for the developer to get the results of the algorithm (percentage of chances to finish on time) and use it in existing business applications.
 * Security:
     - https activated by default and configured by the installer
-    - JWT mechanism to protected BICI back-end APIs
+    - JWT mechanism to secure BICI back-end APIs
     - Input validation implemented to protect against malicious JavaScript
 * Translation in French and Spanish
 * Automatic migration of data to 1.1.0 on startup
-* Documentation of rest api extensions is provided in a [OpenAPI v3](https://openapi.tools/) format
+* Documentation of rest api extensions is provided in a [OpenAPI v3](https://openapi.tools/) format ( `api-doc.yml` in the rest api extension zip file )
 
 ## Improvements
 * Graphical rework of the Monitoring page: data got more readable, desktop display got more efficient
