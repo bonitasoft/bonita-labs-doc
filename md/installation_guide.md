@@ -94,10 +94,10 @@ openssl pkcs12 -export -in /etc/letsencrypt/live/{domain}/fullchain.pem -inkey /
 
 Then when using the installer provide this generated file as a keystore, the same password for the keystore and the key, and the same alias.
 
-#### Renew certificate
+#### Update the certificate
 
 When the certificate expires, it can be renewed by reinstalling the backend (not the storage).
-
+To do so:
 * stop the backend using `bonita-ici stopApp`
 * start and deploy the backend using either the new certificate or newly generated one using `bonita-ici startApp deploy`
 
