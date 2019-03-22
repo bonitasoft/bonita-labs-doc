@@ -4,6 +4,18 @@
 
 API used by Operations Management Living Application
 
+## `/bici-case-by-id-api`
+#### Http method
+`GET`
+
+#### Description
+Return the open case related to the provided case id
+
+#### Query parameters
+|Parameter|Type|Required|Description|
+|---------|----|--------|-----------|
+|caseId|integer|false|id of the case|
+
 ## `/bici-case-api`
 #### Http method
 `GET`
