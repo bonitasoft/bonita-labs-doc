@@ -9,7 +9,7 @@ API used by Operations Management Living Application
 `GET`
 
 #### Description
-This list of cases can be filtered by status (late, predictedLate, onTime) or using a search term
+Return the open case related to the provided case id
 
 #### Query parameters
 |Parameter|Type|Required|Description|
