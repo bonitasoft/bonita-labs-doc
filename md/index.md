@@ -1,21 +1,17 @@
 # Bonita Intelligent Continuous Improvement Add-on
-Monitor the duration of open cases, get help from an Artifical Intelligence algorithm providing the chances for each case to finish within a target duration, and follow the trends on the longer term thanks to the Analytics dashboard.
+Monitor the duration of open cases, get help from an Artifical Intelligence algorithm providing the chances for each case to finish within a target duration, and follow the trends on the longer term thanks to the Analytics dashboards.
 
 This page explains the values and content of Bonita ICI Add-on, which is composed of a standalone application connected to Bonita Engine database, and two Living Applications: one for the Configuration of business elements and algorithm, and one for Operations Management.
 
 ![Bonita ICI Add-on logo](images/ici.png)
 
-
 <div class="col-md-4">
 <div class="panel panel-default">
 <div class="panel-heading">Highlights</div>
 <div class="panel-body">
-<div style="padding: 15px; padding-bottom: 0px;">For the Operations Managers, new <b>Analytics</b> dashboard</div>
-<div style="padding: 15px; padding-bottom: 0px;">For the Developer, new <b>Polling</b> page</div>
-<div style="padding: 15px; padding-bottom: 0px;">New REST API extensions available</div>
-<div style="padding: 15px; padding-bottom: 0px;">Enhanced Security: https, JWT, and input validation - checked!</div>
-<div style="padding: 15px; padding-bottom: 0px;">Translation in French and Spanish</div>
-<div style="padding: 15px; padding-bottom: 0px;">Lots of graphical improvements on the Monitoring page for better readability</div>
+<div style="padding: 15px; padding-bottom: 0px;">New <b>Status</b> section in BICI case execution details</div>
+<div style="padding: 15px; padding-bottom: 0px;">New tabs for Analytics: <b>Case indicators</b> tab, and <b>Task indicators</b></div>
+<div style="padding: 15px; padding-bottom: 0px;">Boost mode for polling implemented on PostgreSQL</div>
 
 * [:fa-angle-double-right: Release Notes](release_notes.md)  
 <!--{ul:.menu .nav}-->
@@ -51,5 +47,3 @@ This page explains the values and content of Bonita ICI Add-on, which is compose
 </div>
 </div>
 </div>
-
-
