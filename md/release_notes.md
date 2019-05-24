@@ -18,8 +18,11 @@ Implement a boost mode for polling on PostgreSQL. The goal of boost modes is to 
 This mode as well as the existing boost mode on Oracle are made available in the installer.
 
 ### Miscellaneous
-#### Security : Document how to input a renewed https certificate in BICI
-#### Graphical page structure : Make sure "BICI LA" accurately inherit from any CSS theme
+- Security : Document how to input a renewed https certificate in BICI
+- Graphical page structure : Make sure "BICI LA" accurately inherit from any CSS theme
 
 ## Limitations and known issues
 ## Bug fixes
+* Initial polling fails with large database when polling mode is set to advanced (ICI-1148)
+* Avoid scrollbar on case list on tablet on monitoring page (ICI-1122)
+* Elapsed time is wrong on polling status page (ICI-1002)
