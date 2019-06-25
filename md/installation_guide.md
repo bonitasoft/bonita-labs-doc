@@ -12,7 +12,7 @@ First of all, you need an up and running **Bonita platform 7.5.4 or greater**.
 BICI server will connect directly to Bonita database, in a read-only manner.
 
 
-## Using the installer
+## Installation using the installer
 
 This mode is designed to get a fully functional BICI stack including BICI server, BICI storage and Living Applications 
 for configuration and operations management.
@@ -145,41 +145,7 @@ bonita-bici-<VERSION>.zip
 ```
 
 
-### Elasticsearch
 
-The BICI server requires and Elasticsearch. Supported versions are 6.2.3 or above, in cluster or single node mode. 
-
-For more information, please refer to the [official installation guide](https://www.elastic.co/downloads/elasticsearch)
-
-
-### BICI server
-
-1. Copy `bici-application-<VERSION>.zip` to the host. 
-2. Unzip it in the directory of your choice. 
-
-We will refer to the extracted directory as `BICI_APPLICATION_HOME`.
-
-#### Configuration
-
-Edit `$BICI_APPLICATION_HOME/application.properties` to configure the application.
-Mandatory parameters are:
-
-In Elasticsearch configuration
-```
-bonita.elasticsearch.hosts              // http url(s) of the installed Elasticsearch 
-
-# when Elasticsearch endpoints are protected by authentication,
-# rest client basic authentication can be enabled by adding properties as follow
-#bonita.elasticsearch.username=admin
-#bonita.elasticsearch.password=changeme
-```
-
-In Bonita database configuration
-```
-bonita.datasource.url                   // url of Bonita Platform database
-bonita.datasource.username              // username used to connect to the Bonita database (can be a read-only user)
-bonita.datasource.password              // password associated to the user used to connect to Bonita database
-```
 
 Oracle only: copy Jdbc driver in `$BICI_APPLICATION_HOME/lib` (drivers for PostgreSQL, MySQL and MS SqlServer are already provided).
 
@@ -199,93 +165,3 @@ To activate this mode, uncomment this property in `$BICI_APPLICATION_HOME/applic
 #bonita.ici.polling.profile=advanced
 ```
 
-### Launch
-
-To launch the application, simply run `$BICI_APPLICATION_HOME/bin/bonita-bici` on Linux 
-or `$BICI_APPLICATION_HOME/bin/bonita-bici.bat` on Windows.
-
-This will start a web server on port 8082 by default (if not changed in `$BICI_APPLICATION_HOME/application.properties`)
-
-### Installation of BICI Living Applications
-
-#### Using the deployer
-
-This method is the recommended way. Use the command below, you will be prompted for required parameters
-
-```shell
-./bonita-bici deploy
-```
-
-#### Manually
-
-This method is the not recommended way, but can be used if you want fine control of deployed Living Applications.
-
-#### Living Application "Configuration"
-
-1. Unzip `la-configuration-<VERSION>.zip` :
-
-```
-├── api-configuration-<VERSION>.zip
-├── application.xml
-├── deploy.json
-├── page-configuration-<VERSION>.zip
-└── profile.xml
-```
-
-2. In the extracted folder, unzip the REST API extension named `api-configuration-<VERSION>.zip` 
-
-```
-├── api-configuration-<VERSION>
-│   ├── com
-│   ├── configuration.properties
-│   ├── lib
-│   └── page.properties
-```
-
-3. Edit the file `configuration.properties` to configure `bonita.ici.application.url`
-
-4. Rezip `api-configuration-<VERSION>.zip`
-
-5. Login to Bonita Portal with credentials that belong to the _Administrator_ profile.
-
-    * In Organization > Profiles, install profile `profile.xml` located in `la-configuration-<VERSION>.zip`  
-        * To edit the mapping of _Configuration_ profile, click on "More" in the third panel.
-        * Add all needed organization entities that will be able to access this Living Application.
-    * In Resources, install the REST API extension `api-configuration.zip` located in `la-configuration-<VERSION>.zip`
-    * In Resources, install the page `page-configuration.zip` located in `la-configuration-<VERSION>.zip`
-    * In Applications, install the Living Application `application.xml` located in `la-configuration-<VERSION>.zip`
-
-#### Living Application "Monitoring"
-
-1. Unzip `la-operations-management-<VERSION>.zip` :
-
-```
-├── api-monitoring-<VERSION>.zip
-├── application.xml
-├── deploy.json
-├── page-operations-management-<VERSION>.zip
-└── profile.xml
-```
-
-2. In the extracted folder, unzip the REST API extension named `api-monitoring-<VERSION>.zip` 
-
-```
-├── api-monitoring-<VERSION>
-│   ├── com
-│   ├── configuration.properties
-│   ├── lib
-│   └── page.properties
-```
-
-3. Edit the file `configuration.properties` to configure `bonita.ici.application.url`
-        
-4. Rezip `api-monitoring-<VERSION>.zip`
-
-5. Login to Bonita Portal with credentials that belong to the _Administrator_ profile.
-
-    * In Organization > Profiles, install profile `profile.xml` located in `la-operations-management-<VERSION>.zip`
-        * To edit the mapping of _Monitoring_ profile, click on "More" in the third panel.
-        * Add all needed organization entities that will be able to access this Living Application.
-    * In Resources, install the REST API extension `api-monitoring.zip` located in `la-operations-management-<VERSION>.zip`
-    * In Resources, install the page `page-operations-management.zip` located in `la-operations-management-<VERSION>.zip`
-    * In Applications, install the Living Application `application.xml` located in `la-operations-management-<VERSION>.zip`
