@@ -12,10 +12,16 @@ First of all, you need an up and running **Bonita platform 7.5.4 or greater**.
 BICI server will connect directly to Bonita database, in a read-only manner.
 
 
-## Installation using the installer
+## Full installation using the installer
 
 This mode is designed to get a fully functional BICI stack including BICI server, BICI storage and Living Applications 
 for configuration and operations management.
+
+
+### Full installation overview
+
+
+![Full installation using the installer](images/bici_installation_installer_full.svg)
 
 ### Pre-requisite
 
