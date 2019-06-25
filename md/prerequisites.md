@@ -45,7 +45,7 @@ Software required for BICI Add-on:
 | **Bonita platform** | 
 | Bonita | 7.5.4 and higher (see note 2, 3 and 4) |
 | **Storage** | 
-| Elasticsearch | 6.2.4 and higher (unless using the docker version launched by the installer)|
+| Elasticsearch | 6.5.3 and higher (unless using the docker version launched by the installer)|
 | **Docker** | 
 | Docker | 18.03 and higher|
 | **Browser** |
