@@ -8,19 +8,19 @@ The installation process allows to deploy BICI resources on Bonita and relies on
 ## BICI deliverable content
 
 The deliverable is composed of one standalone application, two Bonita Living Applications, and an installer that will
-help you install the backend and deploy the two Living Applications in your current instance of the Bonita platform.
+help you install the BICI Stack and deploy the two Living Applications in your Bonita instance.
 
 ```
 bonita-ici-<VERSION>.zip
-    |---- bici-application-<VERSION>.zip          // Standalone application for A.I.
-    |---- la-configuration-<VERSION>.zip          // Bonita L.A. for BICI. configuration
-    |---- la-operations-management-<VERSION>.zip  // Bonita L.A. for Operations Management
-    |---- la.properties                           // properties used by L.A. deployer utility
-    |---- installation-guide.md                   // this file
+    |---- bici-application-<VERSION>.zip          // Standalone BICI application
+    |---- la-configuration-<VERSION>.zip          // Living Application for BICI Configuration
+    |---- la-operations-management-<VERSION>.zip  // Living Application for BICI Operations Management
+    |---- la.properties                           // configuration file used to deploy BICI Living Applications
+    |---- installation-guide.md                   // this documentation
     |---- configuration.properties                // sample configuration file
-    |---- bin/bonita-ici                          // an utility that start the docker containers and deploy L.A.s
-    |---- bin/bonita-ici.bat                      // an utility that start the docker containers and deploy L.A.s (Windows)
-    |---- jdbc_drivers/                           // the folder where to put the jdbc driver of the Bonita platform database
+    |---- bin/bonita-ici                          // installer startup script
+    |---- bin/bonita-ici.bat                      // installer startup script (Windows)
+    |---- jdbc_drivers/                           // folder where to put the jdbc driver to connect to the Bonita database
 ```
 
 
@@ -31,13 +31,13 @@ For a detailed list of supported environment and tools, see the [prerequisites](
 
 ### Bonita
 
-You need an up and running Bonita Stack, the BICI application will connect directly to Bonita database.
+You need an up and running Bonita Stack, the BICI application will connect directly to the Bonita database.
 
 
-### Elasticsearch
+### BICI Storage
 
-Elasticsearch, even in a Docker container, requires a specific configuration of virtual memory on the machine that will
-host it. For more information, see [elasticsearch documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/vm-max-map-count.html)
+BICI Storage, which relies on Elasticsearch, even in a Docker container, requires a specific configuration of virtual memory
+on the machine that hosts it. For more information, see [Elasticsearch documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/vm-max-map-count.html)
 
 On a Linux host
 ```
@@ -50,7 +50,7 @@ or edit file `/etc/sysctl.conf` file
 
 ## Using the installer
 
-Extract the BICI deliverable on the host machine
+Extract the BICI deliverable on the host machine.
 
 In the following, we will use `$BICI_INSTALLER_HOME` when noticing the directory where the installer has been extracted
 on the host machine.
@@ -59,7 +59,7 @@ on the host machine.
 
 The installer relies on Docker to deploy all BICI components and is intended to be run on the Docker host directly
 
-* Ensure you have Docker installed, using command `docker --version`
+* Ensure you have Docker installed, using command `docker version`
 * Docker requires an active Internet connection to pull the Elasticsearch Docker image and to build the BICI application image
 
 #### Windows OS
@@ -77,13 +77,13 @@ set DOCKER_HOST=tcp://localhost:2375
 
 Jdbc drivers for PostgreSQL, MySQL and MS SqlServer are already provided with the installer.
 
-For Oracle only: copy Jdbc driver in `$BICI_INSTALLER_HOME/jdbc_drivers`.
+For Oracle only: copy the jdbc driver in `$BICI_INSTALLER_HOME/jdbc_drivers`.
 
 
 ## Full installation using the installer
 
-This mode is designed to get a fully functional BICI stack including BICI server, BICI storage and Living Applications 
-for configuration and operations management.
+This mode is designed to get a fully functional BICI stack including BICI Application, BICI Storage and BICI Living
+Applications for configuration and operations management.
 
 
 ### Full installation overview
@@ -93,15 +93,15 @@ for configuration and operations management.
 
 ### Installation
 
-Run the Add-on using `bonita-ici` (`bonita-ici.bat` on Windows platform) script that is located inside the `bin` folder
+Run the installer using `bonita-ici` (`bonita-ici.bat` on Windows platform) script that is located inside the `bin` folder
 
 :::info
 use `./bonita-ici --help` to display all options
 :::
 
 By default, this installer performs the following operations:
-* `stopApp`: stop and remove any existing BICI application running (Docker container)
-* `stopStorage`: stop and remove any BICI storage (elasticsearch) Docker container
+* `stopApp`: stop and remove any existing BICI Application running (Docker container)
+* `stopStorage`: stop and remove any BICI Storage (elasticsearch) Docker container
 * `startStorage`: start an Elasticsearch Docker container
 * `startApp`: configure and deploy the BICI application as a Docker container
 * `deploy`: deploy the two Living Applications configured to run on top of this installation.
@@ -109,15 +109,16 @@ By default, this installer performs the following operations:
 
 ### BICI Configuration
 
+### Pass parameters interactively
+
 All required parameters are asked in the command line.
 
 
 ### Pass parameters using configuration file
 
-All parameters asked by the installer can be passed using a configuration file.
+Parameters can be passed using a configuration file.
 
 Example:
-
 ```
 ./bonita-ici --file configuration.properties
 ```
@@ -133,18 +134,24 @@ There are two ways to configure it
 
 #### Self-signed certificate
 
+:::info
+This is not recommended for a Production use of BICI. It is recommended to get your own certificate.
+:::
+
 If you don't already have a valid certificate for you platform or does not know what it is, choose this option.
 A certificate will be generated for you based on configuration settings provided to the installer.
 
 :::info
-This is not recommended for a Production use of BICI. It is recommended to get your own certificate.
+When using this kind of certificate, the Bonita JVM must be restarted each time the BICI application and Living Applications
+are reinstalled.
 :::
+
 
 #### Provide your own certificate
 
 If you already have a certificate and the associated private key of your domain, it can be given to the installer to be used in the backend to enable the https.
 
-This certiface and the private key must be passed to the installer in a format compatible with the Java KeyStore. 
+This certificate and the private key must be passed to the installer in a format compatible with the Java KeyStore. 
 
 Common supported formats are JKS and PKCS12.
 
@@ -168,9 +175,10 @@ Then when using the installer provide this generated file as a keystore, the sam
 
 When the certificate expires, it can replaced by a new certificate generated by the installer or one that you provide.
 
-Replace it by reinstalling the backend:
+Replace it by reinstalling the BICI application and Living applications:
 * stop the BICI application using `bonita-ici stopApp`
-* start the BICI applicaiton and redeploy BICI Living Applications using either the new certificate or newly generated one using `bonita-ici startApp deploy`
+* start the BICI application and redeploy BICI Living Applications using either the new certificate or newly generated one
+using `bonita-ici startApp deploy`
 
 If the certificate is autogenerated, the Bonita JVM needs to be restarted.
 
@@ -179,8 +187,7 @@ If the certificate is autogenerated, the Bonita JVM needs to be restarted.
 
 It can be stopped using `bonita-ici stopStorage stopApp`
 
-
-
+In that case, the BICI Application and Storage containers are dropped
 
 
 ### Advanced polling profile mode
@@ -189,57 +196,43 @@ It can be stopped using `bonita-ici stopStorage stopApp`
 This mode is only available when Bonita is using an Oracle Database
 :::
 
-
 This mode requires that the database user is allowed to create materialized views. To grant this, use 
 `GRANT CREATE MATERIALIZED VIEW TO <USER>` using a SYS connection prior to start the application.  
 
-TODO entry in the configuration file + cli available???
-To activate this mode, uncomment this property in `$BICI_APPLICATION_HOME/application.properties`
-
+To activate this mode when using the configuration file, set
 ```
-#bonita.ici.polling.profile=advanced
+polling.profile=advanced
 ```
 
-
-
+When using the interactive installer mode, answer `advanced` when the `Enter Polling profile` question is asked
 
 
 
 ### Installation with a manually installed Elasticsearch
 
-
-TODO: can provide this using the cli??
-several host???
-
-
 #### Overview
 
+In that case, you request the BICI installer to perform the same operations as in the full installation but it will not
+try to start the BICI Storage Docker container and it will use the instance specified by configuration.
 
-![Full installation using the installer](images/bici_installation_installer_no_elasticsearch.svg.svg)
+![Full installation using the installer](images/bici_installation_installer_no_elasticsearch.svg)
 
 
 #### Configuration
 
-Same as 
-
-
-If you want to use a your own manually installed elasticsearch, change the following properties in the `configuration.properties` file:
+If you want to use a your own manually installed Elasticsearch, change the following properties in the `configuration.properties` file:
 ```
 elasticsearch.port=<port of the elasticsearch>
 elasticsearch.host=<host of the elasticsearch>
 ```
 
+If you use the interactive installer mode, provide the host and port of the running Elasticsearch instance when requested
+by the installer.
+
+
 #### Installation
 
-Then run the installer like this:
-
-TODO : pass the file
+Then run the installer like this (pass the configuration file option if needed):
 ```
-bonita-ici startApp deploy
+bonita-ici startApp deploy 
 ```
-
-It will not try to start the BICI Storage (Elasticsearch) docker container and it will use the elasticsearch specified in
-the `configuration.properties` File.
-
-
-
