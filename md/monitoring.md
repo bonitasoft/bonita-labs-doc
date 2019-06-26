@@ -11,7 +11,7 @@ The artificial intelligence algorithm applies a prediction to each case: its lik
 Based on this information, the page shows a pie chart with the proportion of cases *Late* (already behind the deadline), *Predicted late* (likelihood is below 50%), and *On time* (likelihood is 50% or above). 
 The decision threshold that makes cases *Predicted late* or *On time* can be configured in the [Configuration Living Application](configure.md). 
 
-It also contains a tabbed list of cases that identify each case by its ID as well as the name of the initiator. 
+It also contains a tabbed list of cases that identifies each case by its ID as well as the name of the initiator. 
 For each case *On time* and *Predicted late*, the likelihood to finish on time and the remaining time are also displayed.
 For *Late* cases, the amount of time the case has been late, as well as the initial due date are displayed.
 
@@ -28,7 +28,7 @@ This helps Operations Managers make the best short-term decision to put operatio
 ## Analytics page
 
 This page takes advantage of Bonita ICI storage, and the opportunity it gives to query archived cases database to get trends on raw indicators, as well as a comparison to Key Performance Indicators.
-This view is filtered by a process, period of time, and optionally by process version.
+This view is filtered by process and period of time, and can also be filtered by process version.
 It is made of 2 tabs.
 
 ### Case indicators
