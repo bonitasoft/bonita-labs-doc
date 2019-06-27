@@ -21,6 +21,11 @@ A click on a particular case displays its overview with:
 
 This helps Operations Managers make the best short-term decision to put operations back on track if needed, and organize the team's activity.
 
+#### Attention
+For the cases to be displayed on Monitoring Page, following condition must be met: at least 100 cases must get through the process's path. If in the process there are existing paths with less than 100 cases passed, all of these cases will not be presented here.
+
+If there are recent updates concerning the number of cases passing through the process's path and the situation have changed (there is now 100 or more cases that went through the path), than polling must be redone and model must be recomputed. Only after that, new cases will appear in the Monitoring Page.
+
 ## Analytics page
 
 This page takes advantage of Bonita ICI storage, and the opportunity it gives to query archived cases database to get trends on raw indicators, as well as a comparison to Key Performance Indicators.
