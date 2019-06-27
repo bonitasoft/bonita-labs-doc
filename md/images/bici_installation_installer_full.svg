@@ -15,7 +15,7 @@
    viewBox="0 0 214.0304 109.14297"
    version="1.1"
    id="svg8"
-   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
    sodipodi:docname="bici_installation_installer_full.svg"
    inkscape:export-filename="C:\Users\bonitasoft\Downloads\bici\bici_installation_installer_full.png"
    inkscape:export-xdpi="63"
@@ -481,15 +481,15 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1"
-     inkscape:cx="388.4051"
-     inkscape:cy="175.89277"
+     inkscape:cx="398.13673"
+     inkscape:cy="212.82589"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1366"
-     inkscape:window-height="705"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
      inkscape:window-x="-8"
-     inkscape:window-y="-8"
+     inkscape:window-y="32"
      inkscape:window-maximized="1"
      fit-margin-top="10"
      fit-margin-left="10"
@@ -590,12 +590,12 @@
          sodipodi:role="line"
          style="font-size:4.46754885px;line-height:1.25;font-family:sans-serif;text-align:center;text-anchor:middle;stroke-width:0.33506614">BICI Storage</tspan></text>
     <rect
-       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.11322118;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.12705871;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect815-3-8"
-       width="33.543152"
-       height="33.789284"
-       x="90.292526"
-       y="177.4267" />
+       width="42.260563"
+       height="33.775448"
+       x="86.595276"
+       y="177.43361" />
     <text
        inkscape:export-ydpi="63"
        inkscape:export-xdpi="63"
@@ -610,7 +610,7 @@
          y="203.96373"
          x="109.68537"
          sodipodi:role="line"
-         style="font-size:4.46754885px;line-height:1.25;font-family:sans-serif;text-align:center;text-anchor:middle;stroke-width:0.33506614">BICI App</tspan></text>
+         style="font-size:4.46754885px;line-height:1.25;font-family:sans-serif;text-align:center;text-anchor:middle;stroke-width:0.33506614">BICI Application</tspan></text>
     <rect
        style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.06639266;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect815-3-8-4"
@@ -727,7 +727,7 @@
            sodipodi:role="line"
            x="255.37399"
            y="245.25977"
-           id="tspan3159-4-7-4-5-4-5-6">Bonita Storage</tspan></text>
+           id="tspan3159-4-7-4-5-4-5-6">Bonita Database</tspan></text>
     </g>
     <image
        y="234.50087"
@@ -737,5 +737,45 @@
        preserveAspectRatio="none"
        height="6.4247818"
        width="5.5156145" />
+    <text
+       inkscape:export-ydpi="63"
+       inkscape:export-xdpi="63"
+       inkscape:export-filename="/home/truc/Documents/work/ci-infrastructure_26-jul-2016.png"
+       id="text3157-4-8-4-1-4-28"
+       y="230.71313"
+       x="181.19246"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.02079391px;line-height:0%;font-family:sans-serif;-inkscape-font-specification:'Sans Bold';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.33506614"
+       xml:space="preserve"
+       transform="scale(0.98179159,1.0185461)"><tspan
+         id="tspan3159-4-7-4-5-4-73"
+         y="230.71313"
+         x="181.19246"
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11666656px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;text-anchor:middle;stroke-width:0.33506614">Living</tspan><tspan
+         y="233.35896"
+         x="181.19246"
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11666656px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;text-anchor:middle;stroke-width:0.33506614"
+         id="tspan4805">Applications</tspan></text>
+    <text
+       inkscape:export-ydpi="63"
+       inkscape:export-xdpi="63"
+       inkscape:export-filename="/home/truc/Documents/work/ci-infrastructure_26-jul-2016.png"
+       id="text3157-4-8-4-1-4-28-6"
+       y="205.60173"
+       x="192.24884"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.02079391px;line-height:0%;font-family:sans-serif;-inkscape-font-specification:'Sans Bold';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.33506614"
+       xml:space="preserve"
+       transform="scale(0.98179159,1.0185461)"><tspan
+         id="tspan3159-4-7-4-5-4-73-0"
+         y="205.60173"
+         x="192.24884"
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11666656px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;text-anchor:middle;stroke-width:0.33506614">Advanced Polling</tspan><tspan
+         y="208.24756"
+         x="192.24884"
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11666656px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;text-anchor:middle;stroke-width:0.33506614"
+         id="tspan4805-9">configuration</tspan></text>
   </g>
 </svg>
