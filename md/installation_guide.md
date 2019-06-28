@@ -209,9 +209,9 @@ When using the interactive installer mode, answer `advanced` when the `Enter Pol
 
 
 
-### Installation with a manually installed Elasticsearch
+## Installation with a manually installed Elasticsearch
 
-#### Overview
+### Overview
 
 In that case, you request the BICI installer to perform the same operations as in the full installation but it will not
 try to start the BICI Storage Docker container and it will use the instance specified by configuration.
@@ -219,7 +219,7 @@ try to start the BICI Storage Docker container and it will use the instance spec
 ![Full installation using the installer](images/bici_installation_installer_no_elasticsearch.svg)
 
 
-#### Configuration
+### BICI Installer Configuration
 
 If you want to use a your own manually installed Elasticsearch, change the following properties in the `configuration.properties` file:
 ```
@@ -231,7 +231,7 @@ If you use the interactive installer mode, provide the host and port of the runn
 by the installer.
 
 
-#### Installation
+### Installation
 
 Then run the installer like this (pass the configuration file option if needed):
 ```
