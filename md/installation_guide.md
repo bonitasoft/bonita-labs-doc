@@ -126,6 +126,9 @@ Example:
 
 The sample configuration file named `configuration.properties` contains all properties that can be configured
 
+### BICI LA Applications deployment
+
+You must update the `la.properties` configuration file to ensure the BICI Living applications are able to communicate with the BICI application
 
 ### Https configuration
 
