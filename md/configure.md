@@ -4,8 +4,22 @@ A living application is provided with the BICI Add-on to:
 * Manage polling - check [installation guide](installation_guide.md).
 * Configure processes and compute prediction models.
 
-## Polling status
+## Polling
+
 This page show what is the current status of the synchronization of the data between Bonita Platform and BICI storage.
+In order to learn from the history of all executed processes in Bonita platform, BICI backend need to access and poll data from Bonita platform database.
+The first time BICI backend is launched, all data regarding case and task execution is retrieved from the Bonita platform database.
+Then, every 15 minutes (default configuration), a job updates the module with data of newly executed tasks and cases.
+
+### Manage polling executions
+
+The polling can be handled in BICI Configuration Living Application.
+
+This page allows to:
+* activate/deactivate the polling
+* run it immediately
+* cancel any running polling
+* see previous polling executions
 
 Refer to the [installation guide](installation_guide.md) for more details.
 
