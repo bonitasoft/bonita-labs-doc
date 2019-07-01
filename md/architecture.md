@@ -1,6 +1,6 @@
 # Architecture
 
-Bonita Intelligent Continuous Improvement Add-on (BICI) extracts data of the Bonita BPM Database, transforms it, and stores documents in an Elasticsearch storage engine. A set of REST APIs allow to query this storage. Those APIs are used in two Living Applications deployed on Bonita Platform to configure processes and render predictions.   
+Bonita Intelligent Continuous Improvement Add-on (BICI) extracts data of the Bonita BPM Database, transforms it, and stores documents in an Elasticsearch storage engine. A set of REST APIs allows to query this storage. Those APIs are used in two Living Applications deployed on Bonita Platform to configure processes and render predictions.   
 
 ![Bonita Intelligent Continuous Improvement Add-on Architecture](images/bici_architecture.png)
 
