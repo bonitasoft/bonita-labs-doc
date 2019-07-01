@@ -66,7 +66,7 @@ Notes:
 in addition to Bonita connections
 
 :::info    
-When installing BICI in evaluation mode, an active Internet connexion is required to download Docker images.    
+When installing BICI, an active Internet connexion is required to download Docker images.    
 :::
 
 ## Skills
