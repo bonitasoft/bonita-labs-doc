@@ -14,7 +14,7 @@ Return the open case related to the provided case id
 #### Query parameters
 |Parameter|Type|Required|Description|
 |---------|----|--------|-----------|
-|caseId|integer|false|id of the case|
+|caseId|integer|true|id of the case|
 
 #### Response examples
 * http://localhost:8080/bonita/apps/bici-operations-management/API/extension/bici-case-by-id-api?caseId=101
@@ -134,10 +134,10 @@ This allows to execute an analytics query.
 |---------|----|--------|-----------|
 |c|integer|false|Number of elements to return|
 |p|integer|false|Page to return, starts at 0|
-|queryName|string|true|Name of the analytics query|
+|queryName|string|true|Name of the analytics query: case-time-distribution, case-statistics, case-late-per-month, task-statistics|
 |processName|string|true|Name of the process|
-|processVersion|string|false|Version of the process. If empy, use all allowed versions|
-|parameters|object|false|Parameters required by the query|
+|processVersion|string|false|Version of the process. If empty, use all allowed versions|
+|parameters|object|false|Parameters required by the query: durationOfAnalysis, for case-time-distribution, case-statistics, case-late-per-month, task-statistics; durationInMillis, for case-late-per-month|
 
 #### Response examples
 * http://localhost:8080/bonita/apps/bici-operations-management/API/extension/bici-query-api?queryName=case-time-distribution&processName=Vacation&durationOfAnalysis=2m
