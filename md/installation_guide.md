@@ -247,7 +247,7 @@ bonita-ici startApp deploy
 
 When a polling execution fails, it can be seen in error in BICI Configuration Living Application.
 
-More information is available in the output logs on the BICI backend, either in the Standard output or in the log file.
+More information is available in the logs of the BICI Application Docker container.
 To find the logs you must get the ID of the BICI Application docker container:
 ```
 docker container ls
