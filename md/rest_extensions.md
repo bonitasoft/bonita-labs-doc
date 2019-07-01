@@ -16,6 +16,33 @@ Return the open case related to the provided case id
 |---------|----|--------|-----------|
 |caseId|integer|false|id of the case|
 
+#### Response examples
+* http://localhost:8080/bonita/apps/bici-operations-management/API/extension/bici-case-by-id-api?caseId=101
+```json
+{
+    "caseId": 101,
+    "startDate": "2019-06-17T15:27:29.044Z",
+    "startedBy": {
+        "id": 4,
+        "username": "walter.bates",
+        "firstName": "Walter",
+        "lastName": "Bates"
+    },
+    "process": {
+        "definitionId": "8662860246251890111",
+        "name": "Vacation Request Basic",
+        "version": "4.0",
+        "versionSpecified": true
+    },
+    "status": "LATE",
+    "predictedEndDate": "2019-06-17T15:28:10.220Z",
+    "predictedDurationInMillis": 41153,
+    "minInMillis": null,
+    "maxInMillis": null,
+    "withinTargetRatio": 0
+}
+```
+
 ## `/bici-case-api`
 #### Http method
 `GET`
@@ -33,6 +60,43 @@ This list of cases can be filtered by status (late, predictedLate, onTime) or us
 |status|string|false|Status of the cases: late, predictedLate, onTime|
 |search|string|false|Search keyword, will search in case id and name of the initiator|
 
+#### Response examples
+* http://localhost:8080/bonita/apps/bici-operations-management/API/extension/bici-case-api?processName=Vacation
+```json
+{
+    "cases": [
+        {
+            "caseId": 101,
+            "startDate": "2019-06-17T15:27:29.044Z",
+            "startedBy": {
+                "id": 4,
+                "username": "walter.bates",
+                "firstName": "Walter",
+                "lastName": "Bates"
+            },
+            "process": {
+                "definitionId": "8662860246251890111",
+                "name": "Vacation",
+                "version": "4.0",
+                "versionSpecified": true
+            },
+            "status": "LATE",
+            "predictedEndDate": "2019-06-17T15:28:10.220Z",
+            "predictedDurationInMillis": 41153,
+            "minInMillis": null,
+            "maxInMillis": null,
+            "withinTargetRatio": 0
+        }
+    ],
+    "counts": {
+        "onTime": 0,
+        "predictedLate": 0,
+        "late": 1
+    },
+    "lastPollingDate": "2019-06-25T15:54:40.298Z"
+}
+```
+
 ## `/bici-process-api`
 #### Http method
 `GET`
@@ -42,6 +106,21 @@ Get processes that the user is manager of
 
 #### Query parameters
 No parameters
+
+#### Response examples
+* http://localhost:8080/bonita/apps/bici-operations-management/API/extension/bici-process-api
+```json
+[
+    {
+        "name": "Vacation",
+        "versions": [
+            "4.0"
+        ],
+        "targetDurationInMillis": 259200000,
+        "successRateThreshold": 0.5
+    }
+]
+```
 
 ## `/bici-query-api`
 #### Http method
@@ -59,4 +138,107 @@ This allows to execute an analytics query.
 |processName|string|true|Name of the process|
 |processVersion|string|false|Version of the process. If empy, use all allowed versions|
 |parameters|object|false|Parameters required by the query|
+
+#### Response examples
+* http://localhost:8080/bonita/apps/bici-operations-management/API/extension/bici-query-api?queryName=case-time-distribution&processName=Vacation&durationOfAnalysis=2m
+```json
+{
+    "percentiles": [
+        "10",
+        "20",
+        "30",
+        "40",
+        "50",
+        "60",
+        "70",
+        "80",
+        "90",
+        "100"
+    ],
+    "durationMillis": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ]
+}
+```
+
+* http://localhost:8080/bonita/apps/bici-operations-management/API/extension/bici-query-api?queryName=case-statistics&processName=Vacation&durationOfAnalysis=2y
+```json
+{
+    "median": 38345,
+    "count": 100,
+    "min": 34520,
+    "max": 50736,
+    "avg": 41545,
+    "std_deviation": 5584
+}
+```
+
+* http://localhost:8080/bonita/apps/bici-operations-management/API/extension/bici-query-api?queryName=case-late-per-month&processName=Vacation&durationOfAnalysis=2m&durationInMillis=300
+```json
+{
+    "month": [
+        6
+    ],
+    "year": [
+        2019
+    ],
+    "onTime": [
+        0
+    ],
+    "late": [
+        0
+    ]
+}
+```
+
+* http://localhost:8080/bonita/apps/bici-operations-management/API/extension/bici-query-api?queryName=task-statistics&processName=Vacation&durationOfAnalysis=2y
+```json
+[
+    {
+        "taskName": "Merge",
+        "type": "gate",
+        "averageDuration": 0,
+        "count": 100,
+        "numberOfCases": 100,
+        "loopRatio": 1,
+        "percentOccurrences": 100
+    },
+    {
+        "taskName": "Notify employee request approved",
+        "type": "auto",
+        "averageDuration": 879,
+        "count": 100,
+        "numberOfCases": 100,
+        "loopRatio": 1,
+        "percentOccurrences": 100
+    },
+    {
+        "taskName": "Request approved ?",
+        "type": "gate",
+        "averageDuration": 0,
+        "count": 100,
+        "numberOfCases": 100,
+        "loopRatio": 1,
+        "percentOccurrences": 100
+    },
+    {
+        "taskName": "Review request",
+        "type": "user",
+        "averageDuration": 27682,
+        "count": 100,
+        "numberOfCases": 100,
+        "loopRatio": 1,
+        "percentOccurrences": 100
+    }
+]
+```
 
