@@ -43,9 +43,9 @@ Software required for BICI Add-on:
 | Oracle Java SE Runtime Environment | 8u112 (see note 1) |
 | OpenJDK | 8u112 (see note 1) |
 | **Bonita platform** | 
-| Bonita | 7.5.4 and higher (see note 2, 3 and 4) |
+| Bonita | 7.6.3 to 7.9.x (see note 2, 3 and 4) |
 | **Storage** | 
-| Elasticsearch | 6.2.4 and higher (unless using the docker version launched by the installer)|
+| Elasticsearch | 6.5.3 and higher (unless using the docker version launched by the installer)|
 | **Docker** | 
 | Docker | 18.03 and higher|
 | **Browser** |
@@ -66,7 +66,7 @@ Notes:
 in addition to Bonita connections
 
 :::info    
-When installing BICI in evaluation mode, an active Internet connexion is required to download Docker images.    
+When installing BICI, an active Internet connexion is required to download Docker images.    
 :::
 
 ## Skills
