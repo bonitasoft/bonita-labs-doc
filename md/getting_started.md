@@ -1,35 +1,14 @@
 # Getting started
 
-Bonita Intelligent Continuous Improvement Add-on (BICI Add-on) installation and configuration instructions. 
-
-This chapter covers *Evaluation* and *Production*, two different installation modes.
+Bonita Intelligent Continuous Improvement (BICI) installation and configuration instructions. 
 
 ## Download
 
-Download BICI Add-on from [Bonitasoft Customer Portal](https://customer.bonitasoft.com/).
-
-The archive contains:
-* An installation guide: `installation-guide.md`
-* The BICI application: `bici-application-<version>.zip`
-* Two Living Applications: *BICI Case Monitoring* with predictions, and *BICI Configuration*, to configure the first application
-* An installer: `bin/bonita-ici` (`bin/bonita-ici.bat` on Windows platform)
+Download BICI from the [Bonitasoft Customer Portal](https://customer.bonitasoft.com/).
 
 ## Install
 
-:::info
-Check all [pre-requisites](./prerequisites.md) prior to install.
-:::
-
-The installer rely on docker to deploy all components of BICI.
-
-1. Ensure you have java installed, using command `java -version`
-2. Ensure you have Docker installed, using command `docker --version`
-3. Docker requires an active Internet connection to pull the Elasticsearch Docker image and to build the BICI application image
-4. Unzip the application  `bici-application-<version>.zip`
-5. Run `bin/bonita-ici` (`bin/bonita-ici.bat` on Windows platform). or `sudo bin/bonita-ici`, if docker is available only for root user
-6. Follow the instructions
-
-For more detailed informations of that, see the [installation guide](installation_guide.md).
+Follow the instructions described in the [installation guide](installation_guide.md).
 
 ## Configure
 
