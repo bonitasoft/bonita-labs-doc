@@ -5,6 +5,8 @@ This application is made of two menu options.
 
 ## Monitoring page
 
+![BICI LA Monitoring](images/la/monitoring_home_on_time.png)
+
 This view is filtered by process and optionally process version.
 The artificial intelligence algorithm applies a prediction to each case: its likelihood to finish within the target duration, given two parameters: its execution flow so far and the time remaining before the target duration.
 
@@ -15,7 +17,10 @@ It also contains a tabbed list of cases that identifies each case by its ID as w
 For each case *On time* and *Predicted late*, the likelihood to finish on time and the remaining time are also displayed.
 For *Late* cases, the amount of time the case has been late, as well as the initial due date are displayed.
 
-### Case informations
+### Case information
+
+![BICI LA Monitoring Case Details](images/la/monitoring_case_execution_details.png)
+
 A click on a particular case displays its details on 2 tabs: 
 - Case execution details
   - The case progress bar showing time events(start, target duration) and the status(reach target probability, late since x days)
@@ -40,6 +45,8 @@ It is made of 2 tabs.
 
 ### Case indicators
 
+![BICI LA Monitoring Case Indicators](images/la/monitoring_analytics_case_indicators.png)
+
 In this tab there are 3 major sections:
 
 #### Statistics indicators on case duration
@@ -61,6 +68,8 @@ The percentiles are represented by graphs that indicate the case duration and ar
 For example, for the 30th percentile, the case duration is 2 days, which means that 30% of the archived cases considered ended within 2 days.
 
 ### Task indicators
+
+![BICI LA Monitoring Task Indicators](images/la/monitoring_analytics_task_indicators.png)
 
 In this tab, there is a table that displays Task statistics such as average duration, count, loop ratio, etc...
 
