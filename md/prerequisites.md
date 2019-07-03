@@ -6,10 +6,10 @@ Bonita Intelligent Continuous Improvement prerequisites lists all required envir
 
 We recommend to use a dedicated server for BICI, and for the BICI storage. 
 
-### BICI server
+### BICI Application
 
 
-Hardware required for BICI server:
+Hardware required for BICI Application:
 
 | Type | Minimum | Recommended |
 |:-|:-|:-|
