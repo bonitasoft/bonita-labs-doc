@@ -240,3 +240,19 @@ Then run the installer like this (pass the configuration file option if needed):
 ```
 bonita-ici startApp deploy 
 ```
+
+## Troubleshooting
+
+### Polling errors
+
+When a polling execution fails, it can be seen in error in BICI Configuration Living Application.
+
+More information is available in the logs of the BICI Application Docker container.
+To find the logs you must get the ID of the BICI Application docker container:
+```
+docker container ls
+```
+Next, typing the following command will display the logs:
+```
+docker logs CONTAINER_ID        \\i.e. docker logs 2e169fd6c305
+```
