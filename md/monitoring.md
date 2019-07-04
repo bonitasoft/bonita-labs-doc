@@ -23,7 +23,7 @@ This helps Operations Managers make the best short-term decision to put operatio
 
 ## Analytics page
 
-This page takes advantage of Bonita ICI storage, and the opportunity it gives to query archived cases database to get trends on raw indicators, as well as a comparison to Key Performance Indicators.
+This page takes advantage of BICI storage, and the opportunity it gives to query archived cases database to get trends on raw indicators, as well as a comparison to Key Performance Indicators.
 This view is filtered by process and period of time, and optionally by process version.
 It is made of three parts.
 

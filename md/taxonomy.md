@@ -1,6 +1,6 @@
 * [Release Notes](release_notes.md)
 * [Architecture](architecture.md)
-* [Process-mining](process_mining.md)
+* [Process mining](process_mining.md)
 * [Pre-requisites](prerequisites.md)
 * [Getting started](getting_started.md)
 * [Installation guide](installation_guide.md)
