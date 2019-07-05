@@ -32,7 +32,7 @@ For a detailed list of supported environment and tools, see the [prerequisites](
 
 ### Bonita
 
-You need an up and running Bonita Add-on, the BICI Application will connect directly to the Bonita Database.
+You need an up and running Bonita instance, the BICI Application will connect directly to the Bonita Database.
 
 
 ### BICI Storage
