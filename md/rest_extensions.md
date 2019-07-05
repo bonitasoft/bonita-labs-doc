@@ -45,6 +45,6 @@ This allows to execute an analytics query.
 |p|integer|false|Page to return, starts at 0|
 |queryName|string|true|Name of the analytics query|
 |processName|string|true|Name of the process|
-|processVersion|string|false|Version of the process. If empy, use all allowed versions|
+|processVersion|string|false|Version of the process. If empty, use all allowed versions|
 |parameters|object|false|Parameters required by the query|
 

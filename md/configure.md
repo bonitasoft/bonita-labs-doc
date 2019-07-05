@@ -1,18 +1,18 @@
 # Configure _BICI Operations Management_ Living Application
 
-A living application is provided with the BICI Add-on to: 
+A Living Application is provided with BICI to: 
 * Manage polling - check [installation guide](installation_guide.md).
 * Configure processes and compute prediction models.
 
 ## Polling status
-This page show what is the current status of the synchronization of the data between Bonita Platform and BICI storage.
+This page show what is the current status of the synchronization of the data between Bonita and BICI storage.
 
 Refer to the [installation guide](installation_guide.md) for more details.
 
 ## Processes configuration
 ### Target duration
 
-The target duration is a mandatory configuration to set. It allows the BICI Add-on to know what is a normal time execution for a given process. With this information, the algorithm computes a percentage of chances for the process instance to finish within this time.
+The target duration is a mandatory configuration to set. It allows BICI to know what is a normal time execution for a given process. With this information, the algorithm computes a percentage of chances for the process instance to finish within this time.
 
 In the page, the target duration is configurable in calendar days.
 

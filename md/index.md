@@ -1,7 +1,7 @@
 # Bonita Intelligent Continuous Improvement Add-on
-Monitor the duration of open cases, get help from an Artifical Intelligence algorithm providing the chances for each case to finish within a target duration, and follow the trends on the longer term thanks to the Analytics dashboard.
+Monitor the duration of open cases, get help from an Artificial Intelligence algorithm providing the chances for each case to finish within a target duration, and follow the trends on the longer term thanks to the Analytics dashboard.
 
-This page explains the values and content of Bonita ICI Add-on, which is composed of a standalone application connected to Bonita Engine database, and two Living Applications: one for the Configuration of business elements and algorithm, and one for Operations Management.
+This page explains the values and content of BICI Add-on, which is composed of a standalone application connected to Bonita Database, and two Living Applications: one for the Configuration of business elements and algorithm, and one for Operations Management.
 
 ![Bonita ICI Add-on logo](images/ici.png)
 
@@ -28,7 +28,7 @@ This page explains the values and content of Bonita ICI Add-on, which is compose
 <div class="panel panel-default">
 <div class="panel-heading">Getting started</div>
 <div class="panel-body">
-<div style="padding: 15px; padding-bottom: 0px;">Follow this guide with step-by-step instructions to start using Bonita ICI Add-on.</div>
+<div style="padding: 15px; padding-bottom: 0px;">Follow this guide with step-by-step instructions to start using BICI Add-on.</div>
 <div class="menu-block-wrapper">
 
 * [:fa-angle-double-right: Getting started with BICI](getting_started.md)
