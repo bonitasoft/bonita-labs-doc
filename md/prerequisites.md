@@ -75,4 +75,4 @@ BICI is not a Data Scientist tooling, so no particular skills are required to us
 
 ## Data
 
-Data polled from Bonita engine database use archive table to read BPM history, thus Archive mode be activated.
+Data polled from Bonita Database use archive table to read BPM history, thus Archive mode be activated.

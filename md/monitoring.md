@@ -39,7 +39,7 @@ Only after that, the prediction information will be available for these cases in
 
 ## Analytics page
 
-This page takes advantage of Bonita ICI storage, and the opportunity it gives to query archived cases database to get trends on raw indicators, as well as a comparison to Key Performance Indicators.
+This page takes advantage of BICI storage, and the opportunity it gives to query archived cases database to get trends on raw indicators, as well as a comparison to Key Performance Indicators.
 This view is filtered by process and period of time, and can also be filtered by process version.
 It is made of 2 tabs.
 
