@@ -30,7 +30,7 @@ Return the open case related to the provided case id
     },
     "process": {
         "definitionId": "8662860246251890111",
-        "name": "Vacation Request Basic",
+        "name": "Vacation",
         "version": "4.0",
         "versionSpecified": true
     },
@@ -48,7 +48,7 @@ Return the open case related to the provided case id
 `GET`
 
 #### Description
-This list of cases can be filtered by status (late, predictedLate, onTime) or using a search term
+This list of cases can be filtered by status (late, predictedLate, onTime, unknown) or using a search term
 
 #### Query parameters
 |Parameter|Type|Required|Description|
@@ -57,7 +57,7 @@ This list of cases can be filtered by status (late, predictedLate, onTime) or us
 |p|integer|false|Page to return, starts at 0|
 |processName|string|true|Name of the process|
 |processVersion|string|false|Version of the process|
-|status|string|false|Status of the cases: late, predictedLate, onTime|
+|status|string|false|Status of the cases: late, predictedLate, onTime, unknown|
 |search|string|false|Search keyword, will search in case id and name of the initiator|
 
 #### Response examples
@@ -91,7 +91,8 @@ This list of cases can be filtered by status (late, predictedLate, onTime) or us
     "counts": {
         "onTime": 0,
         "predictedLate": 0,
-        "late": 1
+        "late": 1,
+        "unknown": 0
     },
     "lastPollingDate": "2019-06-25T15:54:40.298Z"
 }
