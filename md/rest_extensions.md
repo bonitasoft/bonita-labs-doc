@@ -1,6 +1,6 @@
 # BICI Operations Management API
 
-*version 1.0*
+*version 2.0*
 
 API used by Operations Management Living Application
 
@@ -48,7 +48,7 @@ Return the open case related to the provided case id
 `GET`
 
 #### Description
-This list of cases can be filtered by status (late, predictedLate, onTime, unknown) or using a search term
+This list of cases can be filtered by status (late, predictedLate, predictedOnTime, unknown) or using a search term
 
 #### Query parameters
 |Parameter|Type|Required|Description|
@@ -57,7 +57,7 @@ This list of cases can be filtered by status (late, predictedLate, onTime, unkno
 |p|integer|false|Page to return, starts at 0|
 |processName|string|true|Name of the process|
 |processVersion|string|false|Version of the process|
-|status|string|false|Status of the cases: late, predictedLate, onTime, unknown|
+|status|string|false|Status of the cases: late, predictedLate, predictedOnTime, unknown|
 |search|string|false|Search keyword, will search in case id and name of the initiator|
 
 #### Response examples
@@ -89,7 +89,7 @@ This list of cases can be filtered by status (late, predictedLate, onTime, unkno
         }
     ],
     "counts": {
-        "onTime": 0,
+        "predictedOnTime": 0,
         "predictedLate": 0,
         "late": 1,
         "unknown": 0
@@ -192,7 +192,7 @@ This allows to execute an analytics query.
     "year": [
         2019
     ],
-    "onTime": [
+    "predictedOnTime": [
         0
     ],
     "late": [
