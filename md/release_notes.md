@@ -7,8 +7,8 @@
 
 # Rest API version changes
 
-TODO 1.0 --> 1.1
-
+The version of the Rest API has been updated from 1.0 to 2.0.
+The Rest API '/bici-case-api' does not return the same result for the cases with the status 'onTime'. And in order to keep consistency, the status 'onTime' has been renamed in 'predictedOnTime'.
 
 # New Monitoring 'Unknown' status
 
