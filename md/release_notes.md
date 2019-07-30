@@ -12,5 +12,6 @@ The Rest API '/bici-case-api' does not return the same result for the cases with
 
 # New Monitoring 'Unknown' status
 
-In BICI Monitoring page, a case who have a path with less than 100 cases passed doesn't have the 'On time' status anymore, but the new 'Unknown' status, in order to differentiate among the cases that are in time those who have a prediction and those who do not have one.
+In BICI Monitoring page, when a case's prefix has been encountered by less than 100 archived cases, it is not displayed with the 'On time' status anymore, but with the new 'Unknown' status, because the predicted ratio is not robust enough under 100 cases.
+For those cases, we cannot predict whether they will finish on time or be late.
 
