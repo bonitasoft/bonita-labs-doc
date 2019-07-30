@@ -10,7 +10,7 @@ This application is made of two menu options.
 This view is filtered by process and optionally process version.
 The artificial intelligence algorithm applies a prediction to each case: its likelihood to finish within the target duration, given two parameters: its execution flow so far and the time remaining before the target duration.
 
-Based on this information, the page shows a pie chart with the proportion of cases *Late* (already behind the deadline), *Predicted late* (likelihood is below 50%), *On time* (likelihood is 50% or above) and *Unknown* (not possible to be predicted, but not late). 
+Based on this information, the page shows a pie chart with the proportion of cases *Predicted late* (likelihood is below 50%), *Late* (already behind the deadline), *On time* (likelihood is 50% or above) and *Unknown* (not possible to be predicted, but not late). 
 The decision threshold that makes cases *Predicted late* or *On time* can be configured in the [Configuration Living Application](configure.md). 
 
 It also contains a tabbed list of cases that identifies each case by its ID as well as the name of the initiator. 
