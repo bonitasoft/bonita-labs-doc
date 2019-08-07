@@ -89,9 +89,9 @@ This list of cases can be filtered by status (late, predictedLate, predictedOnTi
         }
     ],
     "counts": {
-        "predictedOnTime": 0,
         "predictedLate": 0,
         "late": 1,
+        "predictedOnTime": 0,
         "unknown": 0
     },
     "lastPollingDate": "2019-06-25T15:54:40.298Z"
