@@ -123,6 +123,13 @@ No parameters
 ]
 ```
 
+* http://localhost:8080/bonita/apps/bici-operations-management/API/extension/bici-process-api
+```json
+{
+    "message": "You are not the owner of any process."
+}
+```
+
 ## `/bici-query-api`
 #### Http method
 `GET`
