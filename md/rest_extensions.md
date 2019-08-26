@@ -4,6 +4,25 @@
 
 API used by Operations Management Living Application
 
+## `/bici-info`
+#### Http method
+`GET`
+
+#### Description
+Experimental: may change or be removed at any time (since BICI 1.3.0)
+
+#### Query parameters
+No parameters
+
+#### Response examples
+* http://localhost:8080/bonita/apps/bici-operations-management/API/extension/bici-info
+```json
+{
+    "documentationVersion": "1.3",
+    "version": "1.3.0"
+}
+```
+
 ## `/bici-case-by-id-api`
 #### Http method
 `GET`
