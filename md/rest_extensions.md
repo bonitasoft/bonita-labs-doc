@@ -49,7 +49,7 @@ Return the open case related to the provided case id
     },
     "process": {
         "definitionId": "8662860246251890111",
-        "name": "Vacation Request Basic",
+        "name": "Vacation",
         "version": "4.0",
         "versionSpecified": true
     },
@@ -80,7 +80,7 @@ This list of cases can be filtered by status (late, predictedLate, predictedOnTi
 |search|string|false|Search keyword, will search in case id and name of the initiator|
 
 #### Response examples
-* http://localhost:8080/bonita/apps/bici-operations-management/API/extension/bici-case-api?processName=Vacation Request Basic
+* http://localhost:8080/bonita/apps/bici-operations-management/API/extension/bici-case-api?processName=Vacation
 ```json
 {
     "cases": [
@@ -95,7 +95,7 @@ This list of cases can be filtered by status (late, predictedLate, predictedOnTi
             },
             "process": {
                 "definitionId": "8662860246251890111",
-                "name": "Vacation Request Basic",
+                "name": "Vacation",
                 "version": "4.0",
                 "versionSpecified": true
             },
@@ -132,7 +132,7 @@ No parameters
 ```json
 [
     {
-        "name": "Vacation Request Basic",
+        "name": "Vacation",
         "versions": [
             "4.0"
         ],
@@ -160,7 +160,7 @@ This allows to execute an analytics query.
 |parameters|object|false|Parameters required by the query: durationOfAnalysis, for case-time-distribution, case-statistics, case-late-per-month, task-statistics; durationInMillis, for case-late-per-month|
 
 #### Response examples
-* http://localhost:8080/bonita/apps/bici-operations-management/API/extension/bici-query-api?queryName=case-time-distribution&processName=Vacation Request Basic&durationOfAnalysis=2m
+* http://localhost:8080/bonita/apps/bici-operations-management/API/extension/bici-query-api?queryName=case-time-distribution&processName=Vacation&durationOfAnalysis=2m
 ```json
 {
     "percentiles": [
@@ -190,7 +190,7 @@ This allows to execute an analytics query.
 }
 ```
 
-* http://localhost:8080/bonita/apps/bici-operations-management/API/extension/bici-query-api?queryName=case-statistics&processName=Vacation Request Basic&durationOfAnalysis=2y
+* http://localhost:8080/bonita/apps/bici-operations-management/API/extension/bici-query-api?queryName=case-statistics&processName=Vacation&durationOfAnalysis=2y
 ```json
 {
     "median": 38345,
@@ -202,7 +202,7 @@ This allows to execute an analytics query.
 }
 ```
 
-* http://localhost:8080/bonita/apps/bici-operations-management/API/extension/bici-query-api?queryName=case-late-per-month&processName=Vacation Request Basic&durationOfAnalysis=2m&durationInMillis=300
+* http://localhost:8080/bonita/apps/bici-operations-management/API/extension/bici-query-api?queryName=case-late-per-month&processName=Vacation&durationOfAnalysis=2m&durationInMillis=300
 ```json
 {
     "month": [
@@ -220,7 +220,7 @@ This allows to execute an analytics query.
 }
 ```
 
-* http://localhost:8080/bonita/apps/bici-operations-management/API/extension/bici-query-api?queryName=task-statistics&processName=Vacation Request Basic&durationOfAnalysis=2y
+* http://localhost:8080/bonita/apps/bici-operations-management/API/extension/bici-query-api?queryName=task-statistics&processName=Vacation&durationOfAnalysis=2y
 ```json
 [
     {
