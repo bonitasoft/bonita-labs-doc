@@ -27,5 +27,11 @@ This mode as well as the existing boost mode on Oracle are made available in the
 * Avoid scrollbar on case list on tablet on monitoring page (ICI-1122)
 * Elapsed time is wrong on polling status page (ICI-1002)
 
+### Fixes in BICI 1.2.2 (2019-09-05)
+* [ICI-1147] - Apply input validation for all BICI Application API
+* [ICI-1215] - Impossible to know how to make the process visible to Omar
+* [ICI-1289] - BICI 1.2.1 inconsistent usage of the BICI backend/server term in the BICI status/healthcheck page
+
 ### Fixes in BICI 1.2.1 (2019-08-01)
-* Improve the configuration file (ICI-1265)
+* [ICI-1265] - Improve the configuration file
+
