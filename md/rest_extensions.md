@@ -126,7 +126,8 @@ No parameters
 * http://localhost:8080/bonita/apps/bici-operations-management/API/extension/bici-process-api
 ```json
 {
-    "message": "You are not the owner of any process."
+    "code": 404,
+    "message": "Unexpected error: no_supervised_process"
 }
 ```
 
