@@ -23,9 +23,9 @@ This mode as well as the existing boost mode on Oracle are made available in the
 
 ## Limitations and known issues
 ## Bug fixes
-* Initial polling fails with large database when polling mode is set to advanced (ICI-1148)
-* Avoid scrollbar on case list on tablet on monitoring page (ICI-1122)
-* Elapsed time is wrong on polling status page (ICI-1002)
+* [ICI-1148] Initial polling fails with large database when polling mode is set to advanced
+* [ICI-1122] Avoid scrollbar on case list on tablet on monitoring page
+* [ICI-1002] Elapsed time is wrong on polling status page
 
 ### Fixes in BICI 1.2.2 (2019-09-05)
 * [ICI-1147] - Apply input validation for all BICI Application API
