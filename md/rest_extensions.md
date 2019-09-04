@@ -142,6 +142,14 @@ No parameters
 ]
 ```
 
+* http://localhost:8080/bonita/apps/bici-operations-management/API/extension/bici-process-api
+```json
+{
+    "code": 404,
+    "message": "Unexpected error: no_supervised_process"
+}
+```
+
 ## `/bici-query-api`
 #### Http method
 `GET`
