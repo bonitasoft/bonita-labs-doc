@@ -24,6 +24,9 @@ This mode as well as the existing boost mode on Oracle are made available in the
 ## Limitations and known issues
 ## Bug fixes
 
+### Fixes in BICI 1.2.3 (2019-10-03)
+* [ICI-1253] - Configuration page only shows 10 items
+
 ### Fixes in BICI 1.2.2 (2019-09-05)
 * [ICI-1147] - Apply input validation for all BICI Application API
 * [ICI-1215] - Impossible to know how to make the process visible to Omar
