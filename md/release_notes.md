@@ -26,6 +26,7 @@ This mode as well as the existing boost mode on Oracle are made available in the
 
 ### Fixes in BICI 1.2.3 (2019-10-03)
 * [ICI-1253] - Configuration page only shows 10 items
+* [ICI-1308] - As Omar, I need the right error message when I supervise no process but configuration is fine
 
 ### Fixes in BICI 1.2.2 (2019-09-05)
 * [ICI-1147] - Apply input validation for all BICI Application API
