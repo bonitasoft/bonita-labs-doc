@@ -15,3 +15,7 @@ The Rest API '/bici-case-api' does not return the same result for the cases with
 In BICI Monitoring page, when a case's prefix has been encountered by less than 100 archived cases, it is not displayed with the 'On time' status anymore, but with the new 'Unknown' status, because the predicted ratio is not robust enough under 100 cases.
 For those cases, we cannot predict whether they will finish on time or be late.
 
+## Bug fixes
+n
+### Fixes in BICI 1.3.0 (2019-12-05)
+* [ICI-1268] - As Omar when I come back to the monitoring page, I need the same loader than at first display
