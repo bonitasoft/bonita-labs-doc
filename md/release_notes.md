@@ -3,7 +3,8 @@
 ## New values
 ### Task assignment decision support 
 
-When a case seems stuck or gets pretty late, view all candidates for the pending task and then reassign the task to the person with the lesser load, or you know will be more available to do the task and get the case back on track.
+When a case seems stuck or gets pretty late, view all candidates for the pending task and maybe reassign the task to someone else: choose the candidate with the smallest workload or someone you expect to be able to get the case back on track.
+
 
 ### Rich case execution timeline
 
