@@ -1,7 +1,7 @@
 # Bonita Intelligent Continuous Improvement Add-on
 Monitor the duration of open cases, get help from an Artificial Intelligence algorithm providing the chances for each case to finish within a target duration, get all data to understand the lifecycle of a case, and follow the trends on the longer term thanks to the Analytics dashboards.
 
-This page explains the new values and content of BICI Add-on, which is composed of a standalone application connected to Bonita Database, and two Living Applications: one for the Configuration of business elements and algorithm, and one for Operations Management.
+This Add-on is composed of a standalone application connected to Bonita Database, and two Living Applications: one for the Configuration of business elements and algorithm, and one for Operations Management.
 
 ![Bonita ICI Add-on logo](images/ici.png)
 
