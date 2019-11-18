@@ -38,7 +38,7 @@ Software required for BICI Add-on:
 | **Operating system** |
 | Microsoft Windows Server | 2016 64 bits |
 | Red Hat Enterprise Linux |  6.5 64 bits |
-| Ubuntu | 16.04 LTS 64 bitsr |
+| Ubuntu | 16.04 LTS 64 bits |
 | **Java Virtual Machine** |
 | Oracle Java SE Runtime Environment | 8u112 (see note 1) |
 | OpenJDK | 8u112 (see note 1) |
