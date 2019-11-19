@@ -29,4 +29,5 @@ The Rest API '/bici-case-api' does not return the same result for the cases with
 ## Bug fixes
 
 ### Fixes in BICI 1.3.0 (2019-12-05)
+* [ICI-1386] - [LA Configuration] Not possible to configure and create prediction model for more than 10 process
 * [ICI-1268] - As Omar when I come back to the monitoring page, I need the same loader than at first display
