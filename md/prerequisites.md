@@ -26,7 +26,7 @@ while hard disk is only used for logging.
 ### Elastic search
 
 If you deploy elastic on premise, we recommend to follow official [elastic support matrix](https://www.elastic.co/support/matrix)
- and [installation guide](https://www.elastic.co/guide/en/elasticsearch/reference/6.2/setup.html) 
+ and [installation guide](https://www.elastic.co/guide/en/elasticsearch/reference/6.5/setup.html) 
 
 ## Software
 
