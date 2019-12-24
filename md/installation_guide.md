@@ -202,11 +202,15 @@ This mode is only available when Bonita is using: Oracle or PostgreSQL Database
 
 This mode requires that the database user is allowed to create materialized views.
 To grant this in:
-    * Oracle
-    `GRANT CREATE MATERIALIZED VIEW TO <USER>` using a SYS connection prior to start the application.
-    * PostgreSQL
-    `GRANT CONNECT ON DATABASE <DB_NAME>> TO <USER>` is sufficient to create a view
-    `GRANT SELECT ON TABLE <SCHEMA>.arch_flownode_instance TO <USER>` is needed to REFRESH MATERIALIZED VIEW
+
+- Oracle
+
+    - `GRANT CREATE MATERIALIZED VIEW TO <USER>` using a SYS connection prior to start the application.
+
+- PostgreSQL
+
+    - `GRANT CONNECT ON DATABASE <DB_NAME>> TO <USER>` is sufficient to create a view
+    - `GRANT SELECT ON TABLE <SCHEMA>.arch_flownode_instance TO <USER>` is needed to REFRESH MATERIALIZED VIEW
 
 To activate this mode when using the configuration file, set
 ```
