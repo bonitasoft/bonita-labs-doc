@@ -33,8 +33,8 @@ The Rest API '/bici-case-api' does not return the same result for the cases with
 * [ICI-1380] - Task analytics table headers not aligned on some screen sizes
 * [ICI-1399] - The period over which the average duration of tasks has been computed is missing
 * [ICI-851] - Nothing explains that the BICI application is not reachable by BICI LA
-* [ICI-1425] - Update frontend dependencies
 * [ICI-1381] - Architecture picture in the doc: API to REST API ext. arrow should only be one way
+
 ### Fixes in BICI 1.3.0 (2019-12-05)
 * [ICI-1386] - [LA Configuration] Not possible to configure and create prediction model for more than 10 process
 * [ICI-1268] - As Omar when I come back to the monitoring page, I need the same loader than at first display
