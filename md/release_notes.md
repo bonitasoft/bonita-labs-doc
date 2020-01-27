@@ -30,6 +30,7 @@ The Rest API '/bici-case-api' does not return the same result for the cases with
 
 ### Fixes in BICI 1.3.1 (2020-02-06)
 * [ICI-851] - Nothing explains that the BICI application is not reachable by BICI LA
+* [ICI-996] - Sum of cases in the Case late by month graph is not equal to the total number of cases ( 1 case missing?)
 * [ICI-1380] - Task analytics table headers not aligned on some screen sizes
 * [ICI-1381] - Architecture picture in the doc: API to REST API ext. arrow should only be one way
 * [ICI-1399] - The period over which the average duration of tasks has been computed is missing
