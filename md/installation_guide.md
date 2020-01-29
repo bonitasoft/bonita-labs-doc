@@ -110,11 +110,6 @@ By default, this installer performs the following operations:
 
 ### BICI Installer Configuration
 
-### Pass parameters interactively
-
-All required parameters are asked in the command line.
-
-
 ### Pass parameters using configuration file
 
 Parameters can be passed using a configuration file.
@@ -124,7 +119,7 @@ Example:
 ./bonita-ici --file configuration.properties
 ```
 
-The sample configuration file named `configuration.properties` contains all properties that can be configured.
+The sample configuration file named `configuration.properties` contains all properties that can be configured and configuration tips.
 
 ### BICI Living Applications deployment
 
