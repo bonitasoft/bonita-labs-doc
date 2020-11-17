@@ -1,0 +1,36 @@
+= Getting started
+
+Bonita Intelligent Continuous Improvement (BICI) installation and configuration instructions.
+
+== Download
+
+Download BICI from the https://customer.bonitasoft.com/[Bonitasoft Customer Portal].
+
+== Install
+
+Follow the instructions described in the xref:installation_guide.adoc[installation guide].
+
+== Configure
+
+=== Configure Profiles
+
+Once installed, you need to setup the Bonita Portal profile mapping for the profile `Configuration` and make sure Operations Managers are mapped to the provided profile `Process Manager`.
+Moreover, for each process supervised by Operation Managers, the `Process Manager mapping` must also include the Operations Managers in order to display data of the processes in the `Operations Management` Living Application.
+
+=== Synchronize data
+
+In the xref:configure.adoc[Configure Living application]'s `Polling Status` tab, activate the synchronization to push your data into the BICI storage.
+
+=== Configure processes
+
+In the xref:configure.adoc[Configure Living application]'s `Configuration` tab, set target durations and create models for your processes.
+
+== Explore
+
+=== Monitor executing cases
+
+Check out the xref:monitoring.adoc[Operation manager Living application]'s `Monitoring` tab, it contains live monitoring of executing cases.
+
+=== Analyse performance of completed cases
+
+Check out the xref:monitoring.adoc[Operation manager Living application]'s `Analytics` tab, it contains analytics of completed cases.
