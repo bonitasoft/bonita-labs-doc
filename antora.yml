@@ -1,0 +1,6 @@
+name: bici
+title: Bonita ICI
+version: master
+start_page: ROOT:index.adoc
+nav:
+  - modules/ROOT/taxonomy.adoc
