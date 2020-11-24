@@ -6,7 +6,7 @@ It uses AsciiDoctor and Antora to create documentation content.
 
 ## Notes about branches in this repository
 
-Branches named `1.x` were used by a former documentation site when BICI versions where available.
+Branches named `1.x` were used by a former documentation site when BICI versions here available.
 
 We now document only a single version and the documentation sources are now stored in the `master` branch.
 
