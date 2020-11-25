@@ -8,6 +8,7 @@ on:
     paths:
       - 'modules/ROOT/**'
       - 'antora.yml'
+      - '.github/workflows/push-content.yml'
 jobs:
   triggerJob:    
     runs-on: ubuntu-20.04
