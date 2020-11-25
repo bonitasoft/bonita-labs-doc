@@ -10,7 +10,7 @@ on:
       - 'antora.yml'
 jobs:
   triggerJob:    
-    runs-on: ubuntu-latest    
+    runs-on: ubuntu-20.04
     steps:        
       - name: Workflow Dispatch      
         uses: benc-uk/workflow-dispatch@v1.1
