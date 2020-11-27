@@ -49,9 +49,11 @@ Return the open case related to the provided case id
 [discrete]
 ==== Query parameters
 
-|Parameter|Type|Required|Description|
-|------|---|------|--------|
-|caseId|integer|true|id of the case|
+|===
+|Parameter|Type|Required|Description
+
+|caseId|integer|true|id of the case
+|===
 
 [discrete]
 ==== Response examples
@@ -99,14 +101,16 @@ This list of cases can be filtered by status (late, predictedLate, predictedOnTi
 [discrete]
 ==== Query parameters
 
-|Parameter|Type|Required|Description|
-|------|---|------|--------|
-|c|integer|false|Number of elements to return|
-|p|integer|false|Page to return, starts at 0|
-|processName|string|true|Name of the process|
-|processVersion|string|false|Version of the process|
-|status|string|false|Status of the cases: late, predictedLate, predictedOnTime, unknown|
-|search|string|false|Search keyword, will search in case id and name of the initiator|
+|===
+|Parameter|Type|Required|Description
+
+|c|integer|false|Number of elements to return
+|p|integer|false|Page to return, starts at 0
+|processName|string|true|Name of the process
+|processVersion|string|false|Version of the process
+|status|string|false|Status of the cases: late, predictedLate, predictedOnTime, unknown
+|search|string|false|Search keyword, will search in case id and name of the initiator
+|===
 
 [discrete]
 ==== Response examples
@@ -211,14 +215,16 @@ This allows to execute an analytics query.
 [discrete]
 ==== Query parameters
 
-|Parameter|Type|Required|Description|
-|------|---|------|--------|
-|c|integer|false|Number of elements to return|
-|p|integer|false|Page to return, starts at 0|
-|queryName|string|true|Name of the analytics query: case-time-distribution, case-statistics, case-late-per-month, task-statistics|
-|processName|string|true|Name of the process|
-|processVersion|string|false|Version of the process. If empty, use all allowed versions|
-|parameters|object|false|Parameters required by the query: durationOfAnalysis, for case-time-distribution, case-statistics, case-late-per-month, task-statistics; durationInMillis, for case-late-per-month|
+|===
+|Parameter|Type|Required|Description
+
+|c|integer|false|Number of elements to return
+|p|integer|false|Page to return, starts at 0
+|queryName|string|true|Name of the analytics query: case-time-distribution, case-statistics, case-late-per-month, task-statistics
+|processName|string|true|Name of the process
+|processVersion|string|false|Version of the process. If empty, use all allowed versions
+|parameters|object|false|Parameters required by the query: durationOfAnalysis, for case-time-distribution, case-statistics, case-late-per-month, task-statistics; durationInMillis, for case-late-per-month
+|===
 
 [discrete]
 ==== Response examples
