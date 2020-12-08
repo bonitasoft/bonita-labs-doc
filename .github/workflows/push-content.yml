@@ -20,3 +20,4 @@ jobs:
           token: ${{secrets.GH_PAT_TOKEN}}
           ref: master          
           repo: bonitasoft/bonitasoft.github.io
+          inputs: '{ "component": "bici", "branch": "master" }'
