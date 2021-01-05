@@ -1,8 +1,7 @@
 name: bici
 title: Bonita ICI
-version: master
+version: latest
 display_version: labs
-prerelease: true
 # default
 #start_page: ROOT:index.adoc
 nav:
