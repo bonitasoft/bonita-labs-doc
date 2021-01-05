@@ -1,4 +1,5 @@
 = Bonita Intelligent Continuous Improvement Add-on
+:page-aliases: release_notes.adoc
 
 Monitor the duration of open cases, get help from an Artificial Intelligence algorithm providing the chances for each case to finish within a target duration, get all data to understand the lifecycle of a case, and follow the trends on the longer term thanks to the Analytics dashboards.
 
@@ -7,45 +8,20 @@ This Add-on is composed of a standalone application connected to Bonita Database
 image::images/ici.png[Bonita ICI Add-on logo]
 
 
-//<div class="col-md-4">
-//<div class="panel panel-default">
-//<div class="panel-heading">Highlights</div>
-//<div class="panel-body">
-//<div style="padding: 15px; padding-bottom: 0px;">Task assignment decision support</div>
-//<div style="padding: 15px; padding-bottom: 0px;">Rich case execution timeline</div>
-//<div style="padding: 15px; padding-bottom: 0px;">Monitoring 'unknown' status</div>
-//
-//* [:fa-angle-double-right: Release Notes](release_notes.md)
-//<!--{ul:.menu .nav}-->
-//</div>
-//</div>
-//</div>
-//</div>
-//
-//<div class="col-md-4">
-//<div class="panel panel-default">
-//<div class="panel-heading">Getting started</div>
-//<div class="panel-body">
-//<div style="padding: 15px; padding-bottom: 0px;">Follow this guide with step-by-step instructions to start using BICI Add-on.</div>
-//<div class="menu-block-wrapper">
-//
-//* [:fa-angle-double-right: Getting started with BICI](getting_started.md)
-//<!--{ul:.menu .nav}-->
-//</div>
-//</div>
-//</div>
-//</div>
-//
-//<div class="col-md-4">
-//<div class="panel panel-default">
-//<div class="panel-heading">Process mining</div>
-//<div class="panel-body">
-//<div style="padding: 15px; padding-bottom: 0px;">Learn more about what runs in the background.</div>
-//<div class="menu-block-wrapper">
-//
-//* [:fa-angle-double-right:Process mining](process_mining.md)
-//<!--{ul:.menu .nav}-->
-//</div>
-//</div>
-//</div>
-//</div>
+[.card-section]
+== Highlight
+
+[.card.card-index]
+--
+xref:process_mining.adoc[[.card-title]#Process mining# [.card-body]#pass:q[Learn more about what runs in the background.]#]
+--
+
+[.card.card-index]
+--
+xref:architecture.adoc[[.card-title]#Architecture# [.card-body]#pass:q[Find out how BICI is working under the hood.]#]
+--
+
+[.card.card-index]
+--
+xref:getting_started.adoc[[.card-title]#Getting started# [.card-body]#pass:q[Follow this guide with step-by-step instructions to start using the BICI Add-on.]#]
+--

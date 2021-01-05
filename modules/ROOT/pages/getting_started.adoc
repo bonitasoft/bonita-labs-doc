@@ -1,20 +1,12 @@
 = Getting started
 
-Bonita Intelligent Continuous Improvement (BICI) installation and configuration instructions.
-
-== Download
-
-Download BICI from the https://customer.bonitasoft.com/[Bonitasoft Customer Portal].
-
-== Install
-
-Follow the instructions described in the xref:installation_guide.adoc[installation guide].
+Bonita Intelligent Continuous Improvement (BICI) configuration instructions.
 
 == Configure
 
 === Configure Profiles
 
-Once installed, you need to setup the Bonita Portal profile mapping for the profile `Configuration` and make sure Operations Managers are mapped to the provided profile `Process Manager`.
+You need to set up the Bonita Portal profile mapping for the profile `Configuration` and make sure Operations Managers are mapped to the provided profile `Process Manager`.
 Moreover, for each process supervised by Operation Managers, the `Process Manager mapping` must also include the Operations Managers in order to display data of the processes in the `Operations Management` Living Application.
 
 === Synchronize data
