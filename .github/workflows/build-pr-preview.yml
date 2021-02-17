@@ -16,7 +16,10 @@ jobs:
     steps:
       - name: Get documenation site source code
         run: |
-          git clone --depth 1 https://github.com/bonitasoft/bonitasoft.github.io.git
+          pwd
+          ls -lha
+          rm -rf *
+          git clone --depth 1 https://github.com/bonitasoft/bonitasoft.github.io.git .
           # TODO temp until is merged into master
           git checkout feat/build_single_component_branch_for_doc_content_pr_preview
       - name: Generate the site preview
