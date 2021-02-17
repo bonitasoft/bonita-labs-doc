@@ -1,0 +1,29 @@
+name: Build PR preview
+
+on:
+  pull_request:
+    branches:
+      - master
+    paths:
+      - 'modules/ROOT/**'
+      - 'antora.yml'
+      - '.github/workflows/build-pr-preview.yml'
+jobs:
+  build_preview:
+    runs-on: ubuntu-20.04
+    env:
+      COMPONENT_NAME: bici
+    steps:
+      - name: Get documenation site source code
+        run: |
+          git clone --depth 1 https://github.com/bonitasoft/bonitasoft.github.io.git
+          # TODO temp until is merged into master
+          git checkout feat/build_single_component_branch_for_doc_content_pr_preview
+      - name: Generate the site preview
+        run: ./build-preview.bash --branch fake --component ${{env.COMPONENT_NAME}} --pr 12
+#        run: ./build-preview.bash --branch ${{}} --component ${{env.COMPONENT_NAME}} --pr ${{}}
+      - name: Upload
+        uses: actions/upload-artifact@v2
+        with:
+          name: documentation-preview-${{env.COMPONENT_NAME}}-${{github.sha}}
+          path: build/site
