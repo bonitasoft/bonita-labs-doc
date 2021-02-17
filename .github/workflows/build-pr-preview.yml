@@ -20,10 +20,11 @@ jobs:
           ls -lha
           rm -rf *
           git clone --depth 1 https://github.com/bonitasoft/bonitasoft.github.io.git .
-          # TODO temp until is merged into master
           git branch -a
           git fetch origin feat/build_single_component_branch_for_doc_content_pr_preview
-          git checkout feat/build_single_component_branch_for_doc_content_pr_preview
+          git branch -a
+      - name: Get documenation site source code
+        run: git checkout feat/build_single_component_branch_for_doc_content_pr_preview
       - name: Generate the site preview
         run: ./build-preview.bash --branch fake --component ${{env.COMPONENT_NAME}} --pr 12
 #        run: ./build-preview.bash --branch ${{}} --component ${{env.COMPONENT_NAME}} --pr ${{}}
