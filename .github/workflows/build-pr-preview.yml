@@ -31,7 +31,9 @@ jobs:
           npm --version
           npm ci
       - name: Generate the site preview
-        run: ./build-preview.bash --branch fake --component ${{env.COMPONENT_NAME}} --pr 12
+        run: |
+          ./build-preview.bash --branch fake --component ${{env.COMPONENT_NAME}} --pr 12
+          ls -lh build/site
         # pr number: see https://github.com/actions/checkout/issues/58
         #branch https://stackoverflow.com/questions/58033366/how-to-get-current-branch-within-github-actions
 #        run: ./build-preview.bash --branch ${{github.head_ref}} --component ${{env.COMPONENT_NAME}} --pr ${{}}
@@ -40,3 +42,4 @@ jobs:
         with:
           name: documentation-preview-${{env.COMPONENT_NAME}}-${{github.sha}}
           path: build/site
+          if-no-files-found: error
