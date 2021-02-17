@@ -19,7 +19,8 @@ jobs:
           pwd
           ls -lha
           rm -rf *
-          git clone --depth 1 https://github.com/bonitasoft/bonitasoft.github.io.git .
+          #TODO --depth 1 to optimize
+          git clone https://github.com/bonitasoft/bonitasoft.github.io.git .
           git branch -a
           git fetch origin feat/build_single_component_branch_for_doc_content_pr_preview
           git branch -a
@@ -27,7 +28,9 @@ jobs:
         run: git checkout feat/build_single_component_branch_for_doc_content_pr_preview
       - name: Generate the site preview
         run: ./build-preview.bash --branch fake --component ${{env.COMPONENT_NAME}} --pr 12
-#        run: ./build-preview.bash --branch ${{}} --component ${{env.COMPONENT_NAME}} --pr ${{}}
+        # pr number: see https://github.com/actions/checkout/issues/58
+        #branch https://stackoverflow.com/questions/58033366/how-to-get-current-branch-within-github-actions
+#        run: ./build-preview.bash --branch ${{github.head_ref}} --component ${{env.COMPONENT_NAME}} --pr ${{}}
       - name: Upload
         uses: actions/upload-artifact@v2
         with:
