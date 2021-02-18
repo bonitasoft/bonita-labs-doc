@@ -25,11 +25,7 @@ jobs:
           #git fetch origin feat/build_single_component_branch_for_doc_content_pr_preview
           git branch -a
           git checkout feat/build_single_component_branch_for_doc_content_pr_preview
-      - name: Temp npm install # TODO should be done by the repo script
-        run: |
-          node --version
-          npm --version
-          npm ci
+      # TODO pass the site-url argument https://{{repository.owner}}-{{repository.name}}-{{job.name}}-pr-{{pr.number}}.surge.sh.
       - name: Generate the site preview
         run: |
           BRANCH_NAME=$(echo ${GITHUB_HEAD_REF#refs/heads/})
@@ -51,5 +47,5 @@ jobs:
           surge_token: ${{ secrets.SURGE_TOKEN_DOC }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
           dist: build/site
-#          build: |
-#            echo "fake build"
+          build: |
+            echo "Build already done"
