@@ -2,8 +2,6 @@ name: Build PR preview
 
 on:
   pull_request:
-    branches:
-      - master
     paths:
       - 'modules/ROOT/**'
       - 'antora.yml'
