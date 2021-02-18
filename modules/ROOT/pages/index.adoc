@@ -2,7 +2,7 @@
 :page-aliases: release_notes.adoc
 
 [example]
-Hello Planet *Mars*!
+Hello Planet *Mars*, how are you!
 
 Monitor the duration of open cases, get help from an Artificial Intelligence algorithm providing the chances for each case to finish within a target duration, get all data to understand the lifecycle of a case, and follow the trends on the longer term thanks to the Analytics dashboards.
 
