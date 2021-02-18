@@ -28,18 +28,6 @@ jobs:
           echo "BRANCH_NAME=$(echo ${GITHUB_HEAD_REF#refs/heads/})" >> $GITHUB_ENV
           echo "PR_NUMBER=$(echo $GITHUB_REF | awk 'BEGIN { FS = "/" } ; { print $3 }')" >> $GITHUB_ENV
           echo "mini_name=$(echo ${GITHUB_HEAD_REF#refs/heads/})" >> $GITHUB_ENV
-          echo "BRANCH_NAME: ${BRANCH_NAME}"
-          echo "COMPONENT_NAME: ${COMPONENT_NAME}"
-          echo "PR_NUMBER: ${PR_NUMBER}"
-          echo "mini_name: ${mini_name}"
-          echo "gh env BRANCH_NAME: ${{ env.BRANCH_NAME }}"
-          echo "gh env COMPONENT_NAME: ${{ env.COMPONENT_NAME }}"
-          echo "gh env PR_NUMBER: ${{ env.PR_NUMBER }}"
-          echo "gh env mini_name: ${{ env.mini_name }}"
-          echo gh env v2 BRANCH_NAME: "${{ env.BRANCH_NAME }}"
-          echo gh env v2 COMPONENT_NAME: "${{ env.COMPONENT_NAME }}"
-          echo gh env v2 PR_NUMBER: "${{ env.PR_NUMBER }}"
-          echo gh env v2 mini_name: "${{ env.mini_name }}"
       - name: Display environment variables
         run: |
           echo "BRANCH_NAME: ${BRANCH_NAME}"
@@ -53,8 +41,6 @@ jobs:
       # TODO pass the site-url argument https://{{repository.owner}}-{{repository.name}}-{{job.name}}-pr-{{pr.number}}.surge.sh.
       - name: Generate the site preview
         run: |
-          BRANCH_NAME=$(echo ${GITHUB_HEAD_REF#refs/heads/})
-          PR_NUMBER=$(echo $GITHUB_REF | awk 'BEGIN { FS = "/" } ; { print $3 }')
           echo "BRANCH_NAME: ${BRANCH_NAME}"
           echo "COMPONENT_NAME: ${COMPONENT_NAME}"
           echo "PR_NUMBER: ${PR_NUMBER}"
