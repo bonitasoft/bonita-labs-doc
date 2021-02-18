@@ -37,9 +37,9 @@ jobs:
           echo "gh env PR_NUMBER: ${{ env.PR_NUMBER }}"
           echo "gh env mini_name: ${{ env.mini_name }}"
           echo gh env v2 BRANCH_NAME: "${{ env.BRANCH_NAME }}"
-          echo "gh env v2 COMPONENT_NAME: "${{ env.COMPONENT_NAME }}"
-          echo "gh env v2 PR_NUMBER: "${{ env.PR_NUMBER }}"
-          echo "gh env v2 mini_name: "${{ env.mini_name }}"
+          echo gh env v2 COMPONENT_NAME: "${{ env.COMPONENT_NAME }}"
+          echo gh env v2 PR_NUMBER: "${{ env.PR_NUMBER }}"
+          echo gh env v2 mini_name: "${{ env.mini_name }}"
       - name: Display environment variables
         run: |
           echo "BRANCH_NAME: ${BRANCH_NAME}"
