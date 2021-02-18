@@ -38,6 +38,21 @@ jobs:
           echo "gh env COMPONENT_NAME: ${{ env.COMPONENT_NAME }}"
           echo "gh env PR_NUMBER: ${{ env.PR_NUMBER }}"
       # TODO pass the site-url argument https://{{repository.owner}}-{{repository.name}}-{{job.name}}-pr-{{pr.number}}.surge.sh.
+      - name: Generate the site preview
+        run: |
+          BRANCH_NAME=$(echo ${GITHUB_HEAD_REF#refs/heads/})
+          PR_NUMBER=$(echo $GITHUB_REF | awk 'BEGIN { FS = "/" } ; { print $3 }')
+          echo "BRANCH_NAME: ${BRANCH_NAME}"
+          echo "COMPONENT_NAME: ${COMPONENT_NAME}"
+          echo "PR_NUMBER: ${PR_NUMBER}"
+          ./build-preview.bash --branch ${BRANCH_NAME} --component ${COMPONENT_NAME} --pr ${PR_NUMBER}
+          ls -lh build/site
+      - name: Upload
+        uses: actions/upload-artifact@v2
+        with:
+          name: documentation-preview-${{env.COMPONENT_NAME}}-${{github.sha}}
+          path: build/site
+          if-no-files-found: error
       - name: Publish preview
         uses: afc163/surge-preview@v1
         with:
@@ -46,8 +61,4 @@ jobs:
           dist: build/site
           failOnError: true
           build: |
-            echo "BRANCH_NAME: ${BRANCH_NAME}"
-            echo "COMPONENT_NAME: ${COMPONENT_NAME}"
-            echo "PR_NUMBER: ${PR_NUMBER}"
-            ./build-preview.bash --branch ${BRANCH_NAME} --component ${COMPONENT_NAME} --pr ${PR_NUMBER}
-            ls -lh build/site
+            echo "Build already done"
