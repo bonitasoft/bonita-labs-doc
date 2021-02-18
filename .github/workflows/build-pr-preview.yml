@@ -51,5 +51,5 @@ jobs:
           surge_token: ${{ secrets.SURGE_TOKEN_DOC }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
           dist: build/site
-          build: |
-            echo "fake build"
+#          build: |
+#            echo "fake build"
