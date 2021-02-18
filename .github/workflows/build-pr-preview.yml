@@ -2,6 +2,8 @@ name: Build PR preview
 
 on:
   pull_request:
+    # To manage 'surge-preview' action teardown, add default event types + closed event type
+    types: [opened, synchronize, reopened, closed]
     paths:
       - 'modules/ROOT/**'
       - 'antora.yml'
@@ -36,6 +38,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           dist: build/site
           failOnError: true
+          teardown: 'true'
           build: |
             ./build-preview.bash --branch "${{ env.BRANCH_NAME }}" --component "${{ env.COMPONENT_NAME }}" --pr "${{ env.PR_NUMBER }}"
             ls -lh build/site
