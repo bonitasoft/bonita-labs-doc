@@ -13,18 +13,21 @@ jobs:
     runs-on: ubuntu-20.04
     env:
       COMPONENT_NAME: bici
+      # Except if you want to test in progress work that your content depends on, keep it set to master
+      DOC_SITE_BRANCH: feat/build_single_component_branch_for_doc_content_pr_preview
     steps:
       - name: Get documenation site source code
         run: |
           pwd
           ls -lha
+          # Remove existing .git directory
           rm -rf *
           #TODO --depth 1 to optimize
           git clone https://github.com/bonitasoft/bonitasoft.github.io.git .
           #git branch -a
-          #git fetch origin feat/build_single_component_branch_for_doc_content_pr_preview
+          #git fetch origin ${DOC_SITE_BRANCH}
           git branch -a
-          git checkout feat/build_single_component_branch_for_doc_content_pr_preview
+          git checkout ${DOC_SITE_BRANCH}
 #      - name: Generate the site preview
 #        run: |
 #          BRANCH_NAME=$(echo ${GITHUB_HEAD_REF#refs/heads/})
