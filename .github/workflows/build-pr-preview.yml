@@ -39,19 +39,19 @@ jobs:
           echo gh env PR_NUMBER: "${{ env.PR_NUMBER }}"
           echo gh env mini_name: "${{ env.mini_name }}"
       # TODO pass the site-url argument https://{{repository.owner}}-{{repository.name}}-{{job.name}}-pr-{{pr.number}}.surge.sh.
-      - name: Generate the site preview
-        run: |
-          echo "BRANCH_NAME: ${BRANCH_NAME}"
-          echo "COMPONENT_NAME: ${COMPONENT_NAME}"
-          echo "PR_NUMBER: ${PR_NUMBER}"
-          ./build-preview.bash --branch "${{ env.BRANCH_NAME }}" --component "${{ env.COMPONENT_NAME }}" --pr "${{ env.PR_NUMBER }}"
-          ls -lh build/site
-      - name: Upload
-        uses: actions/upload-artifact@v2
-        with:
-          name: documentation-preview-${{env.COMPONENT_NAME}}-${{github.sha}}
-          path: build/site
-          if-no-files-found: error
+#      - name: Generate the site preview
+#        run: |
+#          echo "BRANCH_NAME: ${BRANCH_NAME}"
+#          echo "COMPONENT_NAME: ${COMPONENT_NAME}"
+#          echo "PR_NUMBER: ${PR_NUMBER}"
+#          ./build-preview.bash --branch "${{ env.BRANCH_NAME }}" --component "${{ env.COMPONENT_NAME }}" --pr "${{ env.PR_NUMBER }}"
+#          ls -lh build/site
+#      - name: Upload
+#        uses: actions/upload-artifact@v2
+#        with:
+#          name: documentation-preview-${{env.COMPONENT_NAME}}-${{github.sha}}
+#          path: build/site
+#          if-no-files-found: error
       - name: Publish preview
         uses: afc163/surge-preview@v1
         with:
@@ -60,4 +60,5 @@ jobs:
           dist: build/site
           failOnError: true
           build: |
-            echo "Build already done"
+            ./build-preview.bash --branch "${{ env.BRANCH_NAME }}" --component "${{ env.COMPONENT_NAME }}" --pr "${{ env.PR_NUMBER }}"
+            ls -lh build/site
