@@ -44,7 +44,7 @@ jobs:
           echo "BRANCH_NAME: ${BRANCH_NAME}"
           echo "COMPONENT_NAME: ${COMPONENT_NAME}"
           echo "PR_NUMBER: ${PR_NUMBER}"
-          ./build-preview.bash --branch ${BRANCH_NAME} --component ${COMPONENT_NAME} --pr ${PR_NUMBER}
+          ./build-preview.bash --branch "${{ env.BRANCH_NAME }}" --component "${{ env.COMPONENT_NAME }}" --pr "${{ env.PR_NUMBER }}"
           ls -lh build/site
       - name: Upload
         uses: actions/upload-artifact@v2
