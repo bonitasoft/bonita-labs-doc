@@ -41,11 +41,11 @@ jobs:
           npm ci
       - name: Generate the site preview
         run: |
-          ./build-preview.bash --branch ${GITHUB_HEAD_REF#refs/heads/} --component ${COMPONENT_NAME} --pr ${PR_NUMBER}
+          echo "BRANCH_NAME: ${BRANCH_NAME}"
+          echo "COMPONENT_NAME: ${COMPONENT_NAME}"
+          echo "PR_NUMBER: ${PR_NUMBER}"
+          ./build-preview.bash --branch ${BRANCH_NAME} --component ${COMPONENT_NAME} --pr ${PR_NUMBER}
           ls -lh build/site
-        # pr number: see https://github.com/actions/checkout/issues/58
-        #branch https://stackoverflow.com/questions/58033366/how-to-get-current-branch-within-github-actions
-#        run: ./build-preview.bash --branch ${{github.head_ref}} --component ${{env.COMPONENT_NAME}} --pr ${{}}
       - name: Upload
         uses: actions/upload-artifact@v2
         with:
