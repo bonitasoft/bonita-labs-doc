@@ -12,7 +12,7 @@ jobs:
   build_preview:
     runs-on: ubuntu-20.04
     env:
-      BRANCH_NAME: $(echo ${GITHUB_REF#refs/heads/})
+      BRANCH_NAME: "${GITHUB_REF#refs/heads/}"
       COMPONENT_NAME: bici
     steps:
       - name: Echo environment variables
@@ -37,7 +37,7 @@ jobs:
           npm ci
       - name: Generate the site preview
         run: |
-          ./build-preview.bash --branch ${BRANCH_NAME} --component ${COMPONENT_NAME} --pr 12
+          ./build-preview.bash --branch ${GITHUB_REF#refs/heads/} --component ${COMPONENT_NAME} --pr 12
           ls -lh build/site
         # pr number: see https://github.com/actions/checkout/issues/58
         #branch https://stackoverflow.com/questions/58033366/how-to-get-current-branch-within-github-actions
