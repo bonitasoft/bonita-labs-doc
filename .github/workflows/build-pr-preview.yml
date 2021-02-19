@@ -17,10 +17,11 @@ jobs:
       # Except if you want to test in progress work that your content depends on, keep it set to master
       DOC_SITE_BRANCH: feat/build_single_component_branch_for_doc_content_pr_preview
     steps:
-      - name: gh PR type
+      - name: Log event information
         run:
           echo "The PR number is $PR_NUMBER"
-          echo pr type "${{ toJson(github.event.pull_request) }}"
+          echo pr action is "${{ github.action }}"
+#          echo pr type "${{ toJson(github.event.pull_request) }}"
 #      - name: Get documentation site source code
 #        # TODO optimization do not run when closing PR
 #        run: |
