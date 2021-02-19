@@ -14,7 +14,7 @@ jobs:
     env:
       COMPONENT_NAME: bici
       # Except if you want to test in progress work that your content depends on, keep it set to master
-      DOC_SITE_BRANCH: feat/build_single_component_branch_for_doc_content_pr_preview
+      DOC_SITE_BRANCH: master
       PR_NUMBER: ${{ github.event.pull_request.number }}
     steps:
       - name: Get documentation site source code
