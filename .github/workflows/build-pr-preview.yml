@@ -13,19 +13,19 @@ jobs:
     runs-on: ubuntu-20.04
     env:
       COMPONENT_NAME: bici
-      PR_NUMBER: ${{ github.event.pull_request.number }}
       # Except if you want to test in progress work that your content depends on, keep it set to master
       DOC_SITE_BRANCH: feat/build_single_component_branch_for_doc_content_pr_preview
+      PR_NUMBER: ${{ github.event.pull_request.number }}
     steps:
       - name: Log event information
         run: |
           echo "The PR number is $PR_NUMBER"
           echo pr action is "${{ github.action }}"
-          echo github.job "${{ github.job }}"
 
-          repo_owner_and_name=$(echo "${{github.repository}}" | sed 's/-/\//g')
+          repo_owner_and_name=$(echo "${{github.repository}}" | sed 's/\//-/g')
           # the surge-preview action generates https://{{repository.owner}}-{{repository.name}}-{{job.name}}-pr-{{pr.number}}.surge.sh
-          PREVIEW_URL="https://${repo_owner_and_name}-${{job.name}}-pr-$PR_NUMBER.surge.sh"
+          # https://bonitasoft-bonita-ici-doc-build_preview-pr-124.surge.sh/
+          PREVIEW_URL="https://${repo_owner_and_name}-${{github.job}}-pr-$PR_NUMBER.surge.sh"
           echo "PREVIEW_URL $PREVIEW_URL"
 
 # https://bonitasoft-bonitasoft/bonita-ici-doc--pr-124.surge.sh
