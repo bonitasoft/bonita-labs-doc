@@ -19,30 +19,30 @@ jobs:
       - name: gh PR type
         run:
           echo pr type "${{ toJson(github.event.pull_request) }}"
-      - name: Get documentation site source code
-        # TODO optimization do not run when closing PR
-        run: |
-          pwd
-          ls -lha
-          # Remove existing .git directory
-          rm -rf *
-          #TODO --depth 1 to optimize
-          git clone https://github.com/bonitasoft/bonitasoft.github.io.git .
-          git checkout ${DOC_SITE_BRANCH}
-      - name: Compute environment variables
-        run: |
-          echo "BRANCH_NAME=$(echo ${GITHUB_HEAD_REF#refs/heads/})" >> $GITHUB_ENV
-          echo "PR_NUMBER=$(echo $GITHUB_REF | awk 'BEGIN { FS = "/" } ; { print $3 }')" >> $GITHUB_ENV
-          echo "mini_name=$(echo ${GITHUB_HEAD_REF#refs/heads/})" >> $GITHUB_ENV
-      # TODO pass the site-url argument https://{{repository.owner}}-{{repository.name}}-{{job.name}}-pr-{{pr.number}}.surge.sh.
-      - name: Publish preview
-        uses: afc163/surge-preview@v1
-        with:
-          surge_token: ${{ secrets.SURGE_TOKEN_DOC }}
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          dist: build/site
-          failOnError: true
-          teardown: 'true'
-          build: |
-            ./build-preview.bash --branch "${{ env.BRANCH_NAME }}" --component "${{ env.COMPONENT_NAME }}" --pr "${{ env.PR_NUMBER }}"
-            ls -lh build/site
+#      - name: Get documentation site source code
+#        # TODO optimization do not run when closing PR
+#        run: |
+#          pwd
+#          ls -lha
+#          # Remove existing .git directory
+#          rm -rf *
+#          #TODO --depth 1 to optimize
+#          git clone https://github.com/bonitasoft/bonitasoft.github.io.git .
+#          git checkout ${DOC_SITE_BRANCH}
+#      - name: Compute environment variables
+#        run: |
+#          echo "BRANCH_NAME=$(echo ${GITHUB_HEAD_REF#refs/heads/})" >> $GITHUB_ENV
+#          echo "PR_NUMBER=$(echo $GITHUB_REF | awk 'BEGIN { FS = "/" } ; { print $3 }')" >> $GITHUB_ENV
+#          echo "mini_name=$(echo ${GITHUB_HEAD_REF#refs/heads/})" >> $GITHUB_ENV
+#      # TODO pass the site-url argument https://{{repository.owner}}-{{repository.name}}-{{job.name}}-pr-{{pr.number}}.surge.sh.
+#      - name: Publish preview
+#        uses: afc163/surge-preview@v1
+#        with:
+#          surge_token: ${{ secrets.SURGE_TOKEN_DOC }}
+#          github_token: ${{ secrets.GITHUB_TOKEN }}
+#          dist: build/site
+#          failOnError: true
+#          teardown: 'true'
+#          build: |
+#            ./build-preview.bash --branch "${{ env.BRANCH_NAME }}" --component "${{ env.COMPONENT_NAME }}" --pr "${{ env.PR_NUMBER }}"
+#            ls -lh build/site
