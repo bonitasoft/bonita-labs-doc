@@ -3,21 +3,21 @@ name: Push content
 on:
   workflow_dispatch:
   push:
-    branches: 
+    branches:
       - master
     paths:
       - 'modules/ROOT/**'
       - 'antora.yml'
       - '.github/workflows/push-content.yml'
 jobs:
-  triggerJob:    
+  triggerJob:
     runs-on: ubuntu-20.04
-    steps:        
-      - name: Workflow Dispatch      
+    steps:
+      - name: Workflow Dispatch
         uses: benc-uk/workflow-dispatch@v1.1
-        with:          
-          workflow: Generate documentation          
+        with:
+          workflow: Generate documentation
           token: ${{secrets.GH_TOKEN_DOC_TRIGGER_WF}}
-          ref: master          
+          ref: master
           repo: bonitasoft/bonitasoft.github.io
           inputs: '{ "component": "bici", "branch": "master" }'
