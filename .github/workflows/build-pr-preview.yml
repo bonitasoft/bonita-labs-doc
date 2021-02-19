@@ -32,7 +32,7 @@ jobs:
           echo "BRANCH_NAME=$(echo ${GITHUB_HEAD_REF#refs/heads/})" >> $GITHUB_ENV
           # the surge-preview action generates https://{{repository.owner}}-{{repository.name}}-{{job.name}}-pr-{{pr.number}}.surge.sh
           repo_owner_and_name=$(echo "${{github.repository}}" | sed 's/\//-/g')
-          echo PREVIEW_URL=https://$repo_owner_and_name-"${{github.job}}"-pr-$PR_NUMBER.surge.sh" >> $GITHUB_ENV
+          echo PREVIEW_URL=https://$repo_owner_and_name-"${{github.job}}"-pr-$PR_NUMBER.surge.sh >> $GITHUB_ENV
       - name: Publish preview
         uses: afc163/surge-preview@v1
         with:
