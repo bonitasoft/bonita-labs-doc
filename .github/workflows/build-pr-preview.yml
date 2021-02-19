@@ -18,9 +18,18 @@ jobs:
       DOC_SITE_BRANCH: feat/build_single_component_branch_for_doc_content_pr_preview
     steps:
       - name: Log event information
-        run:
+        run: |
           echo "The PR number is $PR_NUMBER"
           echo pr action is "${{ github.action }}"
+          # the surge-preview action generates https://{{repository.owner}}-{{repository.name}}-{{job.name}}-pr-{{pr.number}}.surge.sh
+          PREVIEW_URL="https://${{github.repository_owner}}-${{github.repository}}-${{job.name}}-pr-$PR_NUMBER.surge.sh"
+          echo "PREVIEW_URL $PREVIEW_URL"
+
+# job.name
+# github.repository_owner
+#github.repository
+
+
 #          echo pr type "${{ toJson(github.event.pull_request) }}"
 #      - name: Get documentation site source code
 #        # TODO optimization do not run when closing PR
