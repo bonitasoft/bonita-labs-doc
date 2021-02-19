@@ -34,8 +34,6 @@ jobs:
 #      - name: Compute environment variables
 #        run: |
 #          echo "BRANCH_NAME=$(echo ${GITHUB_HEAD_REF#refs/heads/})" >> $GITHUB_ENV
-#          echo "PR_NUMBER=$(echo $GITHUB_REF | awk 'BEGIN { FS = "/" } ; { print $3 }')" >> $GITHUB_ENV
-#          echo "mini_name=$(echo ${GITHUB_HEAD_REF#refs/heads/})" >> $GITHUB_ENV
 #      # TODO pass the site-url argument https://{{repository.owner}}-{{repository.name}}-{{job.name}}-pr-{{pr.number}}.surge.sh.
 #      - name: Publish preview
 #        uses: afc163/surge-preview@v1
