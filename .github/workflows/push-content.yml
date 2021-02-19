@@ -17,7 +17,7 @@ jobs:
         uses: benc-uk/workflow-dispatch@v1.1
         with:          
           workflow: Generate documentation          
-          token: ${{secrets.GH_PAT_TOKEN}}
+          token: ${{secrets.GH_TOKEN_DOC_TRIGGER_WF}}
           ref: master          
           repo: bonitasoft/bonitasoft.github.io
           inputs: '{ "component": "bici", "branch": "master" }'
