@@ -16,7 +16,10 @@ jobs:
       # Except if you want to test in progress work that your content depends on, keep it set to master
       DOC_SITE_BRANCH: feat/build_single_component_branch_for_doc_content_pr_preview
     steps:
-      - name: Get documenation site source code
+      - name: gh PR type
+        run: echo pr type
+      - name: Get documentation site source code
+        # TODO optimization do not run when closing PR
         run: |
           pwd
           ls -lha
