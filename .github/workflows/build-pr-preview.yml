@@ -17,7 +17,8 @@ jobs:
       DOC_SITE_BRANCH: feat/build_single_component_branch_for_doc_content_pr_preview
     steps:
       - name: gh PR type
-        run: echo pr type
+        run:
+          echo pr type: "${{ toJson(github.event.pull_request) }}}"
       - name: Get documentation site source code
         # TODO optimization do not run when closing PR
         run: |
