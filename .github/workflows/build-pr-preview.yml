@@ -21,9 +21,17 @@ jobs:
         run: |
           echo "The PR number is $PR_NUMBER"
           echo pr action is "${{ github.action }}"
+          echo github.job "${{ github.job }}"
+
+          repo_owner_and_name=$(echo "${{github.repository}}" | sed 's/-/\//g')
           # the surge-preview action generates https://{{repository.owner}}-{{repository.name}}-{{job.name}}-pr-{{pr.number}}.surge.sh
-          PREVIEW_URL="https://${{github.repository_owner}}-${{github.repository}}-${{job.name}}-pr-$PR_NUMBER.surge.sh"
+          PREVIEW_URL="https://${repo_owner_and_name}-${{job.name}}-pr-$PR_NUMBER.surge.sh"
           echo "PREVIEW_URL $PREVIEW_URL"
+
+# https://bonitasoft-bonitasoft/bonita-ici-doc--pr-124.surge.sh
+#          PREVIEW_URL="https://${{github.repository_owner}}-${{github.repository}}-${{job.name}}-pr-$PR_NUMBER.surge.sh"
+
+# github.repository replace / by -
 
 # job.name
 # github.repository_owner
