@@ -6,4 +6,4 @@
 ** xref:configure.adoc[Configuration Living Application]
 ** xref:monitoring.adoc[Operations Management Living Application]
 ** xref:rest_extensions.adoc[REST API extensions]
-** xref:send_data.adoc[Send us (anonymous) data!]
+** xref:test_data.adoc[Test data!]
