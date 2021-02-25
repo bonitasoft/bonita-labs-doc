@@ -1,0 +1,34 @@
+= Bonita Intelligent Continuous Improvement
+:page-aliases: release_notes.adoc
+
+image::images/ici.png[Bonita ICI logo]
+
+This Lab project is a proof-of-concept that validates the value of artifical intelligence (AI) in the field of operations management when operations are based on process automation and execution.
+
+The use-case chosen and demonstrated is the additional information that AI can add in the monitoring of the **duration of open cases** (process instances), and the opportunities of short-term improvement actions this provides.
+
+Indeed, for each process, our AI algorithm provides a calculation of the chances for each case to finish within the target duration defined by the Operations Manager (OM). Coupled with detailed case history information, this allows the OM to understand the lifecycle of a case, find the cause of a potential deviation from the target, and take the relevant actions to recover and finish on target.
+
+This project also allows the OM to follow the trends on the longer term thanks to the built-in Analytics dashboards.
+
+It is made of a standalone application to connect to the Bonita Database, and two Living Applications: 
+  * One for the Configuration of the target duration and algorithm parameters
+  * One for Operations Management
+
+[.card-section]
+== Highlight
+
+[.card.card-index]
+--
+xref:process_mining.adoc[[.card-title]#Process mining# [.card-body]#pass:q[Learn more about our algorithm.]#]
+--
+
+[.card.card-index]
+--
+xref:architecture.adoc[[.card-title]#Architecture# [.card-body]#pass:q[Find out how BICI is working under the hood.]#]
+--
+
+[.card.card-index]
+--
+xref:getting_started.adoc[[.card-title]#Getting started# [.card-body]#pass:q[Follow this guide with step-by-step instructions to get BICI start using it.]#]
+--
