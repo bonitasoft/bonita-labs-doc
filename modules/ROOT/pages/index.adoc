@@ -1,5 +1,4 @@
 = Labs Program
-:page-aliases: release_notes.adoc
 
 image::images/Lab_icon.png[Labs logo]
 
