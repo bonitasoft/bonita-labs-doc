@@ -14,7 +14,7 @@ jobs:
     env:
       COMPONENT_NAME: bici
       # Except if you want to test in progress work that your content depends on, keep it set to master
-      DOC_SITE_BRANCH: master
+      DOC_SITE_BRANCH: chore/allow_preview_for_the_labs_component # TMP until the PR is opened
       PR_NUMBER: ${{ github.event.pull_request.number }}
     steps:
       - name: Get documentation site source code
