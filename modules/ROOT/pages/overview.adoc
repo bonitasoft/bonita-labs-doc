@@ -12,6 +12,7 @@ Indeed, for each process, our AI algorithm provides a calculation of the chances
 This project also allows the OM to follow the trends on the longer term thanks to the built-in Analytics dashboards.
 
 It is made of a standalone application to connect to the Bonita Database, and two Living Applications: 
+
   * One for the Configuration of the target duration and algorithm parameters
   * One for Operations Management
 
