@@ -1,6 +1,6 @@
 name: labs
+version: master
 title: Labs
-version: latest
 display_version: labs
 # default
 #start_page: ROOT:index.adoc
