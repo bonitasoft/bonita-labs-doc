@@ -1,13 +1,13 @@
 = Labs Program
 
-image::images/Lab_icon.png[Labs logo,200,100]
+image::Lab_icon.png[Labs logo,200,100]
 
-The Labs Program has been created to experiment projects with a potential high value in the Digital Process Automation field.  
+The Labs Program has been created to experiment projects with a potential high value in the Digital Process Automation field.
 
 These projects are not fully part of the Bonita Platform, but they are proving a point and may make it into Bonita at some point.
 
-They may use only Community values. To test such a project, contact community@bonitasoft.com.  
+They may use only Community values. To test such a project, contact community@bonitasoft.com.
 
-Or they may also use Enterprise values. If you are interested to test such a project, contact the Product Management team : product.management@bonitasoft.com.  
+Or they may also use Enterprise values. If you are interested to test such a project, contact the Product Management team : product.management@bonitasoft.com.
 
 In this documentation, you will find information on our main Enterprise Lab project: Bonita Intelligent Continuous Improvement.
