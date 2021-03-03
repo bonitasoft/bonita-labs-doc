@@ -1,8 +1,6 @@
 name: labs
-version: master
+version: latest
 title: Labs
 display_version: labs
-# default
-#start_page: ROOT:index.adoc
 nav:
   - modules/ROOT/taxonomy.adoc
