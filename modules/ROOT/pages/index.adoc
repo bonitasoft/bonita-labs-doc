@@ -1,27 +1,13 @@
-= Bonita Intelligent Continuous Improvement Add-on
-:page-aliases: release_notes.adoc
+= Labs Program
 
-Monitor the duration of open cases, get help from an Artificial Intelligence algorithm providing the chances for each case to finish within a target duration, get all data to understand the lifecycle of a case, and follow the trends on the longer term thanks to the Analytics dashboards.
+image::images/Lab_icon.png[Labs logo,200,100]
 
-This Add-on is composed of a standalone application connected to Bonita Database, and two Living Applications: one for the Configuration of business elements and algorithm, and one for Operations Management.
+The Labs Program has been created to experiment projects with a potential high value in the Digital Process Automation field.  
 
-image::images/ici.png[Bonita ICI Add-on logo]
+These projects are not fully part of the Bonita Platform, but they are proving a point and may make it into Bonita at some point.
 
+They may use only Community values. To test such a project, contact community@bonitasoft.com.  
 
-[.card-section]
-== Highlight
+Or they may also use Enterprise values. If you are interested to test such a project, contact the Product Management team : product.management@bonitasoft.com.  
 
-[.card.card-index]
---
-xref:process_mining.adoc[[.card-title]#Process mining# [.card-body]#pass:q[Learn more about what runs in the background.]#]
---
-
-[.card.card-index]
---
-xref:architecture.adoc[[.card-title]#Architecture# [.card-body]#pass:q[Find out how BICI is working under the hood.]#]
---
-
-[.card.card-index]
---
-xref:getting_started.adoc[[.card-title]#Getting started# [.card-body]#pass:q[Follow this guide with step-by-step instructions to start using the BICI Add-on.]#]
---
+In this documentation, you will find information on our main Enterprise Lab project: Bonita Intelligent Continuous Improvement.

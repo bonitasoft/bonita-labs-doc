@@ -20,4 +20,4 @@ jobs:
           token: ${{secrets.GH_TOKEN_DOC_TRIGGER_WF}}
           ref: master
           repo: bonitasoft/bonitasoft.github.io
-          inputs: '{ "component": "bici", "branch": "master" }'
+          inputs: '{ "component": "labs", "branch": "master" }'
