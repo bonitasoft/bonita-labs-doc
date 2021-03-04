@@ -1,7 +1,7 @@
 = Bonita Intelligent Continuous Improvement
 :page-aliases: release_notes.adoc
 
-image::images/ici.png[Bonita ICI logo]
+image::ici.png[Bonita ICI logo]
 
 This Lab project is a proof-of-concept that validates the value of artifical intelligence (AI) in the field of operations management when operations are based on process automation and execution.
 
@@ -11,7 +11,7 @@ Indeed, for each process, our AI algorithm provides a calculation of the chances
 
 This project also allows the OM to follow the trends on the longer term thanks to the built-in Analytics dashboards.
 
-It is made of a standalone application to connect to the Bonita Database, and two Living Applications: 
+It is made of a standalone application to connect to the Bonita Database, and two Living Applications:
 
   * One for the Configuration of the target duration and algorithm parameters
   * One for Operations Management
