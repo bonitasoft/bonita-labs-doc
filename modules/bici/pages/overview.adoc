@@ -1,5 +1,5 @@
 = Bonita Intelligent Continuous Improvement
-:page-aliases: release_notes.adoc
+:page-aliases: index.adoc, release_notes.adoc
 
 image::ici.png[Bonita ICI logo]
 

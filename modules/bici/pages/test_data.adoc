@@ -1,4 +1,5 @@
 = Test data
+:page-aliases: send_data.adoc
 
 To be able to reach even better predictions, we need to train our algorithm on real-world data.
 
