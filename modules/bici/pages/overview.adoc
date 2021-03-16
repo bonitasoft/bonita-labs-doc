@@ -17,7 +17,7 @@ It is made of a standalone application to connect to the Bonita Database, and tw
   * One for Operations Management
 
 [.card-section]
-== Highlight
+== Highlights
 
 [.card.card-index]
 --
