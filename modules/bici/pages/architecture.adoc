@@ -1,5 +1,6 @@
 = Architecture
 :page-aliases: installation_guide.adoc, next_step.adoc, prerequisites.adoc
+:description: A brief description of BICI architecture.
 
 Bonita Intelligent Continuous Improvement (BICI) extracts data of the Bonita Database, transforms it, and stores documents in an Elasticsearch storage engine. A set of REST APIs allows to query this storage. Those APIs are used in two Living Applications deployed on Bonita to configure processes and render predictions.
 
