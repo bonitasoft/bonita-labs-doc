@@ -1,4 +1,5 @@
 = Configure _BICI Operations Management_ Living Application
+:description: An explanation of how to configure the Operations Management so it delivers its full value.
 
 A Living Application is provided with BICI to:
 
