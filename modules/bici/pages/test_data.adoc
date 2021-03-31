@@ -1,5 +1,6 @@
 = Test data
 :page-aliases: send_data.adoc
+:description: A call to action for customers to help us improve this algorithm, and more to come.
 
 To be able to reach even better predictions, we need to train our algorithm on real-world data.
 
