@@ -1,4 +1,5 @@
 = Getting started
+:description: A description of the steps needed to get BICI up and running.
 
 Bonita Intelligent Continuous Improvement (BICI) configuration instructions.
 

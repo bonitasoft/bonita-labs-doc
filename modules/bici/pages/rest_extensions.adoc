@@ -1,4 +1,5 @@
 = BICI Operations Management API
+:description: The list of APIs used in the Operations Management application.
 
 _version 2.0_
 

@@ -1,4 +1,5 @@
 = Operations Management
+:description: A description of the Operations Management application values.
 
 The Operations Management Living Application contains pages that allow Operations Managers to monitor cases with more information than they could normally get by looking at cases execution.
 This application is made of two menu options.
