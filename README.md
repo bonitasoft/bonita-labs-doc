@@ -1,5 +1,9 @@
 # Bonita Intelligent Continuous Improvement documentation resources
 
+| This branch is now archived. BICI is now part of bonita-labs. See https://github.com/bonitasoft/bonita-labs-doc/tree/master |
+| ----- |
+
+
 This repository contains Bonita Intelligent Continuous Improvement documentation site content.
 It uses [Markdown](https://help.github.com/categories/writing-on-github/) to create documentation content.
 
