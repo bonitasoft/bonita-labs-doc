@@ -1,0 +1,24 @@
+= Bonita Labs documentation resources
+
+This repository contains the sources of the https://documentation.bonitasoft.com/bonita[Bonita documentation site]. It uses https://docs.asciidoctor.org/asciidoc/latest/[Asciidoc] format for
+the documentation content.
+
+== Notes about branches in this repository
+
+Branches named `bici-1.x` were used by a former documentation site when BICI versions were available.
+
+We now document only a single version and the documentation sources are stored in the `master` branch.
+
+
+== Content writing guidelines
+
+See https://github.com/bonitasoft/bonita-documentation-site/blob/master/docs/content/CONTRIBUTING.adoc[Bonita documentation content writing guidelines] for
+recommendations about writing Asciidoc pages the Bonita-way.
+
+
+== Providing feedbacks about Bonita product
+
+For any questions or feedbacks about the *product itself*, please use the following resources:
+
+* http://community.bonitasoft.com/[Community website]
+* https://bonita.atlassian.net/projects/BBPMC/[Community Bug tracker (Jira)]
