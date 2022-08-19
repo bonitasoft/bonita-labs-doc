@@ -4,6 +4,8 @@ title: Labs
 display_version: labs
 asciidoc:
   attributes:
+    # page attributes
     page-editable: true
+    page-pagination: true # display links to previous/next pages at the bottom of the page
 nav:
   - modules/bici/taxonomy.adoc
