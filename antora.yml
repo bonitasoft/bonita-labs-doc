@@ -1,7 +1,6 @@
 name: labs
 version: latest
 title: Labs
-display_version: labs
 asciidoc:
   attributes:
     # page attributes
