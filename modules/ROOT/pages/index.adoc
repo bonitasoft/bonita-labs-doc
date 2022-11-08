@@ -1,6 +1,9 @@
 = Labs Program
 :description: An explanation of the Labs Program and how to benefit from it.
 
+// TODO temp to generate xref validation errors
+xref:unknown.adoc[Unknown page]
+
 image::Lab_icon.png[Labs logo,200,100]
 
 The Labs Program has been created to experiment projects with a potential high value in the Digital Process Automation field.
