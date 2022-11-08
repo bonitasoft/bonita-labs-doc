@@ -18,9 +18,10 @@ jobs:
       BRANCH_NAME: ${{ github.head_ref }}
     steps:
       - name: Build and publish PR preview
-        uses: bonitasoft/bonita-documentation-site/.github/actions/build-and-publish-pr-preview/@master
+        uses: bonitasoft/bonita-documentation-site/.github/actions/build-and-publish-pr-preview@ci/preview_action_add_ignore-errors_input
         with:
+          doc-site-branch: ci/preview_action_add_ignore-errors_input # temp to test the new feature
           surge-token: ${{ secrets.SURGE_TOKEN_DOC }}
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          build-preview-command: |-
-            ./build-preview.bash --component "${{ env.COMPONENT_NAME }}" --branch "${{ env.BRANCH_NAME }}"
+          component: labs
+          ignore-errors: false
