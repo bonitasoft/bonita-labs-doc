@@ -13,14 +13,11 @@ jobs:
     runs-on: ubuntu-22.04
     permissions:
       pull-requests: write # surge-preview write PR comments
-    env:
-      COMPONENT_NAME: labs
-      BRANCH_NAME: ${{ github.head_ref }}
     steps:
       - name: Build and publish PR preview
-        uses: bonitasoft/bonita-documentation-site/.github/actions/build-and-publish-pr-preview/@master
+        uses: bonitasoft/bonita-documentation-site/.github/actions/build-and-publish-pr-preview@master
         with:
           surge-token: ${{ secrets.SURGE_TOKEN_DOC }}
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          build-preview-command: |-
-            ./build-preview.bash --component "${{ env.COMPONENT_NAME }}" --branch "${{ env.BRANCH_NAME }}"
+          component-name: labs
+          ignore-errors: false
