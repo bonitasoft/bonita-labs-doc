@@ -2,6 +2,9 @@
 :page-aliases: index.adoc, release_notes.adoc
 :description: A presentation of the BICI concept.
 
+
+WARNING: this is a modified page to test changes in doc-site generation!
+
 image::ici.png[Bonita ICI logo]
 
 This Lab project is a proof-of-concept that validates the value of artifical intelligence (AI) in the field of operations management when operations are based on process automation and execution.
