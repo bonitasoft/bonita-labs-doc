@@ -1,7 +1,7 @@
 = Labs Program
 :description: An explanation of the Labs Program and how to benefit from it.
 
-WARNING: this is a modified page to test changes in doc-site generation!
+WARNING: this is a modified page to test changes in doc-site generation !
 
 image::Lab_icon.png[Labs logo,200,100]
 
