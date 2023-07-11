@@ -15,11 +15,8 @@ jobs:
       pull-requests: write # surge-preview write PR comments
     steps:
       - name: Build and publish PR preview
-        # TMP use the branch of https://github.com/bonitasoft/bonita-documentation-site/pull/596
-        uses: bonitasoft/bonita-documentation-site/.github/actions/build-and-publish-pr-preview/@feat/add_fail_on_warning_options
+        uses: bonitasoft/bonita-documentation-site/.github/actions/build-and-publish-pr-preview/@master
         with:
-          # TMP use the branch of https://github.com/bonitasoft/bonita-documentation-site/pull/596
-          doc-site-branch: feat/add_fail_on_warning_options
           surge-token: ${{ secrets.SURGE_TOKEN_DOC }}
           github-token: ${{ secrets.GITHUB_TOKEN }}
           component-name: labs
