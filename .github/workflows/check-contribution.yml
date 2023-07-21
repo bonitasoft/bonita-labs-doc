@@ -9,7 +9,7 @@ jobs:
       pull-requests: write # surge-preview write PR comments
     steps:
       - name: Build and publish PR preview
-        uses: bonitasoft/actions/.github/actions/packages/pr-files-checker@ci/check-pr-guidelines
+        uses: bonitasoft/actions/packages/pr-files-checker@ci/check-pr-guidelines
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           attributes-to-check: ':description:,:alias:'
