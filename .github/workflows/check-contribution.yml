@@ -1,0 +1,15 @@
+name: Check PR preview
+
+on:
+  pull_request:
+jobs:
+  check_contribution:
+    runs-on: ubuntu-22.04
+    permissions:
+      pull-requests: write # surge-preview write PR comments
+    steps:
+      - name: Build and publish PR preview
+        uses: bonitasoft/actions/.github/actions/packages/pr-files-checker@ci/check-pr-guidelines
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          attributes-to-check: ':description:,:alias:'
