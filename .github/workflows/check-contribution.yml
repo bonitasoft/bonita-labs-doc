@@ -13,3 +13,5 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           attributes-to-check: ':description:,:alias:'
+          #files-to-check: 'src/main/resources/org/bonitasoft/web/rest/server/api/tenant/CustomUserInfoDefinitionResource.java'
+          files-to-check: 'adoc'
