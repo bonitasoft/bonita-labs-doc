@@ -36,7 +36,7 @@ image::la/configuration_process_configuration.png[BICI LA Configuration Process]
 
 The target duration is a mandatory configuration to set. It allows BICI to know what is a normal time execution for a given process. With this information, the algorithm computes a percentage of chances for the process instance to finish within this time.
 
-In the page, the target duration is configurable in calendar days.
+In the page, the target duration is configurable in [https://documentation.bonitasoft.com] calendar days.
 
 === Decision threshold
 
