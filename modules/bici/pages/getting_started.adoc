@@ -18,7 +18,7 @@ In the xref:configure.adoc[Configure Living application]'s `Polling Status` tab,
 
 === Configure processes
 
-In the xref:configure.adoc[Configure Living application]'s `Configuration` tab, set target durations and create models for your processes.
+In the xref:configure.adoc[Configure Living application]'s `Configuration` tab, Set target durations and create models for your processes.
 
 == Explore
 
