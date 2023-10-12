@@ -5,7 +5,7 @@ the documentation content.
 
 == Notes about branches in this repository
 
-Branches named `bici-1.x` were used by a former documentation site when BICI versions were available.
+Branches named `bici-1.x` were used by a https://documentation.bonitasoft.com[former documentation] site when BICI versions were available.
 
 We now document only a single version and the documentation sources are stored in the `master` branch.
 
