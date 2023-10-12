@@ -1,5 +1,6 @@
 = Getting started
 :description: A description of the steps needed to get BICI up and running.
+:alias: I'm a fake alias to validate PR guidelines checking
 
 Test
 
