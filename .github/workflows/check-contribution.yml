@@ -15,5 +15,5 @@ jobs:
           attributes-to-check: ':description:,:alias:'
           #files-to-check: 'src/main/resources/org/bonitasoft/web/rest/server/api/tenant/CustomUserInfoDefinitionResource.java'
           files-to-check: 'adoc'
-          forbidden-pattern-to-check: 'https://documentation.bonitasoft.com, link:'
+          forbidden-pattern-to-check: 'https://documentation.bonitasoft.com, link:, xref:#'
 
