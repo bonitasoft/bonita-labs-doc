@@ -1,0 +1,10 @@
+I am included in various pages!
+
+[WARNING]
+====
+High, open places above the treeline are awe-inspiring--
+but you need to be prepared for the altitude and
+rapidly changing weather conditions.
+====
+
+NOTE: I contain an forbidden xref:#yolo[reference]!

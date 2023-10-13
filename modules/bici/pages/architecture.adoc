@@ -14,6 +14,15 @@ IMPORTANT: this is another link:https://documentation.bonitasof.com forbidden re
 
 NOTE: welcome to "Bonita BPM"
 
+== Partials
+
+This paragraph contains an included partial
+
+include::partial$include.adoc[]
+
+
+== Next paragraph
+
 BICI connects to the Bonita Database, using its own connection pool to read events from the archives.
 Events are stored in Elasticsearch.
 
