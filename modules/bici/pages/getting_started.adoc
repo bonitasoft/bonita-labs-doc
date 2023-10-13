@@ -1,6 +1,8 @@
 = Getting started
 :description: A description of the steps needed to get BICI up and running.
 
+Test
+
 Bonita Intelligent Continuous Improvement (BICI) configuration instructions.
 
 == Configure
@@ -16,13 +18,13 @@ In the xref:configure.adoc[Configure Living application]'s `Polling Status` tab,
 
 === Configure processes
 
-In the xref:configure.adoc[Configure Living application]'s `Configuration` tab, set target durations and create models for your processes.
+In the xref:configure.adoc[Configure Living application]'s `Configuration` tab, Set target durations and create models for your processes.
 
 == Explore
 
 === Monitor executing cases
 
-Check out the xref:monitoring.adoc[Operation manager Living application]'s `Monitoring` tab, it contains live monitoring of executing cases.
+Check out the xref:monitoring.adoc[Operation manager Living application]'s `Monitoring` tab, it contains live monitoring of  https://documentation.bonitasoft.com[executing cases].
 
 === Analyse performance of completed cases
 

@@ -8,6 +8,8 @@ image::bici_architecture.png[Bonita Intelligent Continuous Improvement Add-on Ar
 
 == Overview
 
+NOTE: this is an xref:#yolo[Invalid ref]
+
 BICI connects to the Bonita Database, using its own connection pool to read events from the archives.
 Events are stored in Elasticsearch.
 
