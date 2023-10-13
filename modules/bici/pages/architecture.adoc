@@ -10,6 +10,10 @@ image::bici_architecture.png[Bonita Intelligent Continuous Improvement Add-on Ar
 
 NOTE: this is an xref:#yolo[Invalid ref]
 
+IMPORTANT: this is another link:https://documentation.bonitasof.com forbidden reference!
+
+NOTE: welcome to "Bonita BPM"
+
 BICI connects to the Bonita Database, using its own connection pool to read events from the archives.
 Events are stored in Elasticsearch.
 
