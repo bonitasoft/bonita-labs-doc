@@ -13,5 +13,5 @@ jobs:
         with:
           attributes-to-check: ':description:,:page-aliases:'
           files-to-check: 'adoc'
-          forbidden-pattern-to-check: 'https://documentation.bonitasoft.com, link:https, link:http, link:, xref:https, xref:http, xref:#'
+          forbidden-pattern-to-check: 'https://documentation.bonitasoft.com, link:https, link:http, link:, xref:https, xref:http, xref:_, xref:#'
 
