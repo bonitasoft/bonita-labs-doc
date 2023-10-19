@@ -11,8 +11,7 @@ jobs:
       - name: Build and publish PR preview
         uses: bonitasoft/actions/packages/pr-antora-content-guidelines-checker@ci/check-pr-guidelines
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
           attributes-to-check: ':description:,:page-aliases:'
           files-to-check: 'adoc'
-          forbidden-pattern-to-check: 'https://documentation.bonitasoft.com, link:, xref:#'
+          forbidden-pattern-to-check: 'https://documentation.bonitasoft.com, link:https, link:http, link:, xref:https, xref:http, xref:#'
 
