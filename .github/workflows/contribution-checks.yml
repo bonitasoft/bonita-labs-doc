@@ -1,4 +1,4 @@
-name: Check PR preview
+name: Contribution checks
 
 on:
   pull_request:
