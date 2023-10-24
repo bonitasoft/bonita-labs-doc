@@ -9,7 +9,8 @@ jobs:
       pull-requests: write # surge-preview write PR comments
     steps:
       - name: Build and publish PR preview
-        uses: bonitasoft/actions/.github/actions/packages/pr-files-checker@ci/check-pr-guidelines
+        uses: bonitasoft/actions/packages/pr-antora-content-guidelines-checker@defect/improve_log_for_contribution_action
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          attributes-to-check: ':description:,:alias:'
+          attributes-to-check: ':description:'
+          files-to-check: 'adoc'
+          forbidden-pattern-to-check: 'https://documentation.bonitasoft.com, link:https, link:http, link:, xref:https, xref:http, xref:_, xref:#, Bonita BPM'
