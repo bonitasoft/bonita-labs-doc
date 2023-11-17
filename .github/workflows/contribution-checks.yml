@@ -6,7 +6,7 @@ jobs:
   check_contribution:
     runs-on: ubuntu-22.04
     permissions:
-      pull-requests: write # "pr-antora-content-guidelines-checker" write PR comments
+      pull-requests: write # "pr-antora-content-guidelines-checker" write PR comments when the PR doesn't match the "Guidelines"
     steps:
       - name: Check PR content
         uses: bonitasoft/actions/packages/pr-antora-content-guidelines-checker@v2
