@@ -4,7 +4,7 @@ on:
   pull_request:
 
 jobs:
-  check_contribution:
+  check_antora_content_guidelines:
     permissions:
       pull-requests: write # "pr-antora-content-guidelines-checker" write PR comments when the PR doesn't match the "Guidelines"
     # TODO use master when https://github.com/bonitasoft/bonita-documentation-site/pull/642 is merged
