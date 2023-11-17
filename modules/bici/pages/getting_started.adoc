@@ -3,6 +3,8 @@
 
 Bonita Intelligent Continuous Improvement (BICI) configuration instructions.
 
+See https://documentation.bonitasoft.com/bonita
+
 == Configure
 
 === Configure Profiles

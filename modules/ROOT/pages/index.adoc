@@ -1,5 +1,4 @@
 = Labs Program
-:description: An explanation of the Labs Program and how to benefit from it.
 
 image::Lab_icon.png[Labs logo,200,100]
 
