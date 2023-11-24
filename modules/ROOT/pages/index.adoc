@@ -7,6 +7,9 @@ xref:#anchor[wrong anchor]
 xref:_anchor2[another wrong anchor with a different AsciiDoc syntax]
 
 
+link:http://localhost:8080/
+link:my_page.adoc
+
 The Labs Program has been created to experiment projects with a potential high value in the Digital Process Automation field.
 
 These projects are not fully part of the Bonita Platform, but they are proving a point and may make it into Bonita at some point.
