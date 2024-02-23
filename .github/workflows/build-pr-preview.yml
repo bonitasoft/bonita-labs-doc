@@ -15,7 +15,7 @@ jobs:
       pull-requests: write # surge-preview write PR comments
     steps:
       - name: Build and publish PR preview
-        uses: bonitasoft/bonita-documentation-site/.github/actions/build-and-publish-pr-preview@master
+        uses: bonitasoft/bonita-documentation-site/.github/actions/build-and-publish-pr-preview@feat/remove_undefined_on_PR_preview_link
         with:
           surge-token: ${{ secrets.SURGE_TOKEN_DOC }}
           github-token: ${{ secrets.GITHUB_TOKEN }}
