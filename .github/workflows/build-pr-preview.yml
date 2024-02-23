@@ -21,3 +21,5 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           component-name: labs
           fail-on-warning: true
+          # ensure that the modified action is really called
+          doc-site-branch: feat/remove_undefined_on_PR_preview_link
