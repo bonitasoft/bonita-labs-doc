@@ -15,11 +15,9 @@ jobs:
       pull-requests: write # surge-preview write PR comments
     steps:
       - name: Build and publish PR preview
-        uses: bonitasoft/bonita-documentation-site/.github/actions/build-and-publish-pr-preview@feat/remove_undefined_on_PR_preview_link
+        uses: bonitasoft/bonita-documentation-site/.github/actions/build-and-publish-pr-preview@master
         with:
           surge-token: ${{ secrets.SURGE_TOKEN_DOC }}
           github-token: ${{ secrets.GITHUB_TOKEN }}
           component-name: labs
           fail-on-warning: true
-          # ensure that the modified action is really called
-          doc-site-branch: feat/remove_undefined_on_PR_preview_link
