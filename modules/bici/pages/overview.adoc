@@ -1,5 +1,6 @@
 = Bonita Intelligent Continuous Improvement
 :page-aliases: index.adoc, release_notes.adoc
+:description: A presentation of the BICI concept.
 
 image::ici.png[Bonita ICI logo]
 
