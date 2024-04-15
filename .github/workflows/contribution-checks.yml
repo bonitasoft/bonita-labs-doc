@@ -1,10 +1,29 @@
 name: Contribution checks
 
 on:
-  pull_request_target:
+  # TODO temp, restore pull_request_target
+  pull_request:
+#  pull_request_target:
+
+# TODO temporarily use the content of the called workflow here to ease the debugging
+#jobs:
+#  check_antora_content_guidelines:
+#    permissions:
+#      pull-requests: write # "pr-antora-content-guidelines-checker" write PR comments when the PR doesn't match the "Guidelines"
+#    uses: bonitasoft/bonita-documentation-site/.github/workflows/_reusable_pr-antora-content-guidelines-checker.yml@master
 
 jobs:
-  check_antora_content_guidelines:
+  checks:
     permissions:
       pull-requests: write # "pr-antora-content-guidelines-checker" write PR comments when the PR doesn't match the "Guidelines"
-    uses: bonitasoft/bonita-documentation-site/.github/workflows/_reusable_pr-antora-content-guidelines-checker.yml@master
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Check
+        # use the content of https://github.com/bonitasoft/actions/pull/129
+        uses: bonitasoft/actions/packages/pr-antora-content-guidelines-checker@feat/pr-antora-checker_better_support_pr-target
+        with:
+          attributes-to-check: ':description:'
+          files-to-check: 'adoc'
+          # WARN: Be aware that spaces after/before the coma are not trimmed by the action. This means that the spaces are part of the pattern.
+          forbidden-pattern-to-check: 'https://documentation.bonitasoft.com,link:https,link:http,link:,xref:https,xref:http,xref:_,xref:#,Bonita BPM'
+
