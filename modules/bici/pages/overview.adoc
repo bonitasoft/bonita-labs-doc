@@ -1,6 +1,9 @@
 = Bonita Intelligent Continuous Improvement
 :page-aliases: index.adoc, release_notes.adoc
 
+missing desription attribute
+
+
 image::ici.png[Bonita ICI logo]
 
 This Lab project is a proof-of-concept that validates the value of artificial intelligence (AI) in the field of operations management when operations are based on process automation and execution.
