@@ -4,6 +4,8 @@
 
 image::ici.png[Bonita ICI logo]
 
+See https://documentation.bonitasoft.com/bici for more information.
+
 This Lab project is a proof-of-concept that validates the value of artificial intelligence (AI) in the field of operations management when operations are based on process automation and execution.
 
 The use-case chosen and demonstrated is the additional information that AI can add in the monitoring of the **duration of open cases** (process instances), and the opportunities of short-term improvement actions this provides.
