@@ -6,6 +6,11 @@ Bonita Intelligent Continuous Improvement (BICI) extracts data of the Bonita Dat
 
 image::bici_architecture.png[Bonita Intelligent Continuous Improvement Add-on Architecture]
 
+See See https://documentation.bonitasoft.com/bici for more information.
+
+See xref:_anchor[wrong anchor]
+
+
 == Overview
 
 BICI connects to the Bonita Database, using its own connection pool to read events from the archives.
