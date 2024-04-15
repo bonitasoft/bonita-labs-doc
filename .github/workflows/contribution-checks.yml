@@ -1,9 +1,7 @@
 name: Contribution checks
 
 on:
-  # TODO temp, restore pull_request_target
-  pull_request:
-#  pull_request_target:
+  pull_request_target:
 
 # TODO temporarily use the content of the called workflow here to ease the debugging
 #jobs:
