@@ -5,6 +5,8 @@ Process mining is a set of analysis made on any enterprise data logs or events, 
 compute some statistics or business analytic queries. Applied to Bonita, we use BPM event logs stored in
 Bonita Database to compute a predictive model.
 
+Check Bonita BPM for more details.
+
 == General
 
 As an introduction, you can see some of our https://www.bonitasoft.com/videos?category=Webinars[webinars] for
