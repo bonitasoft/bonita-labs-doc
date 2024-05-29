@@ -3,11 +3,11 @@ name: Comments PR with changes list
 on:
   pull_request:
     paths:
-      - '.github/workflows/pr-comments-list-changes.yml'
+      - '.github/workflows/pr-comments-changes-list.yml'
       - 'modules/**'
 
 jobs:
-  site:
+  commentsPRChanges:
     permissions:
       pull-requests: write # write PR comments
     uses: bonitasoft/bonita-documentation-site/.github/workflows/_reusable_pr-comment-list-changes.yml@ci/checkout_docSiteBranch_for_pr_comment
