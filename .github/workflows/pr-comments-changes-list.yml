@@ -10,7 +10,8 @@ jobs:
   commentsPRChanges:
     permissions:
       pull-requests: write # write PR comments
-    uses: bonitasoft/bonita-documentation-site/.github/workflows/_reusable_pr-comment-list-changes.yml@master
+    uses: bonitasoft/bonita-documentation-site/.github/workflows/_reusable_pr-comment-list-changes.yml@ci/checkout_in_folder
     secrets: inherit
     with:
       component-name: labs
+      doc-site-branch: ci/checkout_in_folder
