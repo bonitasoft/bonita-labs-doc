@@ -1,11 +1,12 @@
 name: Deploy PR preview
 
+
 on:
-  pull_request_target:
-    paths:
-      - 'modules/**'
-      - 'antora.yml'
-      - '.github/workflows/pr-build-preview.yml'
+  workflow_run:
+    workflows:
+      - "Build PR preview"
+    types:
+      - completed
             
 jobs:
   deploy:
