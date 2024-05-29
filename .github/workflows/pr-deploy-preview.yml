@@ -1,0 +1,15 @@
+name: Deploy PR preview
+
+on:
+  pull_request_target:
+    paths:
+      - 'modules/**'
+      - 'antora.yml'
+      - '.github/workflows/pr-build-preview.yml'
+            
+jobs:
+  deploy:
+    permissions:
+      pull-requests: write
+    uses: bonitasoft/bonita-documentation-site/.github/workflows/_reusable_surge-deploy-preview.yml@master
+    secrets: inherit

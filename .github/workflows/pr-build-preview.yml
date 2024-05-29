@@ -1,0 +1,18 @@
+name: Build PR preview
+
+on:
+  pull_request_target:
+    paths:
+      - 'modules/**'
+      - 'antora.yml'
+      - '.github/workflows/pr-build-preview.yml'
+            
+jobs:
+  build:
+    permissions:
+      pull-requests: write # "pr-antora-content-guidelines-checker" write PR comments when the PR doesn't match the "Guidelines"
+    uses: bonitasoft/bonita-documentation-site/.github/workflows/_reusable_surge-build-preview.yml@master
+    secrets: inherit
+    with:
+      component-name: labs
+      fail-on-warning: true
