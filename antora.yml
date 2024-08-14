@@ -6,5 +6,6 @@ asciidoc:
     # page attributes
     page-editable: true
     page-pagination: true # display links to previous/next pages at the bottom of the page
+    page-hide-components: 'bcd'
 nav:
   - modules/bici/taxonomy.adoc
