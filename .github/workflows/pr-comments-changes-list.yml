@@ -11,7 +11,7 @@ jobs:
   commentsPRChanges:
     permissions:
       pull-requests: write # write PR comments
-    uses: bonitasoft/bonita-documentation-site/.github/workflows/_reusable_pr-comment-list-changes.yml@master
+    uses: bonitasoft/bonita-documentation-site/.github/workflows/_reusable_pr-comment-list-changes.yml@chore/move_pr_comments_to_action_repo
     secrets: inherit
     with:
       component-name: labs
