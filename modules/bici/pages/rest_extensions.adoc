@@ -4,6 +4,7 @@
 _version 2.0_
 
 API used by Operations Management Living Application
+test
 
 == `/bici-info`
 
