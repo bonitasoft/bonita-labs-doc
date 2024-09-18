@@ -1,5 +1,6 @@
 = BICI Operations Management API
 :description: The list of APIs used in the Operations Management application.
+:page-aliases: test_data.adoc
 
 _version 2.0_
 
