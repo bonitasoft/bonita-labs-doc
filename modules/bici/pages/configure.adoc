@@ -1,7 +1,7 @@
 = Configure _BICI Operations Management_ Living Application
 :description: An explanation of how to configure the Operations Management so it delivers its full value.
 
-A Living Application is provided with BICI to:
+A new Living Application is provided with BICI to:
 
 * Manage polling - check xref:installation_guide.adoc[installation guide].
 * Configure processes and compute prediction models.
