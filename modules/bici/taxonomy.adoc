@@ -1,9 +1,9 @@
 * Bonita ICI
 ** xref:overview.adoc[Overview]
 ** xref:architecture.adoc[Architecture]
-** xref:process_mining.adoc[Process mining]
-** xref:getting_started.adoc[Getting started]
+** xref:process-mining.adoc[Process mining]
+** xref:getting-started.adoc[Getting started]
 ** xref:configure.adoc[Configuration Living Application]
 ** xref:monitoring.adoc[Operations Management Living Application]
-** xref:rest_extensions.adoc[REST API extensions]
-** xref:test_data.adoc[Test data!]
+** xref:rest-extensions.adoc[REST API extensions]
+** xref:test-data.adoc[Test data!]

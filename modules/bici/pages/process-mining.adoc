@@ -1,5 +1,6 @@
 = Process mining
 :description: A description of the BICI process mining algorithm.
+:page-aliases: process_mining.adoc
 
 Process mining is a set of analysis made on any enterprise data logs or events, in order to discover processes and
 compute some statistics or business analytic queries. Applied to Bonita, we use BPM event logs stored in

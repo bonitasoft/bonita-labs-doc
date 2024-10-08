@@ -22,7 +22,7 @@ It is made of a standalone application to connect to the Bonita Database, and tw
 
 [.card.card-index]
 --
-xref:process_mining.adoc[[.card-title]#Process mining# [.card-body]#pass:q[Learn more about our algorithm.]#]
+xref:process-mining.adoc[[.card-title]#Process mining# [.card-body]#pass:q[Learn more about our algorithm.]#]
 --
 
 [.card.card-index]
@@ -32,5 +32,5 @@ xref:architecture.adoc[[.card-title]#Architecture# [.card-body]#pass:q[Find out 
 
 [.card.card-index]
 --
-xref:getting_started.adoc[[.card-title]#Getting started# [.card-body]#pass:q[Follow this guide with step-by-step instructions to get BICI start using it.]#]
+xref:getting-started.adoc[[.card-title]#Getting started# [.card-body]#pass:q[Follow this guide with step-by-step instructions to get BICI start using it.]#]
 --
