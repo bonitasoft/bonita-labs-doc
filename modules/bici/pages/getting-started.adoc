@@ -1,5 +1,6 @@
 = Getting started
 :description: A description of the steps needed to get BICI up and running.
+:page-aliases: getting_started.adoc
 
 Bonita Intelligent Continuous Improvement (BICI) configuration instructions.
 
