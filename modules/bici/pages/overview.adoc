@@ -1,8 +1,8 @@
-= Bonita Intelligent Continuous Improvement
+= image:bici_logo.png[Bonita ICI logo] Bonita Intelligent Continuous Improvement
 :page-aliases: index.adoc, release_notes.adoc
-:description: A presentation of the BICI concept.
+:description: A presentation of the BICI concepts.
 
-image::ici.png[Bonita ICI logo]
+image::bici_project_name.png[Bonita ICI project name]
 
 This Lab project is a proof-of-concept that validates the value of artificial intelligence (AI) in the field of operations management when operations are based on process automation and execution.
 
