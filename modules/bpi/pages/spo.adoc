@@ -71,7 +71,7 @@ Rest assured, the SPO relies on computed KPIs such as wait times and failed proc
 
 === I have imported datasets and I have an email configured in my application, yet I haven’t received anything
 
-Smart Process Overview delivery may take a few hours. Check your spam folder or try again later. If the issue persists, contact our https://csc.bonitacloud.bonitasoft.com/apps/CustomerServices/supportGuide/[Support team].
+Smart Process Overview delivery may take a few hours. Check your spam folder or try again later. If the issue persists, contact our {cscCustomerServices}[Support team].
 
 
 === I have imported data while not having any email configured in my application, can I still generate a Smart Process Overview afterwards?
