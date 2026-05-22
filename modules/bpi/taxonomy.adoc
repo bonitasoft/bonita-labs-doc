@@ -1,9 +1,9 @@
 * Bonita Process Insights
-** xref:index.adoc[Bonita Process Insights]
+** xref:index.adoc[Overview]
 ** xref:cli/index.adoc[Exporting data from Bonita]
 *** xref:cli/configuration-for-anonymization.adoc[How to configure anonymization]
 **** xref:cli/actions-anonymization.adoc[Anonymization actions]
-** xref:application.adoc[Bonita Process Insights Application]
+** xref:application.adoc[Application]
 ** xref:dashboards/index.adoc[Dashboards]
 *** xref:dashboards/application-insights.adoc[Application Insights]
 *** xref:dashboards/process-user-insights.adoc[Process User Insights]
