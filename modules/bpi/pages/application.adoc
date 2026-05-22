@@ -40,7 +40,7 @@ When you delete an application, all related imported data will be removed. This 
 
 Once the export tool generates the zip file containing your dataset, you can import it.
 
-Go to the _Applications_ page in your BPI instance, click the "Import Data" button on the target application's card, and access the upload form. Upload the zip file and wait for it to be processed and analyzed. You can also choose to generate a xref:spo:index.adoc[Smart Process Overview], which sends an email with details about the process execution of your data. Once completed, you can explore the data in your dashboards.
+Go to the _Applications_ page in your BPI instance, click the "Import Data" button on the target application's card, and access the upload form. Upload the zip file and wait for it to be processed and analyzed. You can also choose to generate a xref:spo.adoc[Smart Process Overview], which sends an email with details about the process execution of your data. Once completed, you can explore the data in your dashboards.
 
 image::application/import-data.png[Import Data]
 
@@ -57,7 +57,7 @@ image::application/create-business-goal.png[Create business goal]
 [#generate-license]
 === Generate a license to be able to export data from Bonita
 
-As described in the documentation about xref:cli:index.adoc[how to export data from Bonita], most CLI commands require a license to run.
+As described in the documentation about xref:cli/index.adoc[how to export data from Bonita], most CLI commands require a license to run.
 
 To generate and retrieve a license, connect to your Bonita Process Insights instance and accessing the "Generate license" feature from any page.
 
