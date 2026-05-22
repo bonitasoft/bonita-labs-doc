@@ -1,0 +1,79 @@
+= Smart Process Overview
+:description: Explain how to use and receive a Smart Process Overview for your application
+
+== Overview
+Smart Process Overview (SPO) harnesses the power of AI to provide a concise yet insightful summary of your process execution and performance. +
+It delivers clear, actionable insights into your business processes, empowering you to make informed decisions with ease.
+
+With the Smart Process Overview, you gain a comprehensive perspective on your operations. +
+Monitor performance at a glance, evaluate team effectiveness, and quickly identify areas requiring attention through user-friendly reports—designed for both beginners and experienced users.
+
+Every time you import data on Bonita Process Insights, you can choose whether to generate a Smart Process Overview for your data. +
+If enabled, the SPO is automatically sent to the email distribution list specified in your application's settings. +
+Additionally, you can generate the SPO on demand via your application card.
+
+
+== How to use
+[#requirements]
+=== Requirements
+
+* A xref:application.adoc[BPI application]
+
+* At least one email configured in your application’s email distribution list:
+
+image::spo/configure-email.gif[configure-email]
+
+Ensure emails in the distribution list are separated by commas. There is no limit to the number of recipients.
+
+
+=== Generating the Smart Process Overview
+
+==== 1. After importing data
+
+When you import data into your application, the SPO will be available for generation:
+
+image::spo/import-page.png[import-page]
+
+Ensure at least one email is configured in your <<requirements, application details>>.
+
+[#on-demand]
+==== 2. On-demand from the application’s card
+
+Navigate to the application's card on the home page and click the “Generate Smart Process Overview” button to generate it:
+
+image::spo/card-spo.png[card-spo]
+
+
+Ensure you’ve xref:application.adoc[imported at least one dataset] and configured at least one email in the  <<requirements, application details>>.
+
+Once generated, the SPO will be sent to your email distribution list within a few moments.
+
+
+== FAQ
+
+=== What AI model is used to generate the Smart Process Overview?
+
+The SPO is powered by https://openai.com/[OpenAI].
+
+
+=== How is the Smart Process Overview computed?
+
+The SPO analyzes data from the last three months based on the most recent date in your dataset. For example, if your imported data ends on November 15, the SPO will cover November, October, and September.
+
+
+=== What can I expect in terms of data privacy?
+
+Smart Process Overview leverages OpenAI's APIs to deliver its functionalities. Any data sent to OpenAI is governed by their privacy policy, which you can review https://openai.com/policies/row-privacy-policy/[here].
+For organizations with stringent privacy requirements, we suggest to xref:cli/configuration-for-anonymization.adoc[anonymize your imported data] first for maximum privacy.
+
+Rest assured, the SPO relies on computed KPIs such as wait times and failed processes—not raw data. Nothing is sent to OpenAI without your explicit consent.
+
+
+=== I have imported datasets and I have an email configured in my application, yet I haven’t received anything
+
+Smart Process Overview delivery may take a few hours. Check your spam folder or try again later. If the issue persists, contact our {cscCustomerServices}[Support team].
+
+
+=== I have imported data while not having any email configured in my application, can I still generate a Smart Process Overview afterwards?
+
+Yes. Simply configure an email in your application, return to the home page and click the "Generate Smart Process Overview" button on the <<on-demand, application card>>.

@@ -3,9 +3,12 @@ version: latest
 title: Labs
 asciidoc:
   attributes:
+    cscRootUrl: 'https://csc.bonitacloud.bonitasoft.com'
+    cscCustomerServices: '{cscRootUrl}/apps/CustomerServices'
     # page attributes
     page-editable: true
     page-pagination: true # display links to previous/next pages at the bottom of the page
     page-hide-components: 'bcd'
 nav:
   - modules/bici/taxonomy.adoc
+  - modules/bpi/taxonomy.adoc
