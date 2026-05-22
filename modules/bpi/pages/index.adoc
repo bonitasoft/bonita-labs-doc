@@ -1,0 +1,54 @@
+= Bonita Process Insights
+:description: An explanation of what Bonita Process Insights is and how it can help you.
+
+
+== What is Bonita Process Insights?
+
+
+Bonita Process Insights is an independent product from Bonita Platform, in the form of a web application hosted by Bonitasoft, embedding data analytics dashboards.
+
+Bonita Process Insights allows you to:
+
+* Monitor and analyze business processes built in the Bonita Platform
+
+* Visualize performance metrics in an intuitive dashboard interface
+
+* Track key metrics such as cycle time, throughput, error rates, and resource utilization
+
+* Define your business goals related to process performance
+
+* Monitor progress towards these goals through relevant KPIs
+
+* Compare and benchmark performance
+
+== What does it mean for your business?
+
+Bonita Process Insights empowers Bonita Platform users to assess the performance of their processes and formulate data-driven action plans for continuous improvement.
+
+Identify bottlenecks, inefficiencies, deviations, and areas for improvement.
+Investigate specific process instances and stages. With Bonita Process Insights, you have all the tools you need to improve performance and efficiency, and drive your business towards operational excellence.
+
+== How to start using BPI
+
+. Export your Bonita execution data
+. Configure your application
+. Import your data
+. Configure your business goals
+. Access your dashboards
+
+== Bonita Process Insights Release Note
+
+We are excited to announce the latest update to our Application Insights dashboard, designed to provide comprehensive analysis and monitoring of BPM processes.
+This release includes enhanced visualizations, detailed metrics, and new filters to help you optimize process performance and efficiency.
+
+=== July 2024
+
+* Export Tool
+** Databases supported: Postgres & Oracle
+** Advanced anonymization capabilities
+
+* Available Dashboards
+** xref:dashboards:application-insights.adoc[Application Insights]: Understand and supervise overall process performance with our Application Insights dashboard, empowering your organization to unlock actionable insights, identify bottlenecks, ensure SLA compliance.
+** xref:dashboards:process-user-insights.adoc[User Insights]: Gain comprehensive visibility into task performance by role and user, and accurately measure target achievements to drive process efficiency and accountability.
+** xref:dashboards:process-overview.adoc[Process Overview]: Gain a holistic view of process performance to track objectives, identify inefficiencies, and enhance operational governance. This dashboard empowers you to explore detailed process execution data, driving informed decisions for continuous improvement and optimized business operations.
+** xref:dashboards:process-compare.adoc[Process Compare]: Efficiently benchmark and compare process versions to diagnose performance gaps, understand inefficiencies, and ensure objectives are met. This dashboard allows you to compare two processes, time periods, or statuses, providing detailed insights to explore root causes and drive continuous improvement.

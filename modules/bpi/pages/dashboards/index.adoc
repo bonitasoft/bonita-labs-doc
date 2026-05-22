@@ -1,0 +1,73 @@
+= Dashboards
+:description: An explanation of what the Bonita Process Insights Dashboards are.
+
+
+== Introduction to BPI Dashboards?
+
+This section describes our two powerful dashboards to enhance your process analysis capabilities.
+The Process Overview Analysis dashboard offers a comprehensive view of individual processes, enabling detailed performance tracking and identification of bottlenecks.
+The Process Comparison dashboard allows for side-by-side analysis of two processes, facilitating benchmarking and optimization.
+Dive into these dashboards to unlock deeper insights and drive efficiency in your workflows.
+
+== Dashboards
+
+
+=== Dashboard User Insights
+
+The Process User Insights dashboard is a comprehensive tool designed to provide a detailed analysis of the execution of business processes.
+This dashboard offers a visual and metric-driven representation of various aspects of the process, including task performance, actor involvement, and overall process efficiency.
+By utilizing this dashboard, stakeholders can monitor key performance indicators, identify areas for improvement, and ensure that business processes are executed effectively and efficiently.
+
+image::dashboards/process-user-insights.png[Process User Insights]
+
+=== Dashboard overview
+The Overview Dashboard is a powerful tool for gaining deep visibility into business processes, monitoring performance and driving continuous improvement initiatives.
+
+Whether you're a process owner, analyst, or executive, this dashboard equips you with the insights you need to optimize processes and achieve operational excellence.
+
+image::dashboards/process-overview.png[Dashboard overview]
+
+=== Dashboard compare
+The dashboard is a comparison between two processes(different version or same version with different filters) within a BPM (Business Process Management) context.
+
+image::dashboards/process-compare.png[Process compare dashboard]
+
+== Glossary
+
+*Variant:* A specific version or pathway of a business process within an organization.
+
+*Temporal Objectives:* Pre-set time constraints within which a process is expected to be completed.
+
+*Average Duration:* The arithmetic mean time taken to complete a process variant, measured across all cases.
+
+*Standard Deviation:* A statistical measure of the dispersion or variability from the average duration; a low standard deviation indicates that the data points tend to be close to the mean.
+
+*Case:* An instance of a process execution.
+
+*Flow Nodes:* Individual steps, tasks, or actions that comprise a business process.
+
+*Objective Failure Rate:* The proportion of process instances that did not meet the established temporal objectives.
+
+*Unassigned User Flow Nodes:* Process steps that have not been assigned to any user or role within the system, which could lead to process execution delays.
+
+*Case Start Date:* The timestamp marking the initiation of a process case.
+
+*Root Process Definition:* The original process template from which variations may be derived.
+
+*Root Case Id:* The identifier for the initiating process case in a chain of related cases.
+
+*Process Definition:* The specific configuration or edition of the process being examined.
+
+*Case Id:* A unique identifier for an individual instance of a process.
+
+*Process Duration Objective:* The predefined maximum duration allowed for a case to be completed.
+
+*Case Duration:* The total elapsed time from the start to the conclusion of a case.
+
+*Flow Nodes Count:* The count of discrete steps or actions within the process case.
+
+*Case State:* The current phase or status of the case, such as 'Completed' or 'In Progress'.
+
+*Started By:* The user or automated system that initiated the case.
+
+*Case Objective Status:* The success or failure of the case in meeting the duration objective.

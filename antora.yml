@@ -9,3 +9,4 @@ asciidoc:
     page-hide-components: 'bcd'
 nav:
   - modules/bici/taxonomy.adoc
+  - modules/bpi/taxonomy.adoc

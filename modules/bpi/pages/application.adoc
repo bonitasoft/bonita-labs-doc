@@ -1,0 +1,83 @@
+= Bonita Process Insights Application
+:description: Explain how to use and configure the CLI to export data from a Bonita database
+
+== Overview
+The Bonita Process Insights application allows you to manage your datasets from your Bonita usage.
+
+You can easily analyze all execution data of your processes to better understand your teams' activities.
+
+It is also possible to set time-based goals (Business Goals) to verify the achievement of your business objectives.
+
+== Prerequisites
+
+* Internet connexion
+
+* Any supported browser in latest version
+
+* At least one functional process diagram and a BDM defined in Bonita Studio (version 2021.2 and beyond)
+
+* A Bonita Process Insights account / license
+
+* Be able to run the export tool on your BPM database (for cloud customer you should ask to Bonita Cloud team)
+
+== Configuration
+
+image::application/home.png[home page]
+
+=== Manage applications
+
+An _Application (BPI)_ reflects one of your Bonita (BPA) deployments.
+
+For example, if you have multiple BPA instances for a project like "my-hr-app-dev", "my-hr-app-uat", and "my-hr-app-prod", you can create 3 applications in BPI (using the same names for clarity).
+
+image::application/create-application.png[Create application]
+
+Applications can also be deleted in BPI.
+
+When you delete an application, all related imported data will be removed. This includes data used in dashboards, related business goals, and the dataset import history. The "delete application" button is available on the application card in the application list.
+
+=== Import data
+
+Once the export tool generates the zip file containing your dataset, you can import it.
+
+Go to the _Applications_ page in your BPI instance, click the "Import Data" button on the target application's card, and access the upload form. Upload the zip file and wait for it to be processed and analyzed. You can also choose to generate a xref:spo:index.adoc[Smart Process Overview], which sends an email with details about the process execution of your data. Once completed, you can explore the data in your dashboards.
+
+image::application/import-data.png[Import Data]
+
+You can also clean all previously imported data for a specific application.
+
+This may be necessary if, for example, you forgot to anonymize the data or if certain data shouldn't have been included. Cleaning only deletes the BPM data used in dashboards; business goals and dataset import history remain. The "clean data" button is located on the application card in the application list.
+
+=== Define Business Goals
+
+You can either define a Business goal for a specific process either for any flownode you want.
+
+image::application/create-business-goal.png[Create business goal]
+
+[#generate-license]
+=== Generate a license to be able to export data from Bonita
+
+As described in the documentation about xref:cli:index.adoc[how to export data from Bonita], most CLI commands require a license to run.
+
+To generate and retrieve a license, connect to your Bonita Process Insights instance and accessing the "Generate license" feature from any page.
+
+image::application/generate-license.png[Generate license]
+
+== Glossary
+
+=== Business Goals
+Before exporting, you need to configure the connection to the Bonita Instance from which you want to export the data.
+
+=== Cases
+This is an instance of a process
+
+=== Flownode
+A Flow Node in BPMN is an element within a process that represents a point in the flow where something happens.
+It can be an activity that needs to be performed, a decision point, an event that occurs, or a gateway that dictates the flow's path based on certain conditions.
+Flow Nodes are interconnected by Sequence Flows, which determine the order in which activities are executed in the process.
+Type of flownodes:
+
+* **Events**
+* **Activities**
+* **Events Gateways**
+

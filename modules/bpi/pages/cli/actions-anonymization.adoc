@@ -1,0 +1,180 @@
+= Actions Types for anonymization
+:description: Describe all possible actions for anonymization
+:javase-javadoc-base-url: https://docs.oracle.com/en/java/javase/21/docs/api
+
+== Overview
+
+Action types are mechanisms used to anonymize specific values in the exported data. A value can have one or multiple actions associated with it.
+If no actions are explicitly specified in the configuration for a particular value, it will default to a predefined action as described in the page
+xref:configuration-for-anonymization.adoc[How-to configure anonymization with the CLI].
+
+Additionally, you can define a fallback mechanism in case the primary action does not work or does not find a match (for example, using the `REGEX_REPLACE` action).
+
+=== Order of Action Execution
+
+The actions are executed in the order they are defined in the configuration file. The order of the actions is important because the output of one action is the input of the next action.
+The fallback action is executed only if none of the defined actions match.
+
+In the given example, two actions are applied to the `content` column of the `arch_process_comment` table. The first action, `REGEX_REPLACE`, preserves the domain of an email while replacing the remaining parts. The second action substitutes a username (such as walter.bates) with +++*****+++. +
+If neither of these actions match, the fallback action `REMOVE_LINE` is executed, resulting in the removal of the entire line.
+
+[source,yaml]
+----
+arch_process_comment:
+    content:
+      actions:
+        - action: REGEX_REPLACE
+          pattern: [a-zA-Z0-9._-]+(@[a-zA-Z0-9._-]+\.[a-zA-Z0-9_-]+)
+          value: '***$1'
+        - action: REGEX_REPLACE
+          pattern: ( [a-zA-Z0-9_\-]*\.[a-zA-Z0-9_\-]* )
+          value: '*****'
+    fallback:
+      action: REMOVE_LINE
+      where:
+        - column: content
+          regex: '.*'
+----
+
+=== Where conditions
+
+It is possible to define `where` conditions for an action, The where conditions refer to column within the same table (cross-table conditions are not supported). The action will be performed if any conditions in the where conditions list matches. This can be translated as an `OR` operator between conditions: Apply this action if col x match regex 1  OR col x match regex 1 OR col y match regex 2 OR ...
+
+== Available actions
+
+=== HASH
+
+Replace the values with a Hash. This approach removes readable values while preserving cardinality. A secure hash function, such as SHA-256, should be used.
+
+*Usage*: Value containing sensitive information for which you want to maintain accurate statistics and assess its impact on process execution.
+
+*Parameters*:
+
+*value*: the algorithm to use for hashing. Optional, default to SHA-512
+
+Sample configuration:
+[source,yaml]
+----
+arch_process_instance:
+  stringindex1:
+    actions:
+      - action: hash
+        value: SHA-256
+----
+
+=== REPLACE
+
+Replace the value with a specified value (which can be empty).
+
+*Usage*: Value containing sensitive information that you want to hide.
+
+*Parameters*:
+
+*value*: The value used to replace the current field. Default value empty.
+
+Sample configuration:
+[source,yaml]
+----
+arch_flownode_instance:
+  displayname:
+    actions:
+      - action: REPLACE
+        value: 'hidden'
+----
+
+=== REPLACE_WITH_OTHER
+
+Replace a value with the value of another column within the same table and line.
+
+*Usage*: Value containing sensitive information that you want to replace with another non-sensitive meaningful value within the same table.
+
+*Parameters*:
+
+*value*: column name of the column to be used for replacing the value.  No default ; mandatory.
+
+Sample configuration:
+[source,yaml]
+----
+arch_flownode_instance:
+  displayname:
+    actions:
+      - action: REPLACE_WITH_OTHER
+        value: name
+----
+
+=== REGEX_REPLACE
+
+Replace the value if the regexp matches and use the matching group to create the new value.
+
+[TIP]
+====
+The pattern is a regular expression using the {javase-javadoc-base-url}/java.base/java/util/regex/Pattern.html#sum[Java Pattern syntax] used to match the value. The value is the replacement pattern (including captured group) used to modify the value.
+
+* If several parts of the value match, they are all replaced. The behavior is similar to that of the Java {javase-javadoc-base-url}/java.base/java/util/regex/Matcher.html#replaceAll(java.lang.String)[Matcher.replaceAll] method.
+* If none of the regexps match, a fallback can be configured, which can be any other action.
+====
+
+*Usage*: A value containing both sensitive and non-sensitive information, where you want to keep the non-sensitive information.
+
+*Parameters*:
+
+*Pattern*: The regular expression to match  Default , mandatory
+
+*Value*: The replacement pattern ( including captured group ) to used to change the value. No Default , mandatory
+
+*Fallback*: action to apply if no regexp match.
+
+Sample configuration:
+[source,yaml]
+----
+arch_process_comment:
+  content:
+    actions:
+      - action: REGEX_REPLACE
+        pattern: contract (\d+) is ready for user (\S+)\.(\S+)
+        value: contract XXXX is ready for $2
+      - action: REGEX_REPLACE
+        pattern: The task Allocate repair agent on car (\S+) (is now assigned to .*)
+        value: The task Allocate repair agent on car *** $2
+    fallback:
+      - action: REPLACE
+        value: hidden comment
+----
+
+This action can be useful for comments, descriptions or free text like data. It lets you mask such things as emails, usernames or logins with a specific pattern and so on. Because you can define a list of regex actions in a specific order, you can chain regex replacements to break down anonymization in smaller, successive replacements, resulting in simpler regex patterns.
+
+=== KEEP
+
+Keep the value, no anonymization done.
+
+*Parameters*: none
+
+Sample configuration:
+[source,yaml]
+----
+arch_flownode_instance:
+  displayname:
+    actions:
+      - action: KEEP
+----
+
+=== REMOVE_LINE
+
+Remove the whole data row if the column value matches the given regex pattern.
+
+In the example below, we remove all lines of `arch_contract_data` where column `name` has a value that match regex `PurchasedLicenseInput\.bypassSysDate` or `PurchasedLicenseInput\.caseCounterStartDate`
+
+Sample configuration:
+[source,yaml]
+----
+arch_contract_data:
+  val:
+    actions:
+    - action: REMOVE_LINE
+      where:
+      - column: name
+        regex: PurchasedLicenseInput\.bypassSysDate
+      - column: name
+        regex: PurchasedLicenseInput\.caseCounterStartDate
+
+----

@@ -1,0 +1,66 @@
+= How to export data from Bonita for BPI
+:description: Explain how to use and configure the CLI to export data from a Bonita database
+
+== Overview
+A Command Line Interface tool (CLI) is used to provision data extracted from Bonita instances into a Bonita Process Insights environment for deeper process analysis.
+
+The command line tool is delivered as a package, containing a basic documentation about commands and a sample configuration file.
+
+=== How to obtain the tool?
+
+[example]
+To obtain the export tool, contact a sales representative using this form: https://www.bonitasoft.com/contact-us[contact us]
+
+All configuration and execution instructions are described in the tool's *readme.html* file
+
+== BPI license
+
+Most CLI commands require a license to run.
+
+You can retrieve a license by logging into your Bonita Process Insights instance and accessing the xref:application:index.adoc#generate-license["Generate license" feature].
+
+Once you have the license, place the license file in the same directory as the CLI executable.
+
+== Export data
+=== Pre-requisites
+The tool is currently optimized to export data from version 2021.2 (7.13.0) and beyond. While it may be working for older versions, you should contact Bonitasoft to ensure it.
+
+=== Configuration
+
+Before exporting, you need to configure the connection to the Bonita Instance from which you want to export the data.
+
+Export tool can support two types of databases PostgreSQL and Oracle (SQLServer and MySQL are also available upon demand). The JDBC URL must be adapted according to the type of database you will use.
+
+* **Oracle**:
+
+[source,yaml]
+----
+jdbc-url: jdbc:oracle:thin:@${bonita.database.host}:${bonita.database.port}/${bonita.database.name}?oracle.net.disableOob=true`jdbc-url`
+----
+
+* **PostgresSql**:
+
+[source,yaml]
+----
+jdbc-url: jdbc:postgresql://${bonita.database.host}:${bonita.database.port}/${bonita.database.name}
+----
+
+[NOTE]
+====
+After you finish configuring your file, place it next to the executable JAR directory or in a subdirectory named config.
+====
+
+=== Exporting data and Importing to BPI
+
+To export your data, use the following command line :
+`pi-cli bonita export`
+
+You can add some arguments like `--output` to specify the exact path of the exported zip file.
+
+=== Anonymize exported data
+
+By default, your exported data will be anonymized.
+
+It's possible to deactivate the anonymization or add your own configuration.
+
+For more details, see xref:configuration-for-anonymization.adoc[Configure the anonymization].
