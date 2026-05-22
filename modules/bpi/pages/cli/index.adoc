@@ -17,7 +17,7 @@ All configuration and execution instructions are described in the tool's *readme
 
 Most CLI commands require a license to run.
 
-You can retrieve a license by logging into your Bonita Process Insights instance and accessing the xref:application:index.adoc#generate-license["Generate license" feature].
+You can retrieve a license by logging into your Bonita Process Insights instance and accessing the xref:application.adoc#generate-license["Generate license" feature].
 
 Once you have the license, place the license file in the same directory as the CLI executable.
 
@@ -63,4 +63,4 @@ By default, your exported data will be anonymized.
 
 It's possible to deactivate the anonymization or add your own configuration.
 
-For more details, see xref:configuration-for-anonymization.adoc[Configure the anonymization].
+For more details, see xref:cli/configuration-for-anonymization.adoc[Configure the anonymization].

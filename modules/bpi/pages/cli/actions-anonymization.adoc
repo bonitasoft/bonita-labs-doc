@@ -6,7 +6,7 @@
 
 Action types are mechanisms used to anonymize specific values in the exported data. A value can have one or multiple actions associated with it.
 If no actions are explicitly specified in the configuration for a particular value, it will default to a predefined action as described in the page
-xref:configuration-for-anonymization.adoc[How-to configure anonymization with the CLI].
+xref:cli/configuration-for-anonymization.adoc[How-to configure anonymization with the CLI].
 
 Additionally, you can define a fallback mechanism in case the primary action does not work or does not find a match (for example, using the `REGEX_REPLACE` action).
 

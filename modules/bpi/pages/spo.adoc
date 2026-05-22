@@ -64,7 +64,7 @@ The SPO analyzes data from the last three months based on the most recent date i
 === What can I expect in terms of data privacy?
 
 Smart Process Overview leverages OpenAI's APIs to deliver its functionalities. Any data sent to OpenAI is governed by their privacy policy, which you can review https://openai.com/policies/row-privacy-policy/[here].
-For organizations with stringent privacy requirements, we suggest to xref:cli:configuration-for-anonymization.adoc[anonymize your imported data] first for maximum privacy.
+For organizations with stringent privacy requirements, we suggest to xref:cli/configuration-for-anonymization.adoc[anonymize your imported data] first for maximum privacy.
 
 Rest assured, the SPO relies on computed KPIs such as wait times and failed processes—not raw data. Nothing is sent to OpenAI without your explicit consent.
 
