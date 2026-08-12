@@ -9,7 +9,7 @@ The command line tool is delivered as a package, containing a basic documentatio
 === How to obtain the tool?
 
 [example]
-To obtain the export tool, contact a sales representative using this form: https://www.bonitasoft.com/contact-us[contact us]
+To obtain the export tool, contact a sales representative using this form: https://www.ofelia.com/contact-us[contact us]
 
 All configuration and execution instructions are described in the tool's *readme.html* file
 
