@@ -3,7 +3,7 @@ version: latest
 title: Labs
 asciidoc:
   attributes:
-    cscRootUrl: 'https://csc.bonitacloud.bonitasoft.com'
+    cscRootUrl: 'https://csc.bonitacloud.ofelia.com'
     cscCustomerServices: '{cscRootUrl}/apps/CustomerServices'
     # page attributes
     page-editable: true
